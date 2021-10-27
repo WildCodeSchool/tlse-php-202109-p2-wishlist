@@ -23,7 +23,7 @@ class ListModel extends AbstractManager
         $date = new DateTime();
         $statement = $this->pdo->prepare($query);
         $statement->bindValue(":name", $list['name'], \PDO::PARAM_STR);
-        $statement->bindValue(":share_link", $list['share_link'], \PDO::PARAM_INT);
+        $statement->bindValue(":share_link", $this->createShareLink(), \PDO::PARAM_INT);
         $statement->bindValue(":description", $list['description'], \PDO::PARAM_STR);
         $statement->bindValue(":limit_date", $list['limit_date'], \PDO::PARAM_STR);
         $statement->bindValue(":creation_date", $date);
@@ -31,5 +31,14 @@ class ListModel extends AbstractManager
         $statement->bindValue(":event_id", $eventId);
         $statement->execute();
         return (int)$this->pdo->lastInsertId();
+    }
+
+    private function createShareLink(): int
+    {
+        $strNumber = "";
+        for ($i = 0; $i < 5; $i++) {
+            $strNumber .= rand(0, 10);
+        }
+        return intval($strNumber);
     }
 }
