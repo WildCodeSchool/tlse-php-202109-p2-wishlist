@@ -1,3 +1,8 @@
 parameters:
-	ignoreErrors:
-		- '#Constant [A-Z_]+ not found.#'
+    level: max
+    paths:
+        - src
+    ignoreErrors:
+        -
+            message: '#Constant [A-Z_]+ not found.#'
+            path: src
