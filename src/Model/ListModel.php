@@ -16,13 +16,12 @@ class ListModel extends AbstractManager
     {
         $query = "INSERT INTO " . self::TABLE . " (`name`, `share_link`, `description`, `limit_date`, `creation_date`, 
         `user_id`, `event_id`) 
-        VALUES (:name, :share_link, :description, :limit_date, :creation_date, :user_id, :event_id)";
+        VALUES (:name, :share_link, :description, :limit_date, NOW(), :user_id, :event_id)";
         $statement = $this->pdo->prepare($query);
         $statement->bindValue(":name", $list['name'], \PDO::PARAM_STR);
         $statement->bindValue(":share_link", $this->createShareLink(), \PDO::PARAM_INT);
         $statement->bindValue(":description", $list['description'], \PDO::PARAM_STR);
         $statement->bindValue(":limit_date", $list['limit_date'], \PDO::PARAM_STR);
-        $statement->bindValue(":creation_date", $this->createDate(), \PDO::PARAM_STR);
         $statement->bindValue(":user_id", $list["user_id"]);
         $statement->bindValue(":event_id", $list["event_id"]);
         $statement->execute();
@@ -41,12 +40,5 @@ class ListModel extends AbstractManager
         return intval($strNumber);
     }
 
-    /**
-     * @return string
-     */
-    private function createDate(): string
-    {
-        $date = new DateTime('NOW');
-        return str_replace("-", "/", $date->format('d-m-Y'));
-    }
+
 }
