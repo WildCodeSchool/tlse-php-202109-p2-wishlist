@@ -14,9 +14,6 @@ class ListModel extends AbstractManager
      */
     public function createList(array $list): int
     {
-        $userId = 1;
-        $eventId = 1;
-
         $query = "INSERT INTO " . self::TABLE . " (`name`, `share_link`, `description`, `limit_date`, `creation_date`, 
         `user_id`, `event_id`) 
         VALUES (:name, :share_link, :description, :limit_date, :creation_date, :user_id, :event_id)";
@@ -25,9 +22,9 @@ class ListModel extends AbstractManager
         $statement->bindValue(":share_link", $this->createShareLink(), \PDO::PARAM_INT);
         $statement->bindValue(":description", $list['description'], \PDO::PARAM_STR);
         $statement->bindValue(":limit_date", $list['limit_date'], \PDO::PARAM_STR);
-        $statement->bindValue(":creation_date", $this->createDate());
-        $statement->bindValue(":user_id", $userId);
-        $statement->bindValue(":event_id", $eventId);
+        $statement->bindValue(":creation_date", $this->createDate(), \PDO::PARAM_STR);
+        $statement->bindValue(":user_id", $list["user_id"]);
+        $statement->bindValue(":event_id", $list["event_id"]);
         $statement->execute();
         return (int)$this->pdo->lastInsertId();
     }
@@ -47,6 +44,6 @@ class ListModel extends AbstractManager
     private function createDate(): string
     {
         $date = new DateTime('NOW');
-        return $date->format('d-m-Y');
+        return str_replace("-", "/", $date->format('d-m-Y'));
     }
 }
