@@ -41,6 +41,9 @@ class ListModel extends AbstractManager
         return intval($strNumber);
     }
 
+    /**
+     * @return string
+     */
     private function createDate(): string
     {
         $date = new DateTime('NOW');
