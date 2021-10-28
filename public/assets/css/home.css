@@ -1,0 +1,17 @@
+.container-Card{
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+    gap: 10%;
+}
+
+.container-list{
+   box-shadow: 0 2px 5px;
+   margin: 2px;
+}
+.container-Sign_up{
+    box-shadow: 0 2px 5px;
+}
+.container-Youtube{
+    box-shadow: 0 2px 5px;
+}
