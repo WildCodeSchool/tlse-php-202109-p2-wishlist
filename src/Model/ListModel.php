@@ -2,8 +2,6 @@
 
 namespace App\Model;
 
-use DateTime;
-
 class ListModel extends AbstractManager
 {
     public const TABLE = 'list';
@@ -39,6 +37,4 @@ class ListModel extends AbstractManager
         }
         return intval($strNumber);
     }
-
-
 }
