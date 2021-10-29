@@ -15,4 +15,5 @@ return [
     'items/delete' => ['ItemController', 'delete',],
     'list' => ['ListController', 'index',],
     'signup' => ['SignUpController', 'index',],
+    'login' => ['LogInController', 'index',],
 ];
