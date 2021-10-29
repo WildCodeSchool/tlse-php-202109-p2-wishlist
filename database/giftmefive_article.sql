@@ -29,6 +29,7 @@ CREATE TABLE `article` (
   `name` varchar(100) NOT NULL,
   `market_link` varchar(255) NOT NULL,
   `picture` varchar(255) NOT NULL,
+  `description` longtext NOT NULL,
   `price` float NOT NULL,
   `is_gifted` tinyint DEFAULT '0',
   `list_id` int NOT NULL,
@@ -56,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-28 14:43:57
+-- Dump completed on 2021-10-29 12:39:32
