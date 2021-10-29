@@ -16,10 +16,8 @@
 }
 
 .fa {
-  /* font-size: inherit; */
   font-size: xxx-large;
 }
-
 
 .topnav a.icon {
   background: rgb(255, 255, 255);
@@ -34,14 +32,9 @@
   color: white;
 }
 
-
-
 .topnav a img {
   width: 40px;
 }
-
-
-
 
 #logoMenu img {
   height: 40px;
