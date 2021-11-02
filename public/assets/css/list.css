@@ -1,0 +1,76 @@
+body {
+    background-color: #dfdede;
+    font-family: work sans;
+}
+
+.card-header {
+    height: 20px;
+    background: #007EA7;
+}
+
+.card-footer {
+    height: 20px;
+    background: #007EA7;
+}
+
+.in_card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: snow;
+}
+
+.card {
+    border: solid 0.5px black;
+    border-radius: 11px;
+    margin-top: 5%;
+}
+
+.card-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-footer {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.card div div {
+    margin: auto;
+}
+
+div.card div div {
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.sign_up {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: #E5383B;
+    border-radius: 11px;
+    border: none;
+}
+
+div.cards div div a {
+    text-decoration: none;
+    color: white;
+}
