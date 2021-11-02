@@ -1,54 +1,91 @@
-.topnav {
-  overflow: hidden;
-  position: relative;
-}
-
-.topnav #myLinks {
-  display: none;
-}
-
-.topnav a {
-  color: rgb(0, 0, 0);
-  padding: 10px;
-  text-decoration: none;
-  font-size: 45px;
-  display: block;
-}
-
-.fa {
-  font-size: xxx-large;
-}
-
-.topnav a.icon {
-  background: rgb(255, 255, 255);
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.topnav a img {
-  width: 40px;
-}
-
-#logoMenu img {
-  height: 40px;
-}
-
-.topnav  {
-  background: white;
-
-}
-
-html {
-  background: rgb(0, 0, 0);
-}
-
-#myLinks {
-  font-size: small;
-}
+                        .topnav {
+                            overflow: hidden;
+                            position: relative;
+                        }
+                        
+                        .topnav #myLinks {
+                            display: none;
+                        }
+                        
+                        .topnav a {
+                            color: rgb(0, 0, 0);
+                            padding: 10px;
+                            text-decoration: none;
+                            font-size: 45px;
+                            display: block;
+                        }
+                        
+                        .fa {
+                            font-size: xxx-large;
+                        }
+                        
+                        .topnav a.icon {
+                            background: rgb(255, 255, 255);
+                            display: block;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                        }
+                        
+                        .active {
+                            background-color: #04AA6D;
+                            color: white;
+                        }
+                        
+                        .topnav a img {
+                            width: 40px;
+                        }
+                        
+                        #logoMenu img {
+                            height: 40px;
+                        }
+                        
+                        .topnav {
+                            background: white;
+                        }
+                        
+                        html {
+                            background: rgb(0, 0, 0);
+                        }
+                        
+                        #myLinks {
+                            font-size: small;
+                        }
+                        
+                        @media screen and (min-width: 600px) {
+                            .topnav #myLinks {
+                                display: flex;
+                                font-size: smaller;
+                            }
+                            .topnav {
+                                display: flex;
+                                align-items: center;
+                            }
+                            #myLinks a {
+                                font-size: 20px;
+                                margin-right: 4%;
+                            }
+                            .icon {
+                                width: 0,
+                            }
+                            #myLinks {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: flex-end;
+                            }
+                            .fa {
+                                display: none;
+                            }
+                            a .icon {
+                                width: 0%;
+                                height: 0%;
+                            }
+                            .topnav a.icon {
+                                background: rgb(255, 255, 255);
+                                display: none;
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                            }
+                        }
