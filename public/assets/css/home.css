@@ -1,4 +1,10 @@
-.container-Card{
+@media (min-width: 580px){
+    .container-card{
+        display: flex;
+        flex-direction: row;
+    }
+}
+.container-card{
     display: flex;
     flex-direction: column;
     margin: 2px;
@@ -9,9 +15,10 @@
    box-shadow: 0 2px 5px;
    margin: 2px;
 }
-.container-Sign_up{
+.container-sign_up{
     box-shadow: 0 2px 5px;
 }
-.container-Youtube{
+.container-youtube{
     box-shadow: 0 2px 5px;
 }
+
