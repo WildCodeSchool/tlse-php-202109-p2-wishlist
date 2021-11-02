@@ -1,0 +1,329 @@
+.list-share-background {
+
+    background-image: url("/assets/images/list_share_bg_cut.jpg");
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+}
+
+/*MOBILE FIRST*/
+.list-share-container {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5rem 1fr 1fr auto 1fr auto 2rem;
+    grid-template-areas:
+            "navbar navbar navbar"
+            "listTitle listTitle listTitle"
+            "listEvent . listDate"
+            "listDescription listDescription listDescription"
+            ". . sortArticle"
+            "articleContainer articleContainer articleContainer"
+            ". . .";
+    justify-items: center;
+}
+
+.list-title {
+    grid-area: listTitle;
+    margin: 1rem;
+    background-color: var(--color-2);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.list-event {
+    grid-area: listEvent;
+    margin: 1rem;
+    background-color: var(--color-2);
+    padding: 1rem;
+    border-radius: 10px;
+    width: max-content;
+}
+
+.list-date {
+    grid-area: listDate;
+    margin: 1rem;
+    background-color: var(--color-2);
+    padding: 1rem;
+    border-radius: 10px;
+    width: max-content;
+}
+
+.list-description {
+    grid-area: listDescription;
+    margin: 1rem;
+    background-color: var(--color-2);
+    padding: 1rem;
+    text-align: justify;
+    border-radius: 10px;
+}
+
+.list-sort {
+    grid-area: sortArticle;
+}
+
+.article-container {
+    grid-area: articleContainer;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    min-width: 100%;
+}
+
+.article {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 0.5fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-areas:
+            "articlePicture articleTitle articlePrice"
+            "articlePicture articleDescription articleDescription"
+            "articlePicture seeMore seeMore"
+            "giftButton giftButton giftButton";
+    width: 100%;
+    height: max-content;
+    border-radius: 10px;
+    margin: 0 1rem 2rem 1rem;
+    background-color: var(--color-2);
+}
+
+.article-img {
+    grid-area: articlePicture;
+    max-height: calc(100% - 0.4rem);
+    max-width: calc(100% - 0.4rem);
+    align-self: center;
+    margin: 0.2rem;
+}
+
+.article-title {
+    grid-area: articleTitle;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0.2rem 0 0 0.2rem;
+}
+
+.article-price {
+    grid-area: articlePrice;
+    font-size: 1.5rem;
+    margin: 0;
+    justify-self: end;
+    padding: 0.2rem 0.2rem 0 0;
+}
+
+.article-description {
+    grid-area: articleDescription;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0.2rem 0.5rem 0 0.5rem;
+    height: 100%;
+}
+
+.seeMore-button {
+    grid-area: seeMore;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 0.2rem 0;
+}
+
+.seeMore-button > p {
+    font-size: 1rem;
+    text-align: center;
+    background-color: var(--color-4);
+    border-radius: 10px;
+    width: 50%;
+    margin: 0;
+    padding: 0.2rem;
+    align-self: center;
+    color: var(--color-2);
+}
+
+.gift-button {
+    grid-area: giftButton;
+    margin: 0;
+    background-color: var(--event-color-4);
+    width: 100%;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.gift-button > p {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+/*END OF MOBILE FIRST*/
+
+/*DESKTOP FIRST*/
+@media only screen and (min-width: 1200px) {
+    .list-share-background {
+        background-image: url("/assets/images/list_share_bg.jpg");
+    }
+
+    .list-share-container {
+        position: relative;
+        z-index: 1;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 5rem 3rem repeat(9, auto)  2rem;
+        grid-template-areas:
+            "navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar"
+            ". . . . listTitle listTitle listTitle listTitle . . . ."
+            ". . . listEvent listEvent . . listDate listDate . . ."
+            ". . . listDescription listDescription listDescription listDescription listDescription listDescription . . ."
+            ". . . . . . . . . . . sortArticle"
+            ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ."
+            ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ."
+            ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ."
+            ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ."
+            ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ."
+            ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ."
+            ". . . . . . . . . . . .";
+        justify-items: center;
+    }
+
+    .list-title {
+        grid-area: listTitle;
+        width: max-content;
+        height: max-content;
+        margin: 0;
+        padding: 0.5rem 2rem 0.5rem 2rem;
+        text-align: center;
+    }
+
+    .list-event {
+        grid-area: listEvent;
+        width: max-content;
+        height: max-content;
+        margin: 0;
+        padding: 0.5rem 2rem 0.5rem 2rem;
+        text-align: center;
+    }
+
+    .list-date {
+        grid-area: listDate;
+        width: max-content;
+        height: max-content;
+        margin: 0;
+        padding: 0.5rem 2rem 0.5rem 2rem;
+        text-align: center;
+    }
+
+    .list-description {
+        grid-area: listDescription;
+        width: 100%;
+        height: max-content;
+        margin: 0;
+        padding: 0.5rem 2rem 0.5rem 2rem;
+        text-align: center;
+    }
+
+    .list-sort {
+        grid-area: sortArticle;
+    }
+
+    .article-container {
+        grid-area: articleContainer;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        min-width: 100%;
+    }
+
+    .article {
+        display: grid;
+        grid-template-columns: 1.5fr 1.5fr 0.5fr;
+        grid-template-rows: 1fr 2fr 1fr 1fr;
+        grid-template-areas:
+            "articlePicture articleTitle articlePrice"
+            "articlePicture articleDescription articleDescription"
+            "articlePicture seeMore seeMore"
+            "giftButton giftButton giftButton";
+        width: 30%;
+        height: max-content;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        background-color: var(--color-2);
+    }
+
+    .article-img {
+        grid-area: articlePicture;
+        max-height: calc(100% - 0.4rem);
+        max-width: calc(100% - 0.4rem);
+        align-self: center;
+        margin: 0.2rem;
+    }
+
+    .article-title {
+        grid-area: articleTitle;
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 0.2rem 0 0 0.2rem;
+    }
+
+    .article-price {
+        grid-area: articlePrice;
+        font-size: 1.5rem;
+        margin: 0;
+        justify-self: end;
+        padding: 0.2rem 0.2rem 0 0;
+    }
+
+    .article-description {
+        grid-area: articleDescription;
+        font-size: 1.3rem;
+        margin: 0;
+        padding: 0.2rem 0.5rem 0 0.5rem;
+        height: 100%;
+    }
+
+    .seeMore-button {
+        grid-area: seeMore;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0 0 0.2rem 0;
+    }
+
+    .seeMore-button > p {
+        font-size: 1rem;
+        text-align: center;
+        background-color: var(--color-4);
+        border-radius: 10px;
+        width: 50%;
+        margin: 0;
+        padding: 0.2rem;
+        align-self: center;
+        color: var(--color-2);
+    }
+
+    .gift-button {
+        grid-area: giftButton;
+        margin: 0;
+        background-color: var(--event-color-4);
+        width: 100%;
+        text-align: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .gift-button > p {
+        margin: 0;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+    /*END OF DESKTOP FIRST*/
+}
