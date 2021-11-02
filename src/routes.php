@@ -14,6 +14,7 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'list' => ['ListController', 'index',],
+    'list/share' => ['ListController', 'share',],
     'signup' => ['SignUpController', 'index',],
     'login' => ['LogInController', 'index',],
 ];
