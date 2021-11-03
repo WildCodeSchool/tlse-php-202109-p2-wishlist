@@ -1,4 +1,5 @@
 .login-background {
+
     background-image: url("/assets/images/login_bg.jpg");
     background-size: cover;
     position: absolute;
@@ -12,11 +13,12 @@
     z-index: -1;
 }
 
+
 /*MOBILE FIRST*/
 
 .login-title {
     margin: 1rem;
-    background-color: var(--color-2);
+    background-color: var(--background-color);
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
@@ -26,32 +28,31 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    margin: auto;
-    width:60%;
+    margin-left: 5vh;
+    margin-right: 5vh;
 }
 
-.user{
+.user {
     text-align: center;
-    color: white;
+    color: var(--primary-color);
 }
 
-.password{
+.password {
     text-align: center;
-    color: white;
+    color: var(--primary-color);
 }
-
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    border-radius: 30%;
-    background-color: var(--color-2);
+    border-radius: 11px;
+    background-color: var(--background-color);
     text-align: center;
 }
 
 input[type=submit] {
-    background-color: var(--color-5);
+    background-color: var(--btn-color);
     color: white;
     font-size: 15px;
     padding: 14px 20px;
@@ -59,103 +60,95 @@ input[type=submit] {
     margin-left: 25%;
     border: none;
     cursor: pointer;
-    width: 50%;
-    border-radius: 30%;
+    width: 20vh;
+    border-radius: 11px;
 }
-
 input[type=submit]:hover {
-    background-color: white;
-    color: var(--color-5);
-    border: 1px solid var(--color-5);
+    background-color: var(--background-color);
+    color: var(--btn-color);
+    border: 1px solid var(--btn-color);
 }
-
 .noaccount{
     display: flex;
     justify-content: center;
 }
-
 .noaccount-href{
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 20px;
 }
-
 .show-password{
-    color: var(--color-2);
+    color: var(--background-color);
     font-size: 15px;
 }
-
 /*END OF MOBILE FIRST*/
 
 /*DESKTOP FIRST*/
 @media only screen and (min-width: 1200px) {
 
-.login-title {
-    text-align: center;
-    background-color: transparent;
-    color: white;
-    font-size: 40px;
-}
+    .login-title {
+        text-align: center;
+        background-color: transparent;
+        color: var(--primary-color);
+        font-size: 40px;
+    }
 
-.form-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    margin: auto;
-    width:100%;
-}
+    .form-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: auto;
+        width:100%;
+    }
 
-.user{
-    text-align: center;
-    color: white;
-}
+    .user {
+        text-align: center;
+        color: var(--primary-color);
+    }
 
-.password{
-    text-align: center;
-    color: white;
-}
+    .password {
+        text-align: center;
+        color: var(--primary-color);
+    }
+    
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 11px;
+        text-align: center;
+    }
+    
+    input[type=submit] {
+        background-color: var(--btn-color);
+        color: var(--primary-color);
+        font-size: 15px;
+        padding: 14px 20px;
+        margin: 5vh 0;
+        border: none;
+        cursor: pointer;
+        width: 30vh;
+        border-radius: 11px;
+    }
+    input[type=submit]:hover {
+        background-color: white;
+        color: var(--btn-color);
+        border: 1px solid var(--btn-color);
+    }
+    .noaccount{
+        display: flex;
+        justify-content: center;
+    }
+    .noaccount-href{
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .show-password{
+        color: var(--background-color);
+        font-size: 15px;
+        text-shadow: black 2px 2px;
+    }
 
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 30%;
-    text-align: center;
-}
-
-input[type=submit] {
-    background-color: var(--color-5);
-    color: white;
-    font-size: 15px;
-    padding: 14px 20px;
-    margin: 15px 0;
-    margin-left: 25%;
-    border: none;
-    cursor: pointer;
-    width: 50%;
-    border-radius: 30%;
-}
-
-input[type=submit]:hover {
-    background-color: white;
-    color: var(--color-5);
-    border: 1px solid var(--color-5);
-}
-
-.noaccount{
-    display: flex;
-    justify-content: center;
-}
-
-.noaccount-href{
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.show-password{
-    color: var(--color-2);
-    font-size: 15px;
-}
 }
