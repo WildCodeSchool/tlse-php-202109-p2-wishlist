@@ -1,62 +1,50 @@
-.signup-background {
-
+.main-background {
     background-image: url("/assets/images/login_bg.jpg");
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    z-index: -1;
 }
 
 /*MOBILE FIRST*/
 
 .signup-title {
     margin: 1rem;
-    background-color: var(--color-2);
+    background-color: var(--background-color);
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 11px;
     text-align: center;
 }
 
-.firstname{
-    color: white;
+.firstname {
+    color: var(--primary-color);
 }
 
-.lastname{
-    color: white;
+.lastname {
+    color: var(--primary-color);
+    margin-left: 25vh;
 }
 
-.email{
-    color: white;
+.email {
+    color: var(--primary-color);
     text-align: center;
-    margin-right: 10%;
+    margin-right: 5vh;
 }
 
-.password{
-    color: white;
+.password {
+    color: var(--primary-color);
     text-align: center;
-    margin-right: 10%;
+    margin-right: 5vh;
 }
 
-.birthday{
-    color: white;
+.birthday {
+    color: var(--primary-color);
     text-align: center;
-    margin-right: 10%;
+    margin-right: 5vh;
 }
 
-.name{
+.name {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-right: auto;
+    justify-content: space-around;
 }
 
-.input-name{
+.input-name {
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -67,57 +55,60 @@
     flex-flow: row wrap;
     justify-items: center;
     width:100%;
-    margin-left: 5%;
+    margin-left: 2vh;
 }
 
 input[type=date], input[type=email], input[type=password] {
-    width: 80%;
+    width: 40vh;
     padding: 12px 20px;
     border: 1px solid #ccc;
     text-align: center;
     align-content: center;
+    border-radius: 11px;
 }
 
-input[type=text]{
-    width: 35%;
+input[type=text] {
+    width: 35vw;
     padding: 12px 20px;
     border: 1px solid #ccc;
     text-align: center;
+    border-radius: 11px;
 }
 
 input[type=submit] {
-    background-color: var(--color-5);
-    color: white;
+    background-color: var(--btn-color);
+    color: var(--primary-color);
     font-size: 15px;
     padding: 14px 20px;
     border: none;
     cursor: pointer;
-    width: 50%;
-    border-radius: 30%;
-    margin-left: 20%;
-    margin-top: 5%;
+    width: 20vh;
+    border-radius: 11px;
+    margin-top: 1em;
+    margin-left: 25vw;
 }
 
 input[type=submit]:hover {
-    background-color: white;
-    color: var(--color-5);
-    border: 1px solid var(--color-5);
+    background-color: var(--background-color);
+    color: var(--btn-color);
+    border: 1px solid var(--btn-color);
 }
 
-.show-password{
-    color: var(--color-2);
+.show-password {
+    color: var(--primary-color);
     font-size: 15px;
-    margin-left: 20%;
+    margin-left: 20vw;
+    margin-top: 10vw;
 }
 
-.account{
+.account {
     display: flex;
     justify-content: left;
-    margin-left: 5%;
+    margin-left: 10vw;
 }
 
-.account-href{
-    color: white;
+.account-href {
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 20px;
 }
@@ -127,64 +118,65 @@ input[type=submit]:hover {
 /*DESKTOP FIRST*/
 @media only screen and (min-width: 920px) {
 
-    .signup-title {
-        text-align: center;
-        background-color: transparent;
-        color: white;
-        font-size: 40px;
-    }
-
-.firstname{
+.signup-title {
     text-align: center;
-    color: white;
+    background-color: transparent;
+    color: var(--primary-color);
+    font-size: 40px;
 }
 
-.lastname{
+.firstname {
     text-align: center;
-    color: white;
+    color: var(--primary-color);
 }
 
-.date{
+.lastname {
     text-align: center;
-    color: white;
+    color: var(--primary-color);
 }
 
-.email{
+.date {
     text-align: center;
-    color: white;
+    color: var(--primary-color);
 }
 
-.password{
+.email {
     text-align: center;
-    color: white;
+    color: var(--primary-color);
 }
 
-.birthday{
+.password {
     text-align: center;
-    color: white;
+    color: var(--primary-color);
 }
 
-.name{
+.birthday {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.name {
     display: flex;
     flex-direction: row;
     justify-content: space-around
 }
 
-.input-name{
+.input-name {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.form-container {
+.form {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width:100vh;
     margin: auto;
 }
 
 input[type=date], input[type=email], input[type=password] {
-    width: 90%;
+    width: 60vh;
     padding: 12px 20px;
     border: 1px solid #ccc;
     text-align: center;
@@ -192,9 +184,9 @@ input[type=date], input[type=email], input[type=password] {
     margin-right: auto;
 }
 
-input[type=text]{
-    width: 40%;
-    padding: 12px 20px;
+input[type=text] {
+    width: 30vh;
+    padding: 12px 10px;
     border: 1px solid #ccc;
     text-align: center;
     margin-left: auto;
@@ -202,38 +194,36 @@ input[type=text]{
 }
 
 input[type=submit] {
-    background-color: var(--color-5);
-    color: white;
+    background-color: var(--btn-color);
+    color: var(--primary-color);
     font-size: 15px;
     padding: 14px 20px;
     margin: 15px 0;
-    margin-left: 25%;
     border: none;
     cursor: pointer;
-    width: 50%;
-    border-radius: 30%;
+    width: 15vh;
+    border-radius: 11px;
 }
 
 input[type=submit]:hover {
-    background-color: white;
-    color: var(--color-5);
-    border: 1px solid var(--color-5);
+    background-color: var(--background-color);
+    color: var(--btn-color);
+    border: 1px solid var(--btn-color);
 }
 
-.show-password{
-    color: var(--color-2);
+.show-password {
+    color: var(--primary-color);
     font-size: 15px;
-    margin: auto;
+    margin: 1em;
+    text-shadow: black 2px 2px;
 }
 
-.account{
-    display: flex;
-    justify-content: left;
-    margin-left: 5%;
+.account {
+    text-align: center;
 }
 
-.account-href{
-    color: white;
+.account-href {
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 20px;
 }
