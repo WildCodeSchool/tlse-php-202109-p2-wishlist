@@ -1,30 +1,36 @@
 {% extends 'layout.html.twig' %}
 
-{% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/home.css">
-    <link rel="stylesheet" href="/assets/css/navbar.css" />
+{% block navbar %}
+    {% include "Components/_navbar.html.twig" %}
 {% endblock %}
 
-{% block navbar %}
-{% include "Components/_navbar.html.twig" %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
 {% endblock %}
 
 {% block content %}
 <h1>Give me Gift !</h1>
 <body> 
     <div class="container-card">
-        <div class= "container-list">
-            <img class ="image-list" src="">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur quo exercitationem odit, cum atque laudantium dolore fugit dolorem dolorum temporibus labore aliquid tenetur eveniet, distinctio, voluptates nostrum cumque nobis libero.</p>
+        <div class= "container-card">
+            <img class ="image-card" src="/assets/images/pexels-anthony.jpg">
+            <h3>How it works !?<h3>
+            <p>Tired of useless gifts ? Your friends are useless when it comes the time to satistify you? Help them to please you with Gift Me 5!</p>
         </div>
         <div class= "container-sign_up">
-            <img src="">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium ad inventore libero, similique nesciunt incidunt praesentium exercitationem maxime iure ducimus delectus sequi, magnam tempora voluptatibus repellendus! Inventore aut accusantium quam?</p>
-            <input type="submit" value="Sign up for free !">
+            <img class="image-card" src="/assets/images/pexels-karolina2.jpg">
+            <h3>Gift Me 5<h3>
+            <div class="container-para">
+                <p>You can create your own gift lists and share it with your relatives. Gifters can browse your list and gift you whatever they want.
+                    <br>Here is a video explaining the process.</br>
+                </p>
+            </div>
+            <input type="submit" value="Sign up for free !"/>
         </div>
         <div class= "container-youtube">
-            <img src="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita facere tempore sunt quibusdam? Itaque molestiae sunt minima amet modi laborum, earum facilis quasi, odio pariatur animi similique rem, perspiciatis ea.</p>
+            <img class="image-card" src="/assets/images/pexels-szabo.jpg">
+            <h3>Youtube<h3>
         </div>
     </div>
 </body>
