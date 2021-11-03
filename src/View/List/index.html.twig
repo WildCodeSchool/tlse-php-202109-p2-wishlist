@@ -1,5 +1,12 @@
 {% extends 'layout.html.twig' %}
+{% block navbar %}
+  {% include 'Components/_navbar.html.twig' %}
+{% endblock %}
+{% block stylesheet %}
+  <link rel="stylesheet" href="/assets/css/navbar.css" />
+  <link rel="stylesheet" href="/assets/css/list.css" />
+{% endblock %}
 
 {% block content %}
-    <h1>Je suis dans list</h1>
+  {% include 'Components/_lists.html.twig' %}
 {% endblock %}

@@ -1,5 +1,34 @@
 {% extends 'layout.html.twig' %}
 
-{% block content %}
-    <h1>Je suis dans Login</h1>
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
 {% endblock %}
+{% block navbar %}
+
+{% include "Components/_navbar.html.twig" %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="login-background"></div>
+        <div class="login-container">
+        <h3 class="login-title">Connexion à Give Me Gift</h3>
+        <div class="form-container">
+            <form class="form" action="" method="POST">
+                <label for="username"><p class="user">Nom d'utilisateur</p></label>
+                <input type="text" id="username" placeholder="Entrer le nom d'utilisateur" name="username" required>
+                <label for="password"><p class="password">Mot de passe</p></label>
+                <input type="password" id="password" placeholder="Entrer le mot de passe" name="password" required>
+                <label class="show-password" for="checkbox"><input type="checkbox" id="checkbox">Afficher le mot de passe</label>
+                <input type="submit" id='submit' value='Connexion' > 
+            </form>
+        </div>
+            <div class="noaccount">
+               <a class="noaccount-href" href="/SignIn">Pas de compte?</a>
+            </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/show_password.js"></script>
+{% endblock %}
+
