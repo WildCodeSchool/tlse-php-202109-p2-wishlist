@@ -52,6 +52,15 @@ html {
     font-size: small;
 }
 
+.logoMobile>img:nth-child(1) {
+    display: none;
+}
+
+.logoDesktop>img:nth-child(1) {
+    height: 45px;
+    width: auto;
+}
+
 @media screen and (min-width: 600px) {
     .topnav #myLinks {
         display: flex;
