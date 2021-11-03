@@ -118,113 +118,113 @@ input[type=submit]:hover {
 /*DESKTOP FIRST*/
 @media only screen and (min-width: 920px) {
 
-.signup-title {
-    text-align: center;
-    background-color: transparent;
-    color: var(--primary-color);
-    font-size: 40px;
-}
+    .signup-title {
+        text-align: center;
+        background-color: transparent;
+        color: var(--primary-color);
+        font-size: 40px;
+    }
 
-.firstname {
-    text-align: center;
-    color: var(--primary-color);
-}
+    .firstname {
+        text-align: center;
+        color: var(--primary-color);
+    }
 
-.lastname {
-    text-align: center;
-    color: var(--primary-color);
-}
+    .lastname {
+        text-align: center;
+        color: var(--primary-color);
+    }
 
-.date {
-    text-align: center;
-    color: var(--primary-color);
-}
+    .date {
+        text-align: center;
+        color: var(--primary-color);
+    }
 
-.email {
-    text-align: center;
-    color: var(--primary-color);
-}
+    .email {
+        text-align: center;
+        color: var(--primary-color);
+    }
 
-.password {
-    text-align: center;
-    color: var(--primary-color);
-}
+    .password {
+        text-align: center;
+        color: var(--primary-color);
+    }
 
-.birthday {
-    text-align: center;
-    color: var(--primary-color);
-}
+    .birthday {
+        text-align: center;
+        color: var(--primary-color);
+    }
 
-.name {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around
-}
+    .name {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around
+    }
 
-.input-name {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
+    .input-name {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width:100vh;
-    margin: auto;
-}
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:100vh;
+        margin: auto;
+    }
 
-input[type=date], input[type=email], input[type=password] {
-    width: 60vh;
-    padding: 12px 20px;
-    border: 1px solid #ccc;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
+    input[type=date], input[type=email], input[type=password] {
+        width: 60vh;
+        padding: 12px 20px;
+        border: 1px solid #ccc;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-input[type=text] {
-    width: 30vh;
-    padding: 12px 10px;
-    border: 1px solid #ccc;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
+    input[type=text] {
+        width: 30vh;
+        padding: 12px 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-input[type=submit] {
-    background-color: var(--btn-color);
-    color: var(--primary-color);
-    font-size: 15px;
-    padding: 14px 20px;
-    margin: 15px 0;
-    border: none;
-    cursor: pointer;
-    width: 15vh;
-    border-radius: 11px;
-}
+    input[type=submit] {
+        background-color: var(--btn-color);
+        color: var(--primary-color);
+        font-size: 15px;
+        padding: 14px 20px;
+        margin: 15px 0;
+        border: none;
+        cursor: pointer;
+        width: 15vh;
+        border-radius: 11px;
+    }
 
-input[type=submit]:hover {
-    background-color: var(--background-color);
-    color: var(--btn-color);
-    border: 1px solid var(--btn-color);
-}
+    input[type=submit]:hover {
+        background-color: var(--background-color);
+        color: var(--btn-color);
+        border: 1px solid var(--btn-color);
+    }
 
-.show-password {
-    color: var(--primary-color);
-    font-size: 15px;
-    margin: 1em;
-    text-shadow: black 2px 2px;
-}
+    .show-password {
+        color: var(--primary-color);
+        font-size: 15px;
+        margin: 1em;
+        text-shadow: black 2px 2px;
+    }
 
-.account {
-    text-align: center;
-}
+    .account {
+        text-align: center;
+    }
 
-.account-href {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 20px;
-}
+    .account-href {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 20px;
+    }
 }
