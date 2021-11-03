@@ -1,5 +1,4 @@
 .login-background {
-
     background-image: url("/assets/images/login_bg.jpg");
     background-size: cover;
     position: absolute;
@@ -12,7 +11,6 @@
     display: block;
     z-index: -1;
 }
-
 
 /*MOBILE FIRST*/
 
@@ -31,14 +29,17 @@
     margin: auto;
     width:60%;
 }
+
 .user{
     text-align: center;
     color: white;
 }
+
 .password{
     text-align: center;
     color: white;
 }
+
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -61,90 +62,100 @@ input[type=submit] {
     width: 50%;
     border-radius: 30%;
 }
+
 input[type=submit]:hover {
     background-color: white;
     color: var(--color-5);
     border: 1px solid var(--color-5);
 }
+
 .noaccount{
     display: flex;
     justify-content: center;
 }
+
 .noaccount-href{
     color: white;
     text-decoration: none;
     font-size: 20px;
 }
+
 .show-password{
     color: var(--color-2);
     font-size: 15px;
 }
+
 /*END OF MOBILE FIRST*/
 
 /*DESKTOP FIRST*/
 @media only screen and (min-width: 1200px) {
 
-    .login-title {
-        text-align: center;
-        background-color: transparent;
-        color: white;
-        font-size: 40px;
-  
-    }
+.login-title {
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    font-size: 40px;
+}
 
-    .form-container {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        margin: auto;
-        width:100%;
-    }
-    .user{
-        text-align: center;
-        color: white;
-    }
-    .password{
-        text-align: center;
-        color: white;
-    }
-    input[type=text], input[type=password] {
-        width: 100%;
-        padding: 12px 20px;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-        border-radius: 30%;
-        text-align: center;
-    }
-    
-    input[type=submit] {
-        background-color: var(--color-5);
-        color: white;
-        font-size: 15px;
-        padding: 14px 20px;
-        margin: 15px 0;
-        margin-left: 25%;
-        border: none;
-        cursor: pointer;
-        width: 50%;
-        border-radius: 30%;
-    }
-    input[type=submit]:hover {
-        background-color: white;
-        color: var(--color-5);
-        border: 1px solid var(--color-5);
-    }
-    .noaccount{
-        display: flex;
-        justify-content: center;
-    }
-    .noaccount-href{
-        color: white;
-        text-decoration: none;
-        font-size: 20px;
-    }
-    .show-password{
-        color: var(--color-2);
-        font-size: 15px;
-    }
+.form-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: auto;
+    width:100%;
+}
 
+.user{
+    text-align: center;
+    color: white;
+}
+
+.password{
+    text-align: center;
+    color: white;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 30%;
+    text-align: center;
+}
+
+input[type=submit] {
+    background-color: var(--color-5);
+    color: white;
+    font-size: 15px;
+    padding: 14px 20px;
+    margin: 15px 0;
+    margin-left: 25%;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 30%;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: var(--color-5);
+    border: 1px solid var(--color-5);
+}
+
+.noaccount{
+    display: flex;
+    justify-content: center;
+}
+
+.noaccount-href{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.show-password{
+    color: var(--color-2);
+    font-size: 15px;
+}
 }
