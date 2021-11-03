@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Work+Sans:wght@300&display=swap');
+
+:root {
+    --primary-color: #EBF5EE;
+    --background-color: #FBEFEF;
+    --secondary-color: #D8BFAA;
+    --card-color: #007EA7;
+    --btn-color: #E5383B;
+    --font-color: #1B2F37;
+
+    --event-color-1: #FFADAD;
+    --event-color-2: #FFD6A5;
+    --event-color-3: #FDFFB6;
+    --event-color-4: #CAFFBF;
+    --event-color-5: #9BF6FF;
+    --event-color-6: #A0C4FF;
+    --event-color-7: #BDB2FF;
+    --event-color-8: #FFC6FF;
+    --event-color-9: #FFFFFC;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16pt;
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}

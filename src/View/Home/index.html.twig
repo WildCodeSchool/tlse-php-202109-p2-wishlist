@@ -1,13 +1,16 @@
-
-
-
-
 {% extends 'layout.html.twig' %}
+
 {% block stylesheet %}
     <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css" />
 {% endblock %}
+
+{% block navbar %}
+{% include "Components/_navbar.html.twig" %}
+{% endblock %}
+
 {% block content %}
-    <h1>Give me Gift !</h1>
+<h1>Give me Gift !</h1>
 <body> 
     <div class="container-card">
         <div class= "container-list">
@@ -26,4 +29,3 @@
     </div>
 </body>
 {% endblock %}
-
