@@ -1,0 +1,240 @@
+.signup-background {
+
+    background-image: url("/assets/images/login_bg.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+}
+
+/*MOBILE FIRST*/
+
+.signup-title {
+    margin: 1rem;
+    background-color: var(--color-2);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.firstname{
+    color: white;
+}
+
+.lastname{
+    color: white;
+}
+
+.email{
+    color: white;
+    text-align: center;
+    margin-right: 10%;
+}
+
+.password{
+    color: white;
+    text-align: center;
+    margin-right: 10%;
+}
+
+.birthday{
+    color: white;
+    text-align: center;
+    margin-right: 10%;
+}
+
+.name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: auto;
+}
+
+.input-name{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.form-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+    width:100%;
+    margin-left: 5%;
+}
+
+input[type=date], input[type=email], input[type=password] {
+    width: 80%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    align-content: center;
+}
+
+input[type=text]{
+    width: 35%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+input[type=submit] {
+    background-color: var(--color-5);
+    color: white;
+    font-size: 15px;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 30%;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: var(--color-5);
+    border: 1px solid var(--color-5);
+}
+
+.show-password{
+    color: var(--color-2);
+    font-size: 15px;
+    margin-left: 20%;
+}
+
+.account{
+    display: flex;
+    justify-content: left;
+    margin-left: 5%;
+}
+
+.account-href{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/*END OF MOBILE FIRST*/
+
+/*DESKTOP FIRST*/
+@media only screen and (min-width: 920px) {
+
+    .signup-title {
+        text-align: center;
+        background-color: transparent;
+        color: white;
+        font-size: 40px;
+    }
+
+.firstname{
+    text-align: center;
+    color: white;
+}
+
+.lastname{
+    text-align: center;
+    color: white;
+}
+
+.date{
+    text-align: center;
+    color: white;
+}
+
+.email{
+    text-align: center;
+    color: white;
+}
+
+.password{
+    text-align: center;
+    color: white;
+}
+
+.birthday{
+    text-align: center;
+    color: white;
+}
+
+.name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+
+.input-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.form-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+input[type=date], input[type=email], input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=text]{
+    width: 40%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=submit] {
+    background-color: var(--color-5);
+    color: white;
+    font-size: 15px;
+    padding: 14px 20px;
+    margin: 15px 0;
+    margin-left: 25%;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 30%;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: var(--color-5);
+    border: 1px solid var(--color-5);
+}
+
+.show-password{
+    color: var(--color-2);
+    font-size: 15px;
+    margin: auto;
+}
+
+.account{
+    display: flex;
+    justify-content: left;
+    margin-left: 5%;
+}
+
+.account-href{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+}
