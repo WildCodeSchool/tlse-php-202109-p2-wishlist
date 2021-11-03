@@ -46,11 +46,13 @@ input[type=submit] {
     font-size: 15px;
     padding: 14px 20px;
     margin: 15px 0;
-    margin-left: 25%;
+    margin-left: 10vh;
     border: none;
     cursor: pointer;
     width: 20vh;
     border-radius: 11px;
+    border: solid black 0.5px;
+    box-shadow: 2px 2px 4px black ;
 }
 
 input[type=submit]:hover {
@@ -59,24 +61,30 @@ input[type=submit]:hover {
     border: 1px solid var(--btn-color);
 }
 
-.noaccount{
-    display: flex;
-    justify-content: center;
+.noaccount {
+    background-color: var(--btn-color);
+    width: 25vh;
+    margin: auto;
+    border-radius: 11px;
+    border: solid black 0.5px;
+    box-shadow: 2px 2px 4px black ;
+    text-align: center;
 }
 
-.noaccount-href{
+.noaccount-href {
     color: var(--primary-color);
     text-decoration: none;
     font-size: 20px;
 }
-.show-password{
+
+.show-password {
     color: var(--background-color);
     font-size: 15px;
 }
 /*END OF MOBILE FIRST*/
 
 /*DESKTOP FIRST*/
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 920px) {
 
     .login-title {
         text-align: center;
@@ -85,7 +93,7 @@ input[type=submit]:hover {
         font-size: 40px;
     }
 
-    .form{
+    .form {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -114,13 +122,15 @@ input[type=submit]:hover {
     input[type=submit] {
         background-color: var(--btn-color);
         color: var(--primary-color);
-        font-size: 15px;
+        font-size: 20px;
         padding: 14px 20px;
         margin: 5vh 0;
         border: none;
         cursor: pointer;
         width: 30vh;
         border-radius: 11px;
+        box-shadow: 2px 2px 4px black ;
+        border: solid black 0.5px;
     }
 
     input[type=submit]:hover {
@@ -129,18 +139,22 @@ input[type=submit]:hover {
         border: 1px solid var(--btn-color);
     }
 
-    .noaccount{
-        display: flex;
-        justify-content: center;
+    .noaccount {
+        background-color: var(--btn-color);
+        width: 25vh;
+        margin: auto;
+        border-radius: 11px;
+        border: solid black 0.5px;
+        box-shadow: 2px 2px 4px black ;
     }
-
-    .noaccount-href{
+    
+    .noaccount-href {
         color: var(--primary-color);
         text-decoration: none;
         font-size: 20px;
     }
 
-    .show-password{
+    .show-password {
         color: var(--background-color);
         font-size: 15px;
         text-shadow: black 2px 2px;

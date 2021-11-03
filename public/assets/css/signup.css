@@ -18,7 +18,6 @@
 
 .lastname {
     color: var(--primary-color);
-    margin-left: 25vh;
 }
 
 .email {
@@ -86,6 +85,8 @@ input[type=submit] {
     border-radius: 11px;
     margin-top: 1em;
     margin-left: 25vw;
+    border: solid black 0.5px;
+    box-shadow: 2px 2px 4px black;
 }
 
 input[type=submit]:hover {
@@ -126,13 +127,12 @@ input[type=submit]:hover {
     }
 
     .firstname {
-        text-align: center;
         color: var(--primary-color);
     }
 
     .lastname {
-        text-align: center;
         color: var(--primary-color);
+        margin-left: 25vh;
     }
 
     .date {
@@ -201,8 +201,10 @@ input[type=submit]:hover {
         margin: 15px 0;
         border: none;
         cursor: pointer;
-        width: 15vh;
+        width: 20vh;
         border-radius: 11px;
+        border: solid black 0.5px;
+        box-shadow: 2px 2px 4px black ;
     }
 
     input[type=submit]:hover {
