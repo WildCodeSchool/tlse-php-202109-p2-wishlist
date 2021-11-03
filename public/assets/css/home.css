@@ -19,6 +19,7 @@ h3 {
    box-shadow: 0 2px 5px;
    margin: 2px;
    border-radius: 11px; 
+   width: 33%;
 }
 
 h1 {
@@ -30,16 +31,25 @@ h1 {
     display: flex;
     flex-direction: column;
     border-radius: 11px;
+    width: 33%;
 }
 
 .container-youtube {
     box-shadow: 0 2px 5px;
     background-color: white;
     border-radius: 11px;
+    width: 33%;
 }
 
 .image-card {
-    height: auto;
+    height: 45%;
     width: 100%;
     border-radius: 11px;
+}
+
+@media screen and (min-width: 600px){
+    .container-card{
+        display: flex;
+        flex-direction: row;
+    }
 }
