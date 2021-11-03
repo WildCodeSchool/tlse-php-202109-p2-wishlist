@@ -1,16 +1,21 @@
-body {
-    height: 100%;
-    width: 100%;
+.main-background {
     background-image: url("/assets/images/background_list_mobile.jpg");
-    background-size: cover;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    z-index: 0;
+}
+
+.noaccount {
+    text-align: center;
+    background: #E5383B;
+    width: 150px;
+    margin: auto;
+    border-radius: 11px;
+    border: solid black 0.5px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.noaccount a {
+    text-decoration: none;
+    color: white;
+    font-size: smaller;
 }
 
 .cards {
