@@ -52,6 +52,19 @@
     font-size: small;
 }
 
+.logoMobile>img:nth-child(1) {
+    display: none;
+}
+
+.logoDesktop>img:nth-child(1) {
+    height: 45px;
+    width: auto;
+}
+
+div.card div a {
+    font-size: large;
+}
+
 @media screen and (min-width: 600px) {
     .topnav #myLinks {
         display: flex;
@@ -87,5 +100,24 @@
         position: absolute;
         right: 0;
         top: 0;
+    }
+    .active {
+        background-color: #04AA6D;
+        color: white;
+    }
+    .topnav a img {
+        width: 40px;
+    }
+    #logoMenu img {
+        height: 40px;
+    }
+    .topnav {
+        background: white;
+    }
+    html {
+        background: rgb(0, 0, 0);
+    }
+    #myLinks {
+        font-size: small;
     }
 }
