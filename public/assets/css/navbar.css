@@ -61,6 +61,13 @@ html {
     width: auto;
 }
 
+
+/* Élément | http://localhost:8000/list */
+
+div.card div a {
+    font-size: large;
+}
+
 @media screen and (min-width: 600px) {
     .topnav #myLinks {
         display: flex;

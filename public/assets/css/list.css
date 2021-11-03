@@ -49,14 +49,17 @@ div.card div div {
 
 h1 {
     text-align: center;
+    color: white;
 }
 
 h2 {
     text-align: center;
+    color: white;
 }
 
 h3 {
     text-align: center;
+    color: white;
 }
 
 .sign_up {
@@ -79,7 +82,7 @@ div.cards div div a {
     body {
         height: 100%;
         width: 100%;
-        background-image: url("/assets/images/background_list.png");
+        background-image: url("/assets/images/background_list.jpg");
         background-size: cover;
         position: fixed;
         top: 0;
@@ -97,5 +100,6 @@ div.cards div div a {
     }
     .card {
         width: 27%;
+        box-shadow: 5px 5px 8px rgb(0, 0, 0);
     }
 }
