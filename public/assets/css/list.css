@@ -1,6 +1,16 @@
 body {
-    background-color: #dfdede;
-    font-family: work sans;
+    height: 100%;
+    width: 100%;
+    background-image: url("/assets/images/background_list_mobile.jpg");
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
 }
 
 .card-header {
@@ -23,6 +33,7 @@ body {
 .card {
     border: solid 0.5px black;
     border-radius: 11px;
+    margin: 2%;
     margin-top: 5%;
 }
 
@@ -50,11 +61,13 @@ div.card div div {
 h1 {
     text-align: center;
     color: white;
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
 h2 {
     text-align: center;
     color: white;
+    text-shadow: 1px 1px 4px rgb(0, 0, 0);
 }
 
 h3 {
@@ -99,7 +112,7 @@ div.cards div div a {
         justify-content: space-around;
     }
     .card {
-        width: 27%;
+        width: 30%;
         box-shadow: 5px 5px 8px rgb(0, 0, 0);
     }
 }
