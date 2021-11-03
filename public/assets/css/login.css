@@ -16,8 +16,8 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    margin-left: 5vh;
-    margin-right: 5vh;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .user {
@@ -46,10 +46,10 @@ input[type=submit] {
     font-size: 15px;
     padding: 14px 20px;
     margin: 15px 0;
-    margin-left: 10vh;
+    margin-left: 5rem;
     border: none;
     cursor: pointer;
-    width: 20vh;
+    width: 15rem;
     border-radius: 11px;
     border: solid black 0.5px;
     box-shadow: 2px 2px 4px black ;
@@ -63,7 +63,7 @@ input[type=submit]:hover {
 
 .noaccount {
     background-color: var(--btn-color);
-    width: 25vh;
+    width: 12rem;
     margin: auto;
     border-radius: 11px;
     border: solid black 0.5px;
@@ -97,7 +97,7 @@ input[type=submit]:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width:50vh;
+        width: 20rem;
     }
 
     .user {
@@ -124,10 +124,10 @@ input[type=submit]:hover {
         color: var(--primary-color);
         font-size: 20px;
         padding: 14px 20px;
-        margin: 5vh 0;
+        margin: 1rem 0;
         border: none;
         cursor: pointer;
-        width: 30vh;
+        width: 10rem;
         border-radius: 11px;
         box-shadow: 2px 2px 4px black ;
         border: solid black 0.5px;
@@ -141,7 +141,7 @@ input[type=submit]:hover {
 
     .noaccount {
         background-color: var(--btn-color);
-        width: 25vh;
+        width: 10rem;
         margin: auto;
         border-radius: 11px;
         border: solid black 0.5px;
@@ -157,6 +157,7 @@ input[type=submit]:hover {
     .show-password {
         color: var(--background-color);
         font-size: 15px;
+        margin-top: 1rem;
         text-shadow: black 2px 2px;
     }
 } 
