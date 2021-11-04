@@ -1,17 +1,45 @@
-.container-Card{
+.container-card {
     display: flex;
     flex-direction: column;
     margin: 2px;
-    gap: 10%;
+    gap: 20px;
+    background-color: white;
+    border-radius: 11px;
 }
 
-.container-list{
+body {
+    background-color:cadetblue;
+}
+
+h3 {
+    text-align: center;  
+}
+
+.container-list {
    box-shadow: 0 2px 5px;
    margin: 2px;
+   border-radius: 11px; 
 }
-.container-Sign_up{
-    box-shadow: 0 2px 5px;
+
+h1 {
+    text-align: center;
 }
-.container-Youtube{
+
+.container-sign_up {
     box-shadow: 0 2px 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 11px;
+}
+
+.container-youtube {
+    box-shadow: 0 2px 5px;
+    background-color: white;
+    border-radius: 11px;
+}
+
+.image-card {
+    height: auto;
+    width: 100%;
+    border-radius: 11px;
 }
