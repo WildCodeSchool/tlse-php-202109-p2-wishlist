@@ -1,7 +1,42 @@
 {# TODO : manage errors display #}
+<div class="add-form">
+	<h1>Add a new item</h1>
+	<div class="form-container">
+		<form class="form" action="items/add" method="POST">
+			<label for="giftName">
+				<p class="giftName">Nom du cadeau</p>
+			</label>
+			<input type="text" id="giftName" placeholder="Entrer le nom du cadeau" name="giftName" required>
 
-<form method="post">
-	<input type="hidden" value="{{ item.id }}" name="id">
-	<input type="text" value="{{ item.title }}" name="title">
-	<input type="submit" value="Valider">
-</form>
+
+			<label for="price">
+				<p class="price">Prix</p>
+			</label>
+			<input type="price" id="price" placeholder="Entrer le prix du cadeau" name="price" required>
+
+
+			<label for="imgLink">
+				<p class="imgLink">lien de la photo</p>
+			</label>
+			<input type="text" id="imgLink" placeholder="Coller le lien de la photo" name="imgLink" required>
+
+
+			<label for="giftLink">
+				<p class="giftLink">lien</p>
+			</label>
+			<input type="giftLink" id="giftLink" placeholder="coller le lien du cadeau" name="giftLink" required>
+
+			<label for="description">
+				<p class="description">Description</p>
+			</label>
+			<textarea type="description" id="description" placeholder="Decrivez ce cadeau" name="description" required>
+
+
+				<input type="submit" id='submit' value='Connexion'>
+
+			</div>
+
+		</form>
+
+	</div>
+</div>
