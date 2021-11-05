@@ -1,0 +1,210 @@
+.main-background {
+    background-image: url("/assets/images/login_bg.jpg");
+}
+
+/*MOBILE FIRST*/
+
+.signup-title {
+    margin: 1rem;
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-radius: 11px;
+    text-align: center;
+}
+
+.firstname {
+    color: var(--primary-color);
+}
+
+.lastname {
+    color: var(--primary-color);
+}
+
+.email {
+    color: var(--primary-color);
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.password {
+    color: var(--primary-color);
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.birthday {
+    color: var(--primary-color);
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.name {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.input-name {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.form-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+    width:100%;
+    margin-left: 1rem;
+}
+
+input[type=date], input[type=email], input[type=password] {
+    width: 21rem;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    align-content: center;
+    border-radius: 11px;
+}
+
+input[type=text] {
+    width: 9rem;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 11px;
+}
+
+input[type=submit] {
+    background-color: var(--btn-color);
+    color: var(--primary-color);
+    font-size: 15px;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 10rem;
+    border-radius: 11px;
+    margin-top: 1rem;
+    margin-left: 7rem;
+    border: solid black 0.5px;
+    box-shadow: 2px 2px 4px black;
+}
+
+input[type=submit]:hover {
+    background-color: var(--background-color);
+    color: var(--btn-color);
+    border: 1px solid var(--btn-color);
+}
+
+.show-password {
+    color: var(--primary-color);
+    font-size: 15px;
+    margin-left: 5rem;
+    margin-top: 8rem;
+}
+
+/*END OF MOBILE FIRST*/
+
+/*DESKTOP FIRST*/
+@media only screen and (min-width: 920px) {
+
+    .signup-title {
+        text-align: center;
+        background-color: transparent;
+        color: var(--primary-color);
+        font-size: 40px;
+    }
+
+    .firstname {
+        color: var(--primary-color);
+    }
+
+    .lastname {
+        color: var(--primary-color);
+        margin-left: 8em;
+    }
+
+    .date {
+        text-align: center;
+        color: var(--primary-color);
+    }
+
+    .email {
+        text-align: center;
+        color: var(--primary-color);
+    }
+
+    .password {
+        text-align: center;
+        color: var(--primary-color);
+    }
+
+    .birthday {
+        text-align: center;
+        color: var(--primary-color);
+    }
+
+    .name {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around
+    }
+
+    .input-name {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+
+    input[type=date], input[type=email], input[type=password] {
+        width: 30rem;
+        padding: 12px 20px;
+        border: 1px solid #ccc;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input[type=text] {
+        width: 15rem;
+        padding: 12px 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input[type=submit] {
+        background-color: var(--btn-color);
+        color: var(--primary-color);
+        font-size: 15px;
+        padding: 14px 20px;
+        margin: 15px 0;
+        border: none;
+        cursor: pointer;
+        width: 10rem;
+        border-radius: 11px;
+        border: solid black 0.5px;
+        box-shadow: 2px 2px 4px black ;
+    }
+
+    input[type=submit]:hover {
+        background-color: var(--background-color);
+        color: var(--btn-color);
+        border: 1px solid var(--btn-color);
+    }
+
+    .show-password {
+        color: var(--primary-color);
+        font-size: 15px;
+        margin: 1rem;
+        text-shadow: black 2px 2px;
+    }
+}

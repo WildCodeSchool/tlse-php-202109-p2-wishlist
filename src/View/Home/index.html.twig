@@ -1,17 +1,37 @@
 {% extends 'layout.html.twig' %}
 
-{% block stylesheet %}
-
-<link rel="stylesheet" href="/assets/css/navbar.css" />
-
+{% block navbar %}
+    {% include "Components/_navbar.html.twig" %}
 {% endblock %}
 
-{% block navbar %}
-
-{% include "Components/_navbar.html.twig" %}
-
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
 {% endblock %}
 
 {% block content %}
-
+<h1>Give me Gift !</h1>
+<body> 
+    <div class="container-card">
+        <div class= "container-card">
+            <img class ="image-card" src="/assets/images/pexels-anthony.jpg">
+            <h3>How it works !?<h3>
+            <p>Tired of useless gifts ? Your friends are useless when it comes the time to satistify you? Help them to please you with Gift Me 5!</p>
+        </div>
+        <div class= "container-sign_up">
+            <img class="image-card" src="/assets/images/pexels-karolina2.jpg">
+            <h3>Gift Me 5<h3>
+            <div class="container-para">
+                <p>You can create your own gift lists and share it with your relatives. Gifters can browse your list and gift you whatever they want.
+                    <br>Here is a video explaining the process.</br>
+                </p>
+            </div>
+            <input type="submit" value="Sign up for free !"/>
+        </div>
+        <div class= "container-youtube">
+            <img class="image-card" src="/assets/images/pexels-szabo.jpg">
+            <h3>Youtube<h3>
+        </div>
+    </div>
+</body>
 {% endblock %}

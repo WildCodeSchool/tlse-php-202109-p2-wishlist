@@ -29,4 +29,13 @@ class ListController extends AbstractController
     {
         return $this->twig->render('List/share.html.twig');
     }
+
+    public function add(): string
+    {
+        return $this->twig->render('List/add_list.html.twig');
+    }
+    public function user(): string
+    {
+        return $this->twig->render('List/profile.html.twig');
+    }
 }

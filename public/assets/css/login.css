@@ -1,4 +1,5 @@
-.login-background {
+
+.main-background {
     background-image: url("/assets/images/login_bg.jpg");
 }
 
@@ -45,11 +46,15 @@ input[type=submit] {
     color: white;
     font-size: 15px;
     padding: 14px 20px;
+
     border: none;
     cursor: pointer;
     margin: 1rem 5rem 1rem 5rem;
+
     width: 15rem;
     border-radius: 11px;
+    border: solid black 0.5px;
+    box-shadow: 2px 2px 4px black ;
 }
 
 input[type=submit]:hover {
@@ -69,19 +74,22 @@ input[type=submit]:hover {
 }
 
 .noaccount-href {
+
     color: var(--primary-color);
     text-decoration: none;
     font-size: 16px;
 }
 
 .show-password {
+
     color: var(--background-color);
     font-size: 15px;
 }
 /*END OF MOBILE FIRST*/
 
 /*DESKTOP FIRST*/
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 920px) {
+
 
     .login-title {
         text-align: center;
@@ -92,10 +100,10 @@ input[type=submit]:hover {
 
     .form {
         display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        margin: auto;
-        width:100%;
+        flex-direction: column;
+        align-items: center;
+        width: 20rem;
+
     }
 
     .user {
@@ -116,17 +124,19 @@ input[type=submit]:hover {
         border-radius: 11px;
         text-align: center;
     }
-    
+
     input[type=submit] {
         background-color: var(--btn-color);
         color: var(--primary-color);
-        font-size: 15px;
+        font-size: 20px;
         padding: 14px 20px;
-        margin: 5vh 0;
+        margin: 1rem 0;
         border: none;
         cursor: pointer;
-        width: 30vh;
+        width: 10rem;
         border-radius: 11px;
+        box-shadow: 2px 2px 4px black ;
+        border: solid black 0.5px;
     }
 
     input[type=submit]:hover {
@@ -141,6 +151,7 @@ input[type=submit]:hover {
     }
     
     .noaccount-href {
+
         color: var(--primary-color);
         text-decoration: none;
         font-size: 16px;
@@ -149,6 +160,8 @@ input[type=submit]:hover {
     .show-password {
         color: var(--background-color);
         font-size: 15px;
+        margin-top: 1rem;
         text-shadow: black 2px 2px;
     }
 }
+

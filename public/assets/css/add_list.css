@@ -1,0 +1,213 @@
+.main-background {
+    background-image: url("/assets/images/add_list.jpg");
+}
+
+/*MOBILE FIRST*/
+
+.add_list-title {
+    background-color: var(--background-color);
+    border-radius: 11px;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 1rem 0 1rem;
+}
+
+.name {
+    color: var(--primary-color);
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.description {
+    color: var(--primary-color);
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.date {
+    color: var(--primary-color);
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.event {
+    color: var(--primary-color);
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.form-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+    width: 100%;
+    margin: 0 1rem 1rem 1rem;
+}
+
+input[type=date] {
+    padding: 8px 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    align-content: center;
+    border-radius: 11px;
+    width: 21rem;
+}
+
+input[type=text] {
+    padding: 8px 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 11px;
+    width: 21rem;
+}
+
+.choose_event {
+    padding: 8px 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 11px;
+    margin-left: 4rem;
+}
+
+input[type=text].description {
+    width: 9rem;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 11px;
+    width: 21rem;
+    height: 6rem;
+}
+
+input[type=submit] {
+    background-color: var(--btn-color);
+    color: var(--primary-color);
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 10rem;
+    border-radius: 11px;
+    margin-top: 1rem;
+    margin-left: 7rem;
+    border: solid black 0.5px;
+    box-shadow: 2px 2px 4px black;
+}
+
+input[type=submit]:hover {
+    background-color: var(--background-color);
+    color: var(--btn-color);
+    border: 1px solid var(--btn-color);
+}
+
+/*END OF MOBILE FIRST*/
+
+/*DESKTOP FIRST*/
+@media only screen and (min-width: 920px) {
+
+    .add_list-title {
+        background-color: transparent;
+        color: var(--primary-color);
+        text-align: center;
+        margin: 1rem 1rem 0 1rem;
+        font-size: 40px;
+    }
+    
+    .name {
+        color: var(--primary-color);
+        text-align: center;
+        margin-right: 1rem;
+    }
+    
+    .description {
+        color: var(--primary-color);
+        text-align: center;
+        margin-right: 1rem;
+    }
+    
+    .date {
+        color: var(--primary-color);
+        text-align: center;
+        margin-right: 1rem;
+    }
+    
+    .event {
+        color: var(--primary-color);
+        text-align: center;
+        margin-right: 1rem;
+    }
+    
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    input[type=date] {
+        padding: 8px 20px;
+        border: 1px solid #ccc;
+        text-align: center;
+        align-content: center;
+        border-radius: 11px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20rem;
+    }
+    
+    input[type=text] {
+        padding: 8px 20px;
+        border: 1px solid #ccc;
+        text-align: center;
+        align-content: center;
+        border-radius: 11px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20rem;
+    }
+    
+    .choose_event {
+        padding: 8px 20px;
+        border: 1px solid #ccc;
+        text-align: center;
+        border-radius: 11px;
+        margin-left: 4rem;
+        width: 20rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .description_area {
+        padding: 8px 20px;
+        border: 1px solid #ccc;
+        text-align: center;
+        border-radius: 11px;
+        width: 30rem;
+        height: 8rem;
+        margin-left: auto;
+        margin-right: auto;
+        color: var(--font-color);
+    }
+    
+    input[type=submit] {
+        background-color: var(--btn-color);
+        color: var(--primary-color);
+        font-size: 15px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        width: 10rem;
+        border-radius: 11px;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        border: solid black 0.5px;
+        box-shadow: 2px 2px 4px black;
+    }
+    
+    input[type=submit]:hover {
+        background-color: var(--background-color);
+        color: var(--btn-color);
+        border: 1px solid var(--btn-color);
+    }
+}    

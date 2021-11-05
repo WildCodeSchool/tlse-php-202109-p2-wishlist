@@ -1,5 +1,38 @@
 {% extends 'layout.html.twig' %}
 
-{% block content %}
-    <h1>Je suis dans signup</h1>
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/signup.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
 {% endblock %}
+
+{% block navbar %}
+
+{% include "Components/_navbar.html.twig" %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="main-background"></div>
+        <div class="signup-container">
+        <h3 class="signup-title">Inscription à Give Me Gifts</h3>
+        <div class="form-container">
+            <form class="form" action="" method="POST">
+                <div class="name"><label for="firstname"><p class="firstname">Nom</p></label>
+                <label for="lastname"><p class="lastname">Prénom</p></label></div>
+                <div class="input-name">
+                <input type="text" id="firstname" placeholder="Entrer votre nom" name="firstname" required>
+                <input type="text" id="lastname" placeholder="Entrer votre prénom" name="lastname" required></div>
+                <label for="birthday"><p class="birthday">Date de Naissance</p></label>
+                <input type="date" id="birthday" placeholder="Entrer votre date de naissance" name="birthday" required>
+                <label for="email"><p class="email">Email</p></label>
+                <input type="email" id="email" placeholder="Entrer votre email" name="email" required>
+                <label for="password"><p class="password">Mot de passe</p></label>
+                <input type="password" id="password" placeholder="Entrer le mot de passe" name="password" required>
+                <label class="show-password" for="checkbox"><input type="checkbox" id="checkbox">Afficher le mot de passe</label>
+                <input type="submit" id='submit' value='Créer le compte' > 
+            </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/show_password.js"></script>
+{% endblock %}
+
