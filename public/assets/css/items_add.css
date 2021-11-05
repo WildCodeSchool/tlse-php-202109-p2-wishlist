@@ -4,11 +4,10 @@
     position: fixed;
 }
 
+
 /*MOBILE FIRST*/
 
 .list-share-container {
-    z-index: 1;
-    height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 5rem 1fr 1fr auto 1fr auto 2rem;
@@ -120,6 +119,15 @@ div.article {
     padding: 0 0 0.2rem 0;
 }
 
+div.article div a {
+    background: #007EA7;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 4rem;
+    text-align: center;
+}
+
 .seeMore-button>p {
     font-size: 1rem;
     text-align: center;
@@ -148,7 +156,47 @@ div.article {
     font-weight: bold;
 }
 
+.add-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+#giftName {
+    width: 20rem;
+    height: 1.5rem;
+    border-radius: 11px;
+}
+
+#price {
+    width: 20rem;
+    height: 1.5rem;
+    border-radius: 11px;
+}
+
+#imgLink {
+    width: 20rem;
+    height: 1.5rem;
+    border-radius: 11px;
+}
+
+#giftLink {
+    width: 20rem;
+    height: 1.5rem;
+    border-radius: 11px;
+}
+
+#description {
+    width: 20rem;
+    height: 1.5rem;
+    border-radius: 11px;
+}
+
+
 /*END OF MOBILE FIRST*/
+
 
 /*DESKTOP FIRST*/
 
