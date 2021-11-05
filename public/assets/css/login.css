@@ -1,7 +1,9 @@
-
 .main-background {
     background-image: url("/assets/images/login_bg.jpg");
+    position: absolute;
+    z-index: -1;
 }
+
 
 /*MOBILE FIRST*/
 
@@ -31,7 +33,8 @@
     color: var(--primary-color);
 }
 
-input[type=text], input[type=password] {
+input[type=text],
+input[type=password] {
     width: 100%;
     padding: 12px 20px;
     border: 1px solid #ccc;
@@ -46,15 +49,13 @@ input[type=submit] {
     color: white;
     font-size: 15px;
     padding: 14px 20px;
-
     border: none;
     cursor: pointer;
     margin: 1rem 5rem 1rem 5rem;
-
     width: 15rem;
     border-radius: 11px;
     border: solid black 0.5px;
-    box-shadow: 2px 2px 4px black ;
+    box-shadow: 2px 2px 4px black;
 }
 
 input[type=submit]:hover {
@@ -69,54 +70,50 @@ input[type=submit]:hover {
     margin: auto;
     border-radius: 11px;
     border: solid black 0.5px;
-    box-shadow: 2px 2px 4px black ;
+    box-shadow: 2px 2px 4px black;
     text-align: center;
 }
 
 .noaccount-href {
-
     color: var(--primary-color);
     text-decoration: none;
     font-size: 16px;
 }
 
 .show-password {
-
     color: var(--background-color);
     font-size: 15px;
 }
+
+
 /*END OF MOBILE FIRST*/
 
+
 /*DESKTOP FIRST*/
+
 @media only screen and (min-width: 920px) {
-
-
     .login-title {
         text-align: center;
         background-color: transparent;
         color: var(--primary-color);
         font-size: 40px;
     }
-
     .form {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 20rem;
-
     }
-
     .user {
         text-align: center;
         color: var(--primary-color);
     }
-
     .password {
         text-align: center;
         color: var(--primary-color);
     }
-
-    input[type=text], input[type=password] {
+    input[type=text],
+    input[type=password] {
         width: 100%;
         padding: 12px 20px;
         border: 1px solid #ccc;
@@ -124,7 +121,6 @@ input[type=submit]:hover {
         border-radius: 11px;
         text-align: center;
     }
-
     input[type=submit] {
         background-color: var(--btn-color);
         color: var(--primary-color);
@@ -135,28 +131,23 @@ input[type=submit]:hover {
         cursor: pointer;
         width: 10rem;
         border-radius: 11px;
-        box-shadow: 2px 2px 4px black ;
+        box-shadow: 2px 2px 4px black;
         border: solid black 0.5px;
     }
-
     input[type=submit]:hover {
         background-color: white;
         color: var(--btn-color);
         border: 1px solid var(--btn-color);
     }
-
     .noaccount {
         display: flex;
         justify-content: center;
     }
-    
     .noaccount-href {
-
         color: var(--primary-color);
         text-decoration: none;
         font-size: 16px;
     }
-
     .show-password {
         color: var(--background-color);
         font-size: 15px;
@@ -164,4 +155,3 @@ input[type=submit]:hover {
         text-shadow: black 2px 2px;
     }
 }
-
