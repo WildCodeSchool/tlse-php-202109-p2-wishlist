@@ -57,7 +57,7 @@ h3 {
 }
 
 .image-card {
-    height: 40%;
+    height: 15rem;
     width: 100%;
     border-top-left-radius: 11px;
     border-top-right-radius: 11px;
@@ -87,9 +87,9 @@ h3 {
         display: flex;
         flex-direction: row;
     }
-}
-.main-background {
-    background-image: url("/assets/images/pexels-lucie.jpg");
-    background-size: cover;
-    position: fixed;
+    .main-background {
+        background-image: url("/assets/images/pexels-lucie.jpg");
+        background-size: cover;
+        position: fixed;
+    }
 }
