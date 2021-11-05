@@ -87,6 +87,7 @@ p {
         flex-direction: row;
     }
 }
+
 @media screen and (max-width:600px) {
     .titre {
         background-color:var( --background-color);
