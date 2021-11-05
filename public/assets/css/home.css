@@ -5,9 +5,10 @@
     gap: 20px;
 }
 
-body {
-    background-image: url("../images/pexels-lucie.jpg");
-    background-size: 1300px;
+.main-background {
+    background-image: url("/assets/images/pexels-lucie2.jpg");
+    background-size: cover;
+    position: fixed;
 }
 
 h3 {
@@ -31,7 +32,7 @@ h3 {
     color: var(--primary-color);
 }
 
-p {
+.paragraphe {
     margin: 0;
     padding: 1rem;
     font-size: 1rem;
@@ -87,10 +88,8 @@ p {
         flex-direction: row;
     }
 }
-
-@media screen and (max-width:600px) {
-    .titre {
-        background-color:var( --background-color);
-        color: black;
-    }
+.main-background {
+    background-image: url("/assets/images/pexels-lucie.jpg");
+    background-size: cover;
+    position: fixed;
 }
