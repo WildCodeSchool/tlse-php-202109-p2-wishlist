@@ -37,11 +37,32 @@ class UserManager extends AbstractManager
         return (int)$this->pdo->lastInsertId();
     }
 
+    public function updateUserSession(array $sessionInfos)
+    {
+        $query = "UPDATE " . self::TABLE . " SET 
+            `session` = :session_id,
+             WHERE `id` = :user_id";
+        $statement = $this->pdo->prepare($query);
+        $statement->bindValue(":session_id", $sessionInfos["session_id"], \PDO::PARAM_STR);
+        $statement->bindValue(":user_id", intval($sessionInfos["user_id"]), \PDO::PARAM_INT);
+    }
+
     public function selectUserBySessionId($sessionId)
     {
-        $query = "SELECT *  FROM " . static::TABLE . " WHERE `session` = :session_id";
+        $query = "SELECT id, firstname, lastname, birthday FROM " . static::TABLE . " WHERE `session` = :session_id";
         $statement = $this->pdo->prepare($query);
         $statement->bindValue(":session_id", $sessionId);
+        $statement->execute();
+        return $statement->fetch();
+    }
+
+    public function checkUser($userInfos)
+    {
+        $query = "SELECT id, firstname, lastname, birthday FROM " . static::TABLE . " 
+        WHERE `email` = :email AND `password` = :password";
+        $statement = $this->pdo->prepare($query);
+        $statement->bindValue(":email", $userInfos['email'], \PDO::PARAM_STR);
+        $statement->bindValue(":password", $userInfos['password'], \PDO::PARAM_STR);
         $statement->execute();
         return $statement->fetch();
     }
