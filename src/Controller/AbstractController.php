@@ -31,7 +31,7 @@ abstract class AbstractController
      * add it at the beginning of each page
      * @return mixed
      */
-    protected static function isConnected()
+    public static function isConnected()
     {
         session_start();
         $sessionId = session_id();
