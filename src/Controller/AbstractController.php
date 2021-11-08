@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Model\UserManager;
 use Twig\Environment;
 use Twig\Extension\DebugExtension;
 use Twig\Loader\FilesystemLoader;
@@ -24,5 +25,17 @@ abstract class AbstractController
             ]
         );
         $this->twig->addExtension(new DebugExtension());
+    }
+
+    /**
+     * add it at the beginning of each page
+     * @return mixed
+     */
+    public static function isConnected()
+    {
+        session_start();
+        $sessionId = session_id();
+        $userSession = new UserManager();
+        $_SESSION["user"] = $userSession->selectUserBySessionId($sessionId);
     }
 }
