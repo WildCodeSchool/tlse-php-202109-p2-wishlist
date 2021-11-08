@@ -46,6 +46,10 @@ class LogInController extends AbstractController
                     $_SESSION["user"] = $user;
                     $_SESSION['session_id'] = $sessionId;
                     header("Location: /list");
+                } else {
+                    return $this->twig->render('Login/index.html.twig', [
+                        'errorUser' => "Cet utilisateur n'existe pas",
+                    ]);
                 }
             }
         }

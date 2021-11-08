@@ -2,12 +2,17 @@
 
 namespace App\Controller;
 
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
+
 class LogOutController extends AbstractController
 {
     /**
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
-     * @throws \Twig\Error\LoaderError
+     * Destroy session
+     * @throws RuntimeError
+     * @throws SyntaxError
+     * @throws LoaderError
      */
     public function index()
     {
