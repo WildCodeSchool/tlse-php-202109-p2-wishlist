@@ -18,7 +18,7 @@ class LogInController extends AbstractController
     public function index(): string
     {
         session_start();
-        if ($_SESSION['user'] && $_SESSION['session_id']) {
+        if (isset($_SESSION['user']) && isset($_SESSION['session_id'])) {
             header('Location: /');
         }
         if ($_SERVER['REQUEST_METHOD'] === "POST") {
@@ -40,7 +40,6 @@ class LogInController extends AbstractController
                 $newUser = new UserManager();
                 $user = $newUser->checkUser($userInfos);
                 if ($user) {
-                    session_start();
                     $sessionId = session_id();
                     $sessionInfos = ['user_id' => $user["id"], 'session_id' => $sessionId];
                     $newUser->updateUserSession($sessionInfos);

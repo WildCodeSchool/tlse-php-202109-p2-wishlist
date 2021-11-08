@@ -2,16 +2,17 @@
 
 namespace App\Controller;
 
-class SignUpController extends AbstractController
+class LogOutController extends AbstractController
 {
     /**
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      * @throws \Twig\Error\LoaderError
      */
-    public function index(): string
+    public function index()
     {
         session_start();
-        return $this->twig->render('Signup/index.html.twig');
+        session_destroy();
+        header('Location: /login');
     }
 }
