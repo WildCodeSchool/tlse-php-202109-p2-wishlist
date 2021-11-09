@@ -1,15 +1,13 @@
 .main-background {
-    background-image: url("/assets/images/list_share_bg_mobile.jpg");
+    background-image: url("/assets/images/add_list.jpg");
     background-size: cover;
+    position: fixed;
 }
 
 
 /*MOBILE FIRST*/
 
 .list-share-container {
-    position: relative;
-    z-index: 1;
-    height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 5rem 1fr 1fr auto 1fr auto 2rem;
@@ -70,7 +68,7 @@
     grid-template-rows: 1fr 2fr 1fr 1fr;
     grid-template-areas: "articlePicture articleTitle articlePrice" "articlePicture articleDescription articleDescription" "articlePicture seeMore seeMore" "giftButton giftButton giftButton";
     width: 100%;
-    height: max-content;
+    height: 14rem;
     border-radius: 10px;
     margin: 0 1rem 2rem 1rem;
     background-color: var(--color-2);
@@ -121,6 +119,15 @@ div.article {
     padding: 0 0 0.2rem 0;
 }
 
+div.article div a {
+    background: #007EA7;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 4rem;
+    text-align: center;
+}
+
 .seeMore-button>p {
     font-size: 1rem;
     text-align: center;
@@ -133,10 +140,10 @@ div.article {
     color: var(--color-2);
 }
 
-.gift-button {
+.delete-button {
     grid-area: giftButton;
     margin: 0;
-    background-color: var(--event-color-4);
+    background-color: var(--event-color-1);
     width: 100%;
     text-align: center;
     border-bottom-left-radius: 10px;
@@ -149,6 +156,44 @@ div.article {
     font-weight: bold;
 }
 
+.add-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+#giftName {
+    width: 20rem;
+    height: 1.5rem;
+    border-radius: 11px;
+}
+
+#price {
+    width: 20rem;
+    height: 1.5rem;
+    border-radius: 11px;
+}
+
+#imgLink {
+    width: 20rem;
+    height: 1.5rem;
+    border-radius: 11px;
+}
+
+#giftLink {
+    width: 20rem;
+    height: 1.5rem;
+    border-radius: 11px;
+}
+
+#description {
+    width: 20rem;
+    height: 1.5rem;
+    border-radius: 11px;
+}
+
 
 /*END OF MOBILE FIRST*/
 
@@ -157,12 +202,11 @@ div.article {
 
 @media only screen and (min-width: 900px) {
     .main-background {
-        background-image: url("/assets/images/list_share_bg.jpg");
+        background-image: url("/assets/images/add_list.jpg");
         background-size: cover;
         position: fixed
     }
     .list-share-container {
-        position: relative;
         z-index: 1;
         height: 100vh;
         display: grid;
@@ -218,8 +262,8 @@ div.article {
         grid-template-columns: 1.5fr 1.5fr 0.5fr;
         grid-template-rows: 1fr 2fr 1fr 1fr;
         grid-template-areas: "articlePicture articleTitle articlePrice" "articlePicture articleDescription articleDescription" "articlePicture seeMore seeMore" "giftButton giftButton giftButton";
-        width: 30%;
-        height: max-content;
+        width: 18rem;
+        height: 15rem;
         border-radius: 10px;
         margin-bottom: 2rem;
         background-color: var(--color-2);
