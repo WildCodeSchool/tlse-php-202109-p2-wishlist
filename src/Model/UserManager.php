@@ -58,11 +58,28 @@ class UserManager extends AbstractManager
 
     public function checkUser($userInfos)
     {
+        $passwordHash = $this->getPasswordHash($userInfos['email']);
+        if (!$passwordHash) {
+            return ['errorEmail' => "Aucun compte n'est associé à cette adresse email."];
+        } else {
+            $isRightPassword = password_verify($userInfos['password'], $passwordHash['password']);
+        }
+        if (!$isRightPassword) {
+            return ['errorPassword' => "Le mot de passe est incorrect."];
+        }
         $query = "SELECT id, firstname, lastname, birthday FROM " . static::TABLE . " 
-        WHERE `email` = :email AND `password` = :password";
+        WHERE `email` = :email";
         $statement = $this->pdo->prepare($query);
         $statement->bindValue(":email", $userInfos['email'], \PDO::PARAM_STR);
-        $statement->bindValue(":password", $userInfos['password'], \PDO::PARAM_STR);
+        $statement->execute();
+        return $statement->fetch();
+    }
+
+    public function getPasswordHash(string $email)
+    {
+        $query = "SELECT password FROM " . static::TABLE . " WHERE `email` = :email";
+        $statement = $this->pdo->prepare($query);
+        $statement->bindValue(":email", $email, \PDO::PARAM_STR);
         $statement->execute();
         return $statement->fetch();
     }

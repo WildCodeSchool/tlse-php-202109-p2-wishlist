@@ -39,13 +39,24 @@ class LogInController extends AbstractController
                 ];
                 $newUser = new UserManager();
                 $user = $newUser->checkUser($userInfos);
-                if ($user) {
+                if (count($user) > 1) {
                     $sessionId = session_id();
-                    $sessionInfos = ['user_id' => $user["id"], 'session_id' => $sessionId];
+                    $sessionInfos = [
+                        'user_id' => $user["id"],
+                        'session_id' => $sessionId
+                    ];
                     $newUser->updateUserSession($sessionInfos);
                     $_SESSION["user"] = $user;
                     $_SESSION['session_id'] = $sessionId;
                     header("Location: /list");
+                } elseif (isset($user['errorEmail'])) {
+                    return $this->twig->render('Login/index.html.twig', [
+                        'errorEmail' => $user['errorEmail'],
+                    ]);
+                } elseif (isset($user['errorPassword'])) {
+                    return $this->twig->render('Login/index.html.twig', [
+                        'errorPassword' => $user['errorPassword'],
+                    ]);
                 } else {
                     return $this->twig->render('Login/index.html.twig', [
                         'errorUser' => "Cet utilisateur n'existe pas",

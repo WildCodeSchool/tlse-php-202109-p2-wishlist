@@ -1,2 +1,0 @@
-INSERT INTO `giftmefive`.`list` (`id`, `name`, `share_link`, `description`, `limit_date`, `creation_date`, `user_id`, `event_id`) VALUES ('3', '\"My Birthday list\"', '90825', '\"Hey! vous pouvez trouver ci-dessous ce qui me fera plaisir pour mon anniversaire. Vous pouvez réserver tel ou tel objet. Vous y trouvererez également un lien vers  un site marchand si vous ne savez pas où le trouver\"', '2021-07-31', '2021-10-29', '1', '2');
-
