@@ -11,6 +11,7 @@ class SignUpController extends AbstractController
      */
     public function index(): string
     {
+        session_start();
         return $this->twig->render('Signup/index.html.twig');
     }
 }

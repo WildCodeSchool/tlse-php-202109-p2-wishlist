@@ -18,5 +18,6 @@ return [
     'list/add' => ['ListController', 'add',],
     'signup' => ['SignUpController', 'index',],
     'login' => ['LogInController', 'index',],
+    'logout' => ['LogOutController', 'index',],
     'user' => ['ListController', 'user',],
 ];
