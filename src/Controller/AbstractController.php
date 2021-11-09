@@ -26,16 +26,4 @@ abstract class AbstractController
         );
         $this->twig->addExtension(new DebugExtension());
     }
-
-    /**
-     * add it at the beginning of each page
-     * @return mixed
-     */
-    public static function isConnected()
-    {
-        session_start();
-        $sessionId = session_id();
-        $userSession = new UserManager();
-        $_SESSION["user"] = $userSession->selectUserBySessionId($sessionId);
-    }
 }

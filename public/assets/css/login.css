@@ -110,7 +110,7 @@ input[type=submit]:hover {
         align-items: center;
         width: 20rem;
     }
-    .user {
+    .email {
         text-align: center;
         color: var(--primary-color);
     }

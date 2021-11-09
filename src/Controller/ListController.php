@@ -16,6 +16,7 @@ class ListController extends AbstractController
      */
     public function index(): string
     {
+        session_start();
         return $this->twig->render('List/index.html.twig');
     }
 
@@ -27,15 +28,18 @@ class ListController extends AbstractController
      */
     public function share(): string
     {
+        session_start();
         return $this->twig->render('List/share.html.twig');
     }
 
     public function add(): string
     {
+        session_start();
         return $this->twig->render('List/add_list.html.twig');
     }
     public function user(): string
     {
+        session_start();
         return $this->twig->render('List/profile.html.twig');
     }
 }
