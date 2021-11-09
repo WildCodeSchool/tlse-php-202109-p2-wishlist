@@ -5,11 +5,12 @@
 /*MOBILE FIRST*/
 
 .add_list-title {
-    background-color: var(--background-color);
+    background-color: transparent;
     border-radius: 11px;
     text-align: center;
     padding: 1rem;
     margin: 1rem 1rem 0 1rem;
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
 .name {
@@ -111,6 +112,7 @@ input[type=submit]:hover {
         text-align: center;
         margin: 1rem 1rem 0 1rem;
         font-size: 40px;
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
     }
     
     .name {
