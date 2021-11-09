@@ -28,12 +28,12 @@ class ListModel extends AbstractManager
 
     public function showByLinkShare(int $linkShare)
     {
-        $query = "SELECT * FROM " . static::TABLE . " WHERE share_link = :share_link";
+        $query = "SELECT * FROM article JOIN list ON list.id = article.list_id WHERE list.share_link = :share_link";
         $statement = $this->pdo->prepare($query);
         $statement->bindValue('share_link', $linkShare, \PDO::PARAM_INT);
         $statement->execute();
 
-        return $statement->fetch();
+        return $statement->fetchAll();
     }
 
     /**
