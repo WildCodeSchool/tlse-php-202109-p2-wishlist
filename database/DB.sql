@@ -103,7 +103,7 @@ CREATE TABLE `list` (
 
 LOCK TABLES `list` WRITE;
 /*!40000 ALTER TABLE `list` DISABLE KEYS */;
-INSERT INTO `list` VALUES (1,'\"My Birthday list\"',90825,'\"Hey! vous pouvez trouver ci-dessous ce qui me fera plaisir pour mon anniversaire. Vous pouvez réserver tel ou tel objet. Vous y trouvererez également un lien vers  un site marchand si vous ne savez pas où le trouver\"','2021-07-31','2021-10-29',1,2);
+INSERT INTO `list` VALUES (1,'Ma liste d\'anniversaire',90825,'Hey! vous pouvez trouver ci-dessous ce qui me fera plaisir pour mon anniversaire. Vous pouvez réserver tel ou tel objet. Vous y trouvererez également un lien vers  un site marchand si vous ne savez pas où le trouver','2021-07-31','2021-10-29',1,2);
 /*!40000 ALTER TABLE `list` ENABLE KEYS */;
 UNLOCK TABLES;
 
