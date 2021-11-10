@@ -53,4 +53,32 @@ class ListModel extends AbstractManager
         }
         return intval($strNumber);
     }
+
+    public function showListsByUserId(int $userId)
+    {
+        $queryList = "SELECT l.id AS lid
+                FROM list l 
+                JOIN user u ON u.id = l.user_id
+                WHERE u.id = :user_id";
+        $statement = $this->pdo->prepare($queryList);
+        $statement->bindValue('user_id', $userId, \PDO::PARAM_INT);
+        $statement->execute();
+        $listsId = $statement->fetchAll();
+
+        $lists = [];
+        foreach ($listsId as $list) {
+            $query = "SELECT l.id AS lid, a.name AS aname, a.is_gifted, u.id, u.lastname, u.firstname, u.birthday, 
+                l.name AS lname, e.name AS ename, l.description AS ldescription, l.limit_date
+                FROM user u
+                JOIN list l ON u.id = l.user_id
+                JOIN event e ON e.id = l.event_id
+                JOIN article a ON l.id = a.list_id
+                WHERE l.id = :list_id";
+            $statement = $this->pdo->prepare($query);
+            $statement->bindValue('list_id', intval($list['lid']), \PDO::PARAM_INT);
+            $statement->execute();
+            $lists[] = $statement->fetchAll();
+        }
+        return $lists;
+    }
 }
