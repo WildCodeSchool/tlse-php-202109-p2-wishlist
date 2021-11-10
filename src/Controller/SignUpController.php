@@ -9,7 +9,6 @@ class SignUpController extends AbstractController
 
     public function index(): string
     {
-        session_start();
         $userConnection = new UserManager();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $errors = $userConnection->errorsInForm($_POST);
