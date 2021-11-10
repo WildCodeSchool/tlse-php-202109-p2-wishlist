@@ -11,11 +11,13 @@ abstract class AbstractController
 {
     protected Environment $twig;
 
+
     /**
      *  Initializes this class.
      */
     public function __construct()
     {
+
         $loader = new FilesystemLoader(APP_VIEW_PATH);
         $this->twig = new Environment(
             $loader,
