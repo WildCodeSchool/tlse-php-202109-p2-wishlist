@@ -1,15 +1,20 @@
 .main-background {
     background-image: url("/assets/images/add_list.jpg");
+    background-size: cover;
+    position: fixed;
 }
 
 /*MOBILE FIRST*/
 
 .add_list-title {
-    background-color: var(--background-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
     border-radius: 11px;
     text-align: center;
     padding: 1rem;
     margin: 1rem 1rem 0 1rem;
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
 .name {
@@ -69,14 +74,16 @@ input[type=text] {
     margin-left: 4rem;
 }
 
-input[type=text].description {
-    width: 9rem;
-    padding: 12px 20px;
+.description_area {
+    padding: 8px 20px;
     border: 1px solid #ccc;
     text-align: center;
     border-radius: 11px;
     width: 21rem;
-    height: 6rem;
+    height: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--font-color);
 }
 
 input[type=submit] {
@@ -111,6 +118,7 @@ input[type=submit]:hover {
         text-align: center;
         margin: 1rem 1rem 0 1rem;
         font-size: 40px;
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
     }
     
     .name {
