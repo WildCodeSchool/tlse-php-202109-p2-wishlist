@@ -46,6 +46,12 @@ class ListController extends AbstractController
     public function add(): string
     {
         session_start();
+        $createList = new ListModel();
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $_POST["user_id"] = $_SESSION["user"]["id"];
+            $createList->createList($_POST);
+            return $this->twig->render('List/profile.html.twig');
+        }
         return $this->twig->render('List/add_list.html.twig');
     }
 

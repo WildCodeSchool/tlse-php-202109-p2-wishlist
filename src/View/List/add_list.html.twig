@@ -16,19 +16,20 @@
         <div class="add_list-container">
         <h3 class="add_list-title">Création de votre liste</h3>
         <div class="form-container">
-            <form class="form" action="/items/add" method="POST">
+            <form class="form" action="" method="POST">
                 <label for="name"><p class="name">Nom de la liste</p></label>
                 <input type="text" id="name" placeholder="Entrez le nom de la liste" name="name" required>
-                <label for="date"><p class="date">Date de l'évenement</p></label>
-                <input type="date" id="date" name="date" required>
-                <label for="event"><p class="event">Evenement</p></label>
-                <select name="event" id="event" class="choose_event" required >
+                <label for="limit_date"><p class="date">Date de l'évenement</p></label>
+                <input type="date" id="limit_date" name="limit_date" required>
+                <label for="event_id"><p class="event">Evenement</p></label>
+                <select name="event_id" id="event_id" class="choose_event" required >
                     <option value="">-- Merci de choisir un évenement --</option>
-                    <option value="mariage">Mariage</option>
-                    <option value="naissance">Naissance</option>
-                    <option value="frc">Fête Religieuse Commerciale</option>
-                    <option value="anniversaire">Anniversaire</option>
-                    <option value="autre">Autre</option>
+                    <option value="1">Mariage</option>
+                    <option value="3">Crémaillère</option>
+                    <option value="5">Fête Prénatale</option>
+                    <option value="4">Fête Religieuse</option>
+                    <option value="2">Anniversaire</option>
+                    <option value="6">Autre</option>
                 </select>
                 <label for="description"><p class="description">Description</p></label>
                 <textarea class="description_area" id="description" placeholder="Indiquez des informations sur votre liste" name="description" required> </textarea>
