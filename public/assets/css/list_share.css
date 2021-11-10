@@ -1,10 +1,10 @@
+/*MOBILE FIRST*/
+
 .main-background {
     background-image: url("/assets/images/list_share_bg_mobile.jpg");
     background-size: cover;
+    position: fixed
 }
-
-
-/*MOBILE FIRST*/
 
 .list-share-container {
     position: relative;
@@ -66,19 +66,25 @@
 
 .article {
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr 0.5fr;
+    grid-template-columns: 2fr 1.5fr 0.5fr;
     grid-template-rows: 1fr 2fr 1fr 1fr;
-    grid-template-areas: "articlePicture articleTitle articlePrice" "articlePicture articleDescription articleDescription" "articlePicture seeMore seeMore" "giftButton giftButton giftButton";
+    grid-template-areas:
+            "articlePicture articleTitle articlePrice" "articlePicture articleDescription articleDescription"
+            "articlePicture seeMore seeMore" "giftButton giftButton giftButton";
     width: 100%;
-    height: max-content;
+    min-height: 15rem;
+    max-height: 15rem;
     border-radius: 10px;
     margin: 0 1rem 2rem 1rem;
-    background-color: var(--color-2);
+    background-color: var(--background-color);
+    border: 1px solid var(--border);
+    box-shadow: 5px 5px 1px 0 var(--font-color);
+
 }
 
 div.article {
     background: white;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .article-img {
@@ -91,14 +97,14 @@ div.article {
 
 .article-title {
     grid-area: articleTitle;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0;
     padding: 0.2rem 0 0 0.2rem;
 }
 
 .article-price {
     grid-area: articlePrice;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0;
     justify-self: end;
     padding: 0.2rem 0.2rem 0 0;
@@ -106,7 +112,7 @@ div.article {
 
 .article-description {
     grid-area: articleDescription;
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin: 0;
     padding: 0.2rem 0.5rem 0 0.5rem;
     height: 100%;
@@ -119,18 +125,19 @@ div.article {
     display: flex;
     justify-content: center;
     padding: 0 0 0.2rem 0;
+    text-decoration: none;
 }
 
-.seeMore-button>p {
+.seeMore-button > p {
     font-size: 1rem;
     text-align: center;
-    background-color: var(--color-4);
+    background-color: var(--btn-color);
     border-radius: 10px;
     width: 50%;
     margin: 0;
     padding: 0.2rem;
     align-self: center;
-    color: var(--color-2);
+    color: var(--primary-color);
 }
 
 .gift-button {
@@ -143,7 +150,7 @@ div.article {
     border-bottom-right-radius: 10px;
 }
 
-.gift-button>p {
+.gift-button > p {
     margin: 0;
     font-size: 1.7rem;
     font-weight: bold;
@@ -161,6 +168,7 @@ div.article {
         background-size: cover;
         position: fixed
     }
+
     .list-share-container {
         position: relative;
         z-index: 1;
@@ -171,6 +179,7 @@ div.article {
         grid-template-areas: "navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar" ". . . . listTitle listTitle listTitle listTitle . . . ." ". . . listEvent listEvent . . listDate listDate . . ." ". . . listDescription listDescription listDescription listDescription listDescription listDescription . . ." ". . . . . . . . . . . sortArticle" ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". . . . . . . . . . . .";
         justify-items: center;
     }
+
     .list-title {
         grid-area: listTitle;
         width: max-content;
@@ -179,6 +188,7 @@ div.article {
         padding: 0.5rem 2rem 0.5rem 2rem;
         text-align: center;
     }
+
     .list-event {
         grid-area: listEvent;
         width: max-content;
@@ -187,6 +197,7 @@ div.article {
         padding: 0.5rem 2rem 0.5rem 2rem;
         text-align: center;
     }
+
     .list-date {
         grid-area: listDate;
         width: max-content;
@@ -195,6 +206,7 @@ div.article {
         padding: 0.5rem 2rem 0.5rem 2rem;
         text-align: center;
     }
+
     .list-description {
         grid-area: listDescription;
         width: 100%;
@@ -203,9 +215,11 @@ div.article {
         padding: 0.5rem 2rem 0.5rem 2rem;
         text-align: center;
     }
+
     .list-sort {
         grid-area: sortArticle;
     }
+
     .article-container {
         grid-area: articleContainer;
         display: flex;
@@ -213,6 +227,7 @@ div.article {
         justify-content: space-evenly;
         min-width: 100%;
     }
+
     .article {
         display: grid;
         grid-template-columns: 1.5fr 1.5fr 0.5fr;
@@ -222,8 +237,10 @@ div.article {
         height: max-content;
         border-radius: 10px;
         margin-bottom: 2rem;
-        background-color: var(--color-2);
+        background-color: var(--background-color);
+        box-shadow: 0 0 0 0;
     }
+
     .article-img {
         grid-area: articlePicture;
         max-height: calc(100% - 0.4rem);
@@ -231,26 +248,30 @@ div.article {
         align-self: center;
         margin: 0.2rem;
     }
+
     .article-title {
         grid-area: articleTitle;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin: 0;
         padding: 0.2rem 0 0 0.2rem;
     }
+
     .article-price {
         grid-area: articlePrice;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin: 0;
         justify-self: end;
         padding: 0.2rem 0.2rem 0 0;
     }
+
     .article-description {
         grid-area: articleDescription;
-        font-size: 1.3rem;
+        font-size: 1rem;
         margin: 0;
         padding: 0.2rem 0.5rem 0 0.5rem;
         height: 100%;
     }
+
     .seeMore-button {
         grid-area: seeMore;
         margin: 0;
@@ -258,18 +279,21 @@ div.article {
         display: flex;
         justify-content: center;
         padding: 0 0 0.2rem 0;
+        text-decoration: none;
     }
-    .seeMore-button>p {
+
+    .seeMore-button > p {
         font-size: 1rem;
         text-align: center;
-        background-color: var(--color-4);
+        background-color: var(--btn-color);
         border-radius: 10px;
         width: 50%;
         margin: 0;
         padding: 0.2rem;
         align-self: center;
-        color: var(--color-2);
+        color: var(--primary-color);
     }
+
     .gift-button {
         grid-area: giftButton;
         margin: 0;
@@ -279,10 +303,12 @@ div.article {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
-    .gift-button>p {
+
+    .gift-button > p {
         margin: 0;
         font-size: 1.7rem;
         font-weight: bold;
     }
+
     /*END OF DESKTOP FIRST*/
 }
