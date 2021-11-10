@@ -15,9 +15,11 @@ return [
     'items/delete' => ['ItemController', 'delete',],
     'list' => ['ListController', 'index',],
     'list/share' => ['ListController', 'share', ['share_link']],
+    'list/user' => ['ListController', 'user',],
+    'list/user/lists' => ['ListController', 'lists',],
     'list/add' => ['ListController', 'add',],
     'signup' => ['SignUpController', 'index',],
     'login' => ['LogInController', 'index',],
     'logout' => ['LogOutController', 'index',],
-    'user' => ['ListController', 'user',],
+
 ];

@@ -24,7 +24,7 @@ class SignUpController extends AbstractController
             $sessionId = session_id();
             $_POST['session'] = $sessionId;
             $userConnection->createUser($_POST);
-            return $this->twig->render('List/profile.html.twig');
+            return $this->twig->render('List/lists.html.twig');
         }
         return $this->twig->render('Signup/index.html.twig');
     }
