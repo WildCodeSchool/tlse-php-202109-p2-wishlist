@@ -58,6 +58,22 @@ class ListController extends AbstractController
     public function user(): string
     {
         session_start();
-        return $this->twig->render('List/profile.html.twig');
+        if (isset($_SESSION['user'])) {
+            header("Location: /list/user/lists");
+        } else {
+            header("Location: /login");
+        }
+        return $this->twig->render('List/lists.html.twig');
+    }
+
+    public function lists(): string
+    {
+        session_start();
+        if (!isset($_SESSION['user'])) {
+            header("Location: /login");
+        }
+        $userLists = new ListModel();
+        $lists = $userLists->showListsByUserId(intval($_SESSION['user']['id']));
+        return $this->twig->render('List/lists.html.twig', ["lists" => $lists]);
     }
 }

@@ -19,7 +19,7 @@ class LogInController extends AbstractController
     {
         session_start();
         if (isset($_SESSION['user']) && isset($_SESSION['session_id'])) {
-            header('Location: /user');
+            header('Location: /list');
         }
         if ($_SERVER['REQUEST_METHOD'] === "POST") {
             $_POST = array_map('trim', $_POST);
