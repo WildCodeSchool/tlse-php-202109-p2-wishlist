@@ -86,7 +86,7 @@ h3 {
         height: 25rem;
     }
 
-    *{
+    * {
         overflow-y: hidden;
         overflow-x: hidden;
     }
