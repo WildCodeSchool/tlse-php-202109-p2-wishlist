@@ -12,7 +12,7 @@ class UserManager extends AbstractManager
         return $user;
     }
 
-    public function errorsForm(array $user): array
+    public function errorsInForm(array $user): array
     {
         $errors = [];
 
@@ -26,9 +26,6 @@ class UserManager extends AbstractManager
                     break;
                 case 'password':
                     $key = "mot de passe";
-                    break;
-                case 'birthday':
-                    $key = "date de naissance";
                     break;
                 case 'email':
                     $key = "email";

@@ -12,7 +12,7 @@ class SignUpController extends AbstractController
         session_start();
         $userConnection = new UserManager();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $errors = $userConnection->errorsForm($_POST);
+            $errors = $userConnection->errorsInForm($_POST);
 
             if (!empty($errors)) {
                 return $this->twig->render('Signup/index.html.twig', ['errors' => $errors]);
