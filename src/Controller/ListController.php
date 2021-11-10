@@ -53,7 +53,7 @@ class ListController extends AbstractController
     {
         session_start();
         if (isset($_SESSION['user'])) {
-            var_dump('je suis connecté');
+            header("Location: /list/user/lists");
         } else {
             header("Location: /login");
         }
