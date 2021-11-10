@@ -4,17 +4,59 @@ namespace App\Model;
 
 class UserManager extends AbstractManager
 {
+    public function cleanUser(string $user): string
+    {
+        $user = trim($user);
+        $user = stripslashes($user);
+        $user = htmlspecialchars($user);
+        return $user;
+    }
+
+    public function errorsInForm(array $user): array
+    {
+        $errors = [];
+
+        foreach ($user as $key => $data) {
+            switch ($data) {
+                case 'lastname':
+                    $key = "lastname";
+                    break;
+                case 'firstname':
+                    $key = "firstname";
+                    break;
+                case 'password':
+                    $key = "mot de passe";
+                    break;
+                case 'email':
+                    $key = "email";
+                    break;
+                default:
+                    break;
+            }
+            if (empty($data)) {
+                $errors[$key] = "Le champ $key est requis";
+            } elseif ($key === "email") {
+                if (filter_var($data, FILTER_VALIDATE_EMAIL) === false) {
+                    $errors[$key] = "Veuillez saisir une adresse mail valide";
+                }
+            }
+        }
+        return $errors;
+    }
+
     public const TABLE = 'user';
 
     public function createUser(array $user): int
     {
+        $password = $this->cleanUser($user['password']);
+        $password = password_hash($password, PASSWORD_DEFAULT);
         $query = "INSERT INTO " . self::TABLE . " (`lastname`, `firstname`, `email`, `password`, `birthday`, `session`) 
         VALUES (:lastname, :firstname, :email, :password, :birthday, :session)";
         $statement = $this->pdo->prepare($query);
         $statement->bindValue(":lastname", $user["lastname"], \PDO::PARAM_STR);
         $statement->bindValue(":firstname", $user["firstname"], \PDO::PARAM_STR);
         $statement->bindValue(":email", $user["email"], \PDO::PARAM_STR);
-        $statement->bindValue(":password", $user["password"], \PDO::PARAM_STR);
+        $statement->bindValue(":password", $password, \PDO::PARAM_STR);
         $statement->bindValue(":birthday", $user["birthday"]);
         $statement->bindValue(":session", $user["session"], \PDO::PARAM_STR);
         $statement->execute();

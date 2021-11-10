@@ -1,21 +1,35 @@
 .main-background {
     background-image: url("/assets/images/background_list_mobile.jpg");
+    background-size: cover;
+    position: fixed;
 }
 
 .noaccount {
     text-align: center;
-    background: #E5383B;
-    width: 150px;
+    background-color: var(--btn-color);
+    width: 13rem;
     margin: auto;
     border-radius: 11px;
     border: solid black 0.5px;
     box-shadow: 2px 2px 4px rgb(0, 0, 0);
+    padding: 1rem;
+}
+
+.noaccount:hover {
+    background-color: var(--background-color);
+    color: var(--btn-color);
+    border: 1px solid var(--btn-color);
 }
 
 .noaccount a {
+    color: var(--primary-color);
     text-decoration: none;
-    color: white;
-    font-size: smaller;
+    padding: 1rem;
+}
+
+.noaccount-href:hover {
+    color: var(--btn-color);
+    text-decoration: none;
 }
 
 .cards {
@@ -40,7 +54,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: snow;
+    background-color: var(--background-color);
     opacity: 0.85;
 }
 
@@ -71,19 +85,20 @@ div.card div div {
 
 h1 {
     text-align: center;
-    color: white;
+    color: var(--primary-color);
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
 h2 {
     text-align: center;
-    color: white;
+    color: var(--primary-color);
     text-shadow: 1px 1px 4px rgb(0, 0, 0);
 }
 
 h3 {
     text-align: center;
-    color: white;
+    color: var(--primary-color);
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
 .sign_up {
@@ -91,7 +106,7 @@ h3 {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    color: white;
+    color: var(--primary-color);
     background-color: #E5383B;
     border-radius: 11px;
     border: none;
@@ -99,12 +114,13 @@ h3 {
 
 div.cards div div a {
     text-decoration: none;
-    color: white;
+    color: var(--primary-color);
 }
 
 @media screen and (min-width: 600px) {
     .main-background {
         background-image: url("/assets/images/background_list.jpg");
+        position: absolute;
     }
     .cards {
         flex-direction: row;
@@ -115,7 +131,7 @@ div.cards div div a {
         margin-top: 20px;
         flex-grow: 1;
         box-shadow: 5px 5px 8px rgb(0, 0, 0);
-        background: white;
+        background: var(--background-color);
         opacity: 0.8;
     }
 }
