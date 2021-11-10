@@ -17,8 +17,11 @@ class ListController extends AbstractController
      */
     public function index(): string
     {
-        session_start();
-        return $this->twig->render('List/index.html.twig');
+        if (isset($_SESSION['user'])) {
+            return $this->twig->render('List/index.html.twig', ['user' => $_SESSION['user']]);
+        } else {
+            return $this->twig->render('List/index.html.twig');
+        }
     }
 
     /**
@@ -29,7 +32,6 @@ class ListController extends AbstractController
      */
     public function share(): string
     {
-        session_start();
         if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['share_link'])) {
             $newList = new ListModel();
             $list = $newList->showByLinkShare($_GET['share_link']);
@@ -45,19 +47,17 @@ class ListController extends AbstractController
 
     public function add(): string
     {
-        session_start();
         $createList = new ListModel();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_POST["user_id"] = $_SESSION["user"]["id"];
             $createList->createList($_POST);
             return $this->twig->render('List/profile.html.twig');
         }
-        return $this->twig->render('List/add_list.html.twig');
+        return $this->twig->render('List/add_list.html.twig', ['user' => $_SESSION['user']]);
     }
 
     public function user(): string
     {
-        session_start();
         if (isset($_SESSION['user'])) {
             header("Location: /list/user/lists");
         } else {
@@ -68,12 +68,14 @@ class ListController extends AbstractController
 
     public function lists(): string
     {
-        session_start();
         if (!isset($_SESSION['user'])) {
             header("Location: /login");
         }
         $userLists = new ListModel();
         $lists = $userLists->showListsByUserId(intval($_SESSION['user']['id']));
-        return $this->twig->render('List/lists.html.twig', ["lists" => $lists]);
+        return $this->twig->render('List/lists.html.twig', [
+            'user' => $_SESSION['user'],
+            "lists" => $lists
+        ]);
     }
 }

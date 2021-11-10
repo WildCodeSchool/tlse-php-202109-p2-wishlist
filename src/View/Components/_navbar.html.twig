@@ -8,17 +8,17 @@ rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0
 	<!-- Navigation links (hidden by default) -->
 	<div id="myLinks">
 		<a href="/">Accueil</a>
-		<a href="/list">Listes</a>
+
 
 		{% if  user is null   %}
-				
+			<a href="/list">Listes</a>
 			<a href="/login">Connexion</a>
 		
 		{% else %}
-		   		    
+			<a href="/list/user/lists">Mes Listes</a>
 			<a href="/logout">Se déconnecter</a>
 					    
-		{% endif %} #}
+		{% endif %}
 			
 	</div>
 	<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->

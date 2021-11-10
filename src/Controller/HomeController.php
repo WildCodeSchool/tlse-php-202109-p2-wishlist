@@ -21,7 +21,10 @@ class HomeController extends AbstractController
      */
     public function index(): string
     {
-        session_start();
-        return $this->twig->render('Home/index.html.twig', ['user' => $_SESSION['user']]);
+        if (isset($_SESSION['user'])) {
+            return $this->twig->render('Home/index.html.twig', ['user' => $_SESSION['user']]);
+        } else {
+            return $this->twig->render('Home/index.html.twig');
+        }
     }
 }
