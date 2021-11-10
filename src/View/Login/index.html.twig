@@ -1,39 +1,35 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheet %}
-	<link rel="stylesheet" href="/assets/css/login.css">
-	<link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
 {% endblock %}
 {% block navbar %}
 
-	{% include "Components/_navbar.html.twig" %}
+    {% include "Components/_navbar.html.twig" %}
 
 {% endblock %}
 
 {% block content %}
+<div class="main-background"></div>
+<div class="login-container">
+    <h3 class="login-title">Connexion à Give Me Gift</h3>
+    <div class="form-container">
+        <form class="form" action="" method="POST">
+            <label for="email"><p class="email">Email</p></label>
+            <input type="text" id="email" placeholder="Entrer votre Email" name="email" required>
+            <label for="password"><p class="password">Mot de passe</p></label>
+            <input type="password" id="password" placeholder="Entrer le mot de passe" name="password" required>
+            <label class="show-password" for="checkbox"><input type="checkbox" id="checkbox">Afficher le mot de
+                passe</label>
+            <input type="submit" id="submit" value="Connexion">
 
-	<div class="main-background"></div>
-	<div class="login-container">
-		<h3 class="login-title">Connexion à Give Me Gifts</h3>
-		<div class="form-container">
-			<form class="form" action="" method="POST">
-				<label for="username">
-					<p class="user">Nom d'utilisateur</p>
-				</label>
-				<input type="text" id="username" placeholder="Entrer votre adresse mail" name="username" required>
-				<label for="password">
-					<p class="password">Mot de passe</p>
-				</label>
-				<input type="password" id="password" placeholder="Entrer votre mot de passe" name="password" required>
-				<label class="show-password" for="checkbox"><input type="checkbox" id="checkbox">Afficher le mot de passe</label>
-				<input type="submit" id='submit' value='Connexion'>
-			</div>
-			<div class="noaccount">
-				<a class="noaccount-href" href="/signup">Créer un compte</a>
-			</div>
-		</form>
+            <div class="noaccount">
+                <a class="noaccount-href" href="/signup">Créer un compte</a>
+            </div>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/show_password.js"></script>
+    {% endblock %}
 
-	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="assets/javascript/show_password.js"></script>
-{% endblock %}

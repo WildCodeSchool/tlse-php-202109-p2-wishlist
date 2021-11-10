@@ -1,5 +1,7 @@
 .main-background {
-    background-image: url("/assets/images/background_list_mobile.jpg");
+    background-image: url("/assets/images/add_list.jpg");
+    background-size: cover;
+    position: fixed;
 }
 
 .noaccount {
@@ -16,6 +18,11 @@
     text-decoration: none;
     color: white;
     font-size: smaller;
+}
+
+.Ajouter {
+    width: 100%;
+    height: 100%;
 }
 
 .cards {
@@ -42,6 +49,26 @@
     justify-content: space-between;
     background-color: snow;
     opacity: 0.85;
+    width: 100%;
+    height: 15rem;
+}
+
+.in_card a {
+    width: 2rem;
+    height: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.in_card a img {
+    width: 2rem;
+    height: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .card {
@@ -104,7 +131,7 @@ div.cards div div a {
 
 @media screen and (min-width: 600px) {
     .main-background {
-        background-image: url("/assets/images/background_list.jpg");
+        background-image: url("/assets/images/add_list.jpg");
     }
     .cards {
         flex-direction: row;
