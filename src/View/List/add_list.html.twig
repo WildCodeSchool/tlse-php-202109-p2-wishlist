@@ -6,24 +6,22 @@
 {% endblock %}
 
 {% block navbar %}
-
-{% include "Components/_navbar.html.twig" %}
-
+    {% include "Components/_navbar.html.twig" %}
 {% endblock %}
 
 {% block content %}
     <div class="main-background"></div>
-        <div class="add_list-container">
+    <div class="add_list-container">
         <h3 class="add_list-title">Création de votre liste</h3>
         <div class="form-container">
             <form class="form" action="" method="POST">
                 <label for="name"><p class="name">Nom de la liste</p></label>
                 <input type="text" id="name" placeholder="Entrez le nom de la liste" name="name" required>
-                <label for="limit_date"><p class="date">Date de l'évenement</p></label>
+                <label for="limit_date"><p class="date">Date de l'évènement</p></label>
                 <input type="date" id="limit_date" name="limit_date" required>
-                <label for="event_id"><p class="event">Evenement</p></label>
-                <select name="event_id" id="event_id" class="choose_event" required >
-                    <option value="">-- Merci de choisir un évenement --</option>
+                <label for="event_id"><p class="event">Évènement</p></label>
+                <select name="event_id" id="event_id" class="choose_event" required>
+                    <option value="">-- Merci de choisir un évènement --</option>
                     <option value="1">Mariage</option>
                     <option value="3">Crémaillère</option>
                     <option value="5">Fête Prénatale</option>
@@ -32,10 +30,12 @@
                     <option value="6">Autre</option>
                 </select>
                 <label for="description"><p class="description">Description</p></label>
-                <textarea class="description_area" id="description" placeholder="Indiquez des informations sur votre liste" name="description" required> </textarea>
-                <input type="submit" id='submit' value='Créer la liste' > 
+                <textarea class="description_area" id="description"
+                          placeholder="Indiquez des informations sur votre liste"
+                          name="description" required> </textarea>
+                <input type="submit" id='submit' value='Créer la liste'>
             </form>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 {% endblock %}
-

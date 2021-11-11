@@ -45,17 +45,22 @@ class ListController extends AbstractController
         return $this->twig->render('List/index.html.twig');
     }
 
-    public function add(): string
+    public function addList(): string
     {
         $createList = new ListModel();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_POST["user_id"] = $_SESSION["user"]["id"];
             $createList->createList($_POST);
-            return $this->twig->render('List/profile.html.twig');
+            header("Location: /list/user/lists");
         }
         return $this->twig->render('List/add_list.html.twig', ['user' => $_SESSION['user']]);
     }
 
+    /**
+     * @throws SyntaxError
+     * @throws RuntimeError
+     * @throws LoaderError
+     */
     public function user(): string
     {
         if (isset($_SESSION['user'])) {
@@ -66,16 +71,23 @@ class ListController extends AbstractController
         return $this->twig->render('List/lists.html.twig');
     }
 
+    /**
+     * @throws SyntaxError
+     * @throws RuntimeError
+     * @throws LoaderError
+     */
     public function lists(): string
     {
-        if (!isset($_SESSION['user'])) {
+        if (isset($_SESSION['user'])) {
+            $userLists = new ListModel();
+            $lists = $userLists->showListsByUserId(intval($_SESSION['user']['id']));
+            return $this->twig->render('List/lists.html.twig', [
+                'user' => $_SESSION['user'],
+                "lists" => $lists
+            ]);
+        } else {
             header("Location: /login");
+            return $this->twig->render('Login/index.html.twig');
         }
-        $userLists = new ListModel();
-        $lists = $userLists->showListsByUserId(intval($_SESSION['user']['id']));
-        return $this->twig->render('List/lists.html.twig', [
-            'user' => $_SESSION['user'],
-            "lists" => $lists
-        ]);
     }
 }
