@@ -18,6 +18,7 @@ return [
     'list/user' => ['ListController', 'user',],
     'list/user/lists' => ['ListController', 'lists',],
     'list/user/lists/addList' => ['ListController', 'addList',],
+    'list/user/lists/addArticle' => ['ListController', 'addArticle', ['listId']],
     'signup' => ['SignUpController', 'index',],
     'login' => ['LogInController', 'index',],
     'logout' => ['LogOutController', 'index',],

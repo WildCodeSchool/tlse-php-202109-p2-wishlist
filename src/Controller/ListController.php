@@ -45,13 +45,21 @@ class ListController extends AbstractController
         return $this->twig->render('List/index.html.twig');
     }
 
+    /**
+     * @throws SyntaxError
+     * @throws RuntimeError
+     * @throws LoaderError
+     */
     public function addList(): string
     {
-        $createList = new ListModel();
+        if (!isset($_SESSION['user'])) {
+            header("Location: /login?notConnected=Tu n'es pas connecté");
+        }
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $createList = new ListModel();
             $_POST["user_id"] = $_SESSION["user"]["id"];
             $createList->createList($_POST);
-            header("Location: /list/user/lists");
+            header("Location: /list/user/lists/");
         }
         return $this->twig->render('List/add_list.html.twig', ['user' => $_SESSION['user']]);
     }
@@ -66,7 +74,7 @@ class ListController extends AbstractController
         if (isset($_SESSION['user'])) {
             header("Location: /list/user/lists");
         } else {
-            header("Location: /login");
+            header("Location: /login?notConnected=Tu n'es pas connecté");
         }
         return $this->twig->render('List/lists.html.twig');
     }
@@ -83,11 +91,25 @@ class ListController extends AbstractController
             $lists = $userLists->showListsByUserId(intval($_SESSION['user']['id']));
             return $this->twig->render('List/lists.html.twig', [
                 'user' => $_SESSION['user'],
-                "lists" => $lists
+                'lists' => $lists,
             ]);
         } else {
-            header("Location: /login");
+            header("Location: /login?notConnected=Tu n'es pas connecté");
             return $this->twig->render('Login/index.html.twig');
+        }
+    }
+
+    public function addArticle()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_SESSION['user'])) {
+            //rajouter le lien vers addArticle - Pour l'instant 404
+            $listId = trim($_GET['listId']);
+            return $this->twig->render('List/add_article.html.twig', [
+                'user' => $_SESSION['user'],
+                'listId' => $listId
+            ]);
+        } else {
+            header("Location: /login?notConnected=Tu n'es pas connecté");
         }
     }
 }

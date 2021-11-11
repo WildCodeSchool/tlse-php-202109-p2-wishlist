@@ -54,30 +54,50 @@ class ListModel extends AbstractManager
         return intval($strNumber);
     }
 
-    public function showListsByUserId(int $userId)
+    /**
+     * @param int $userId
+     * @return array of all lists of a user ordered in an index array first with data second with articles
+     */
+    public function showListsByUserId(int $userId): array
     {
-        $queryList = "SELECT l.id AS lid
+        //query the number of lists
+        $queryListId = "SELECT l.id AS lid
                 FROM list l 
                 JOIN user u ON u.id = l.user_id
                 WHERE u.id = :user_id";
-        $statement = $this->pdo->prepare($queryList);
+        $statement = $this->pdo->prepare($queryListId);
         $statement->bindValue('user_id', $userId, \PDO::PARAM_INT);
         $statement->execute();
         $listsId = $statement->fetchAll();
 
         $lists = [];
         foreach ($listsId as $list) {
-            $query = "SELECT l.id AS lid, a.name AS aname, a.is_gifted, u.id, u.lastname, u.firstname, u.birthday, 
-                l.name AS lname, e.name AS ename, l.description AS ldescription, l.limit_date
+            // query of the list infos (id, name, event, description, limit_date)
+            $queryListInfos = "SELECT l.id AS lid, l.name AS lname, e.name AS ename, l.description AS ldescription,
+                l.limit_date
+                FROM user u
+                JOIN list l ON u.id = l.user_id
+                JOIN event e ON e.id = l.event_id
+                WHERE l.id = :list_id";
+            $statement = $this->pdo->prepare($queryListInfos);
+            $statement->bindValue('list_id', intval($list['lid']), \PDO::PARAM_INT);
+            $statement->execute();
+            $listInfos = $statement->fetchAll();
+
+            // query of the gifts
+            $queryList = "SELECT a.name AS aname
                 FROM user u
                 JOIN list l ON u.id = l.user_id
                 JOIN event e ON e.id = l.event_id
                 JOIN article a ON l.id = a.list_id
                 WHERE l.id = :list_id";
-            $statement = $this->pdo->prepare($query);
+            $statement = $this->pdo->prepare($queryList);
             $statement->bindValue('list_id', intval($list['lid']), \PDO::PARAM_INT);
             $statement->execute();
-            $lists[] = $statement->fetchAll();
+            $listData = $statement->fetchAll();
+
+            // insert the 2 queries in the same index array
+            $lists[] = [$listInfos, $listData];
         }
         return $lists;
     }

@@ -26,14 +26,40 @@ h1 {
     padding-bottom: 3rem;
 }
 
-.card {
+/* add new list */
+.in-card-add {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--background-color);
+    opacity: 0.9;
+    padding: 0.5rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card-add {
     border-radius: 10px;
     width: calc(100% - 2rem);
     margin-left: 1rem;
     margin-right: 1rem;
 }
 
-.card-header {
+.in-card-add a img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.card {
+    border-radius: 10px;
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.card-header,
+.card-header-add {
     height: fit-content;
     padding: 0.5rem;
     text-align: center;
@@ -48,6 +74,8 @@ h1 {
     flex-direction: row;
     background-color: var(--background-color);
     opacity: 0.9;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .in-card .card-body {
@@ -70,7 +98,7 @@ h1 {
 }
 
 .card-description {
-    text-align: justify;
+    text-align: center;
 }
 
 .in-card .gift-list {
@@ -90,21 +118,6 @@ h1 {
     color: var(--primary-color);;
 }
 
-/* add new list */
-.in-card-add {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: var(--background-color);
-    opacity: 0.9;
-    padding: 0.5rem;
-}
-
-.in-card-add a img {
-    height: 3rem;
-    width: 3rem;
-}
-
 @media screen and (min-width: 1200px) {
     .main-background {
         background-image: url("/assets/images/add_list.jpg");
@@ -114,6 +127,13 @@ h1 {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .card-add {
+        border-radius: 10px;
+        width: calc(100% - 7rem);
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
     .card {
