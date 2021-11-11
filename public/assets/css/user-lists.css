@@ -16,6 +16,7 @@ h1 {
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
+/*list container*/
 .cards {
     display: flex;
     flex-direction: column;
@@ -49,6 +50,11 @@ h1 {
     opacity: 0.9;
 }
 
+.in-card .card-body {
+    width: 60%;
+    padding: 0.5rem;
+}
+
 .in-card .card-body p {
     font-size: 1rem;
 }
@@ -67,14 +73,9 @@ h1 {
     text-align: justify;
 }
 
-.in-card .card-body {
-    width: 60%;
-    padding: 0.5rem;
-}
-
 .in-card .gift-list {
     width: calc(100% - 60%);
-    padding:0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -89,6 +90,7 @@ h1 {
     color: var(--primary-color);;
 }
 
+/* add new list */
 .in-card-add {
     display: flex;
     flex-direction: row;
@@ -117,6 +119,6 @@ h1 {
     .card {
         box-shadow: 5px 5px 8px rgb(0, 0, 0);
         background: var(--background-color);
-        width: calc((100%/3) - 5rem) ;
+        width: calc((100% / 3) - 5rem);
     }
 }
