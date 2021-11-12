@@ -3,15 +3,49 @@
     position: fixed;
 }
 
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+.container-card {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    gap: 2rem;
+}
+
+.card {
+    margin: 2rem auto 2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--background-color);
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    height: max-content;
+}
+
+.image-card {
+    height: calc(100% / 2);
+    width: 100%;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
 a {
     margin-bottom: inherit;
     text-decoration: none;
 }
 
-h3 {
+.card > h3 {
     text-align: center;
-    font-weight: 900;
-    font-size: 18px;
+    font-size: 1.5rem;
 }
 
 .titre {
@@ -21,39 +55,10 @@ h3 {
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
-.paragraphe {
+.paragraph {
     margin: 0;
-    font-size: 14px;
+    font-size: 1.2rem;
     padding: 0 1rem 1rem 1rem;
-}
-
-.image-card {
-    height: 15rem;
-    width: 100%;
-    border-top-left-radius: 11px;
-    border-top-right-radius: 11px;
-}
-
-.container-card {
-    display: flex;
-    flex-direction: column;
-    margin: 2px;
-    gap: 2rem;
-    height: 170rem;
-}
-
-.card {
-    margin-right: auto;
-    margin-bottom: 2rem;
-    margin-left: auto;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: var(--background-color);
-    border-radius: 11px;
-    text-align: center;
-    text-decoration: none;
 }
 
 .button {
@@ -70,24 +75,28 @@ h3 {
     font-weight: bold;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1200px) {
+    .main-background {
+        background-image: url("/assets/images/pexels-lucie.jpg");
+    }
+
     .container-card {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-    }
-    .main-background {
-        background-image: url("/assets/images/pexels-lucie.jpg");
-        position: absolute;
-        z-index: -1;
-    }
-    .card {
-        width: 20rem;
-        height: 25rem;
+        height: calc(100% - 30%);
     }
 
-    * {
-        overflow-y: hidden;
-        overflow-x: hidden;
+    .card {
+        width: calc(100% / 3 - 3rem);
+        height: 100%;
+    }
+
+    .card > h3 {
+        font-size: 2.3rem;
+    }
+
+    .card > .paragraph {
+        font-size: 1.5rem;
     }
 }
