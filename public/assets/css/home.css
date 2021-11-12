@@ -75,6 +75,10 @@ a {
     font-weight: bold;
 }
 
+.welcome-user {
+    font-size: 1.7rem;
+}
+
 @media screen and (min-width: 1200px) {
     .main-background {
         background-image: url("/assets/images/pexels-lucie.jpg");
