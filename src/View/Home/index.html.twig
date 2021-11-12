@@ -1,37 +1,49 @@
 {% extends 'layout.html.twig' %}
 
 {% block navbar %}
-	{% include "Components/_navbar.html.twig" %}
+    {% include "Components/_navbar.html.twig" %}
 {% endblock %}
 
 {% block stylesheet %}
-	<link rel="stylesheet" href="/assets/css/home.css">
-	<link rel="stylesheet" href="/assets/css/navbar.css">
-	<link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
 {% endblock %}
 
 {% block content %}
-	<div class="main-background"></div>	
-		<h1 class='titre'>Give me Gifts !</h1>
-		<div class="container-card">
-			<div class="card">
-				<img class="image-card" src="/assets/images/list_share_bg.jpg">
-				<h3>Gift Me 5</h3>
-				<p class="paragraphe">Vous pouvez créer vos propres listes de cadeaux et les partager à vos proches, ils peuvent parcourir votre liste et vous offrir ce qu'ils veulent.</p>				
+    <div class="main-background"></div>
+    <h1 class='titre'>Give me Gifts !</h1>
+    <div class="container-card">
+        <div class="card">
+            <img class="image-card" src="/assets/images/list_share_bg.jpg" alt="cadeau-bleu">
+            <h3>Gift Me 5</h3>
+            <p class="paragraph">Vous pouvez créer vos propres listes de cadeaux et les partager à vos proches, ils
+                peuvent parcourir votre liste et vous offrir ce qu'ils veulent.</p>
+            {% if user is not null %}
+                <p class="welcome-user">Bienvenu {{ user['firstname'] }}</p>
+            {% else %}
                 <a class="button" href="/login">Se connecter</a>
-			</div>
-			<div class="card">
-				<img class="image-card" src="/assets/images/pexels-laura.jpg">
-				<h3>Comment ça fonctionne?</h3>
-				<p class="paragraphe">Marre des cadeaux inutiles ?<br>Vos amis sont inutiles quand vient le temps de vous satisfaire ?
-				<br>Aidez-les à vous faire plaisir avec Give me Gifts!</p>
+            {% endif %}
+        </div>
+        <div class="card">
+            <img class="image-card" src="/assets/images/pexels-laura.jpg" alt="cadeau-beige">
+            <h3>Comment ça fonctionne?</h3>
+            <p class="paragraph">Marre des cadeaux inutiles ?<br>Vos amis sont inutiles quand vient le temps de vous
+                satisfaire ?
+                <br>Aidez-les à vous faire plaisir avec Give me Gifts!</p>
+
+            {% if user is not null %}
+                <a class="button" href="/list/user/lists">Mes listes</a>
+            {% else %}
                 <a class="button" href="/list">Exemples</a>
-			</div>
-			<div class="card">
-				<img class="image-card" src="/assets/images/pexels-szabo.jpg">
-				<h3>Youtube</h3>
-				<p class="paragraphe">Vous pouvez retrouver une vidéo explicative du site Give me Gifts</p>
-				<a class="button" href="http://www.youtube.com">Regarder</a>
-			</div>		
-	</div>
+            {% endif %}
+        </div>
+        <div class="card">
+            <img class="image-card" src="/assets/images/pexels-szabo.jpg" alt="youtube-image">
+            <h3>Youtube</h3>
+            <p class="paragraph">Vous pouvez retrouver une vidéo explicative du site Give me Gifts et apprendre à donner
+                un cadeau à vos amis </p>
+            <a class="button" href="http://www.youtube.com">Regarder</a>
+        </div>
+    </div>
 {% endblock %}
