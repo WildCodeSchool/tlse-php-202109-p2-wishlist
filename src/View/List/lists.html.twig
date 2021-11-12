@@ -4,9 +4,13 @@
 {% endblock %}
 {% block stylesheet %}
   <link rel="stylesheet" href="/assets/css/navbar.css" />
-  <link rel="stylesheet" href="/assets/css/user.css" />
+  <link rel="stylesheet" href="/assets/css/user-lists.css" />
 {% endblock %}
 
 {% block content %}
   {% include 'Components/_user-lists.html.twig' %}
+{% endblock %}
+
+{% block javascript %}
+    <script src="/assets/javascript/user-lists.js"></script>
 {% endblock %}

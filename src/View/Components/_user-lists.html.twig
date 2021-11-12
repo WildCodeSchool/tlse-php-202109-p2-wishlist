@@ -3,32 +3,32 @@
     Vos Listes
 </h1>
 <div class="cards">
+    <div class="card-add">
+        <div class="card-header-add">Créer une liste</div>
+        <div class="in-card-add">
+            <a href="/list/user/lists/addList" title="Ajout">
+                <img src="/assets/images/icone_ajout.png" alt="icone_ajout"/>
+            </a>
+        </div>
+    </div>
     {% for list in lists %}
         <div class="card">
-            <div class="card-header"></div>
-            <div class="in_card">
+            <div style="display: none;">{{ list[0][0]['lid'] }}</div>
+            <div class="card-header">{{ list[0][0]['ename'] }}</div>
+            <div class="in-card">
                 <div class="card-body">
-                    <p class="card-title">{{ list[0]['lname'] }}</p>
-                    <p class="card-event">{{ list[0]['ename'] }}</p>
-                    <p class="card-date">{{ list[0]['limit_date'] }}</p>
-                    <p class="card-description">{{ list[0]['ldescription'] }}</p>
+                    <p class="card-title">{{ list[0][0]['lname'] }}</p>
+                    <p class="card-date">{{ list[0][0]['limit_date'] }}</p>
+                    <p class="card-description">{{ list[0][0]['ldescription'] }}</p>
                 </div>
-                <div class="liste cadeaux">
-                    {% for gift in list %}
-                        <p>{{ gift['aname'] }}</p>
+                <div class="gift-list">
+                    {% for i in 0..3 %}
+                        {% if list[1][i]['aname'] is not null %}
+                            <p>{{ list[1][i]['aname'] }}</p>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>
-            <div class="card-footer">
-                <a href="/items/add">voir</a>
-            </div>
         </div>
     {% endfor %}
-    <div class="card">
-        <div class="card-header"></div>
-        <div class="in_card">
-            <a href="/list/add" title="Ajout"><img src="/assets/images/icone_ajout.png" alt="icone_ajout"/></a>
-        </div>
-        <div class="card-footer"></div>
-    </div>
 </div>
