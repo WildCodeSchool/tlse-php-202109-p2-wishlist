@@ -23,16 +23,16 @@ class ArticleManager extends AbstractManager
     public function insertArticle(array $article)
     {
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE .
-        " (`name`, `market_link`,`picture`,`description`,`price`,`list_id`) 
-        VALUES (:name, :market_link, :picture, :description, :price, :list_id, :market_link)");
-        $statement->bindValue(':name', $article['name'], \PDO::PARAM_STR);
-        $statement->bindValue(':market_link', $article['market_link'], \PDO::PARAM_STR);
-        $statement->bindValue(':picture', $article['picture'], \PDO::PARAM_STR);
+        " (`name`, `market_link`,`picture`, `description`, `price`, `is_gifted`, `list_id`) 
+        VALUES (:name, :market_link, :picture, :description, :price, :is_gifted, :list_id)");
+        $statement->bindValue(':name', $article['giftName'], \PDO::PARAM_STR);
+        $statement->bindValue(':market_link', $article['giftLink'], \PDO::PARAM_STR);
+        $statement->bindValue(':picture', $article['imgLink'], \PDO::PARAM_STR);
         $statement->bindValue(':description', $article['description'], \PDO::PARAM_STR);
         $statement->bindValue(':price', $article['price'], \PDO::PARAM_INT);
+        $statement->bindValue(':is_gifted', $article['is_gifted']);
         $statement->bindValue(':list_id', $article['list_id']);
-
         $statement->execute();
-        return (int)$this->pdo->lastInsertId();
+        return $this->pdo->lastInsertId();
     }
 }

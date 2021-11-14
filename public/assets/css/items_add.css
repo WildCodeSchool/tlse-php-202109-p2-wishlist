@@ -5,80 +5,57 @@
 }
 
 /*MOBILE FIRST*/
-
-.presentation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
+.list-container {
+    background-color: var(--background-color);
+    border-radius: 15px;
+    width: 50rem;
+    margin: auto;
+    text-align: center;
+    padding: 0 1rem 0 1rem;
+    opacity: 80%;
 }
-
-.list-share-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 5rem 1fr 1fr auto 1fr auto 2rem;
-    grid-template-areas: "navbar navbar navbar" "listTitle listTitle listTitle" "listEvent . listDate" "listDescription listDescription listDescription" ". . sortArticle" "articleContainer articleContainer articleContainer" ". . .";
-    justify-items: center;
-    color: black;
-}
-
 .list-title {
-    grid-area: listTitle;
-    margin: 1rem;
-    background-color: transparent;
-    color: var(--primary-color);
-    padding: 1rem;
-    border-radius: 10px;
-    text-shadow: 5px 5px 8px rgb(0, 0, 0);
-}
-
-.list-event {
-    grid-area: listEvent;
-    margin: 1rem;
-    background-color: var(--background-color);
-    padding: 1rem;
-    border-radius: 10px;
-    width: max-content;
-}
-
-.list-date {
-    grid-area: listDate;
-    margin: 1rem;
-    background-color: var(--background-color);
-    padding: 1rem;
-    border-radius: 10px;
-    width: max-content;
+    color: var(--font-color);
 }
 
 .list-description {
-    grid-area: listDescription;
-    margin: 1rem;
-    background-color: var(--background-color);
-    padding: 1rem;
-    text-align: justify;
-    border-radius: 10px;
+    color: var(--font-color);
 }
 
 .add-form>h1 {
-    margin: auto;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary-color);
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
 #submit {
-    width: 10rem;
-    margin-left: auto;
-    margin-right: auto;
     background-color: var(--btn-color);
+    color: var(--primary-color);
+    font-size: 20px;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 1rem 5rem 1rem 5rem;
+    width: 13rem;
     border-radius: 11px;
-    color: white;
-    font-size: initial;
+    border: solid black 0.5px;
+    box-shadow: 2px 2px 4px black;
+}
+
+#submit:hover {
+    background-color: var(--background-color);
+    color: var(--btn-color);
+    border: 1px solid var(--btn-color);
 }
 
 .add-form {
     margin: auto;
-    color: white;
+    color: var(--primary-color);
     font-weight: 400;
 }
+
 
 .list-sort {
     grid-area: sortArticle;
@@ -105,7 +82,7 @@
 }
 
 div.article {
-    background: white;
+    background: var(--primary-color);
     opacity: 0.8;
 }
 
@@ -119,17 +96,19 @@ div.article {
 
 .article-title {
     grid-area: articleTitle;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0;
     padding: 0.2rem 0 0 0.2rem;
+    color: var(--font-color);
 }
 
 .article-price {
     grid-area: articlePrice;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0;
     justify-self: end;
     padding: 0.2rem 0.2rem 0 0;
+    color: var(--font-color);
 }
 
 .article-description {
@@ -138,6 +117,7 @@ div.article {
     margin: 0;
     padding: 0.2rem 0.5rem 0 0.5rem;
     height: 100%;
+    color: var(--font-color);
 }
 
 .seeMore-button {
@@ -165,9 +145,13 @@ div.article div a {
     border-radius: 10px;
     width: 50%;
     margin: 0;
-    padding: 0.2rem;
+    padding: 0.5rem;
     align-self: center;
     color: var(--primary-color);
+    text-decoration: none;
+}
+.seeMore-button {
+    text-decoration: none;
 }
 
 .delete-button {
@@ -194,11 +178,28 @@ div.article div a {
     margin-bottom: 5rem;
 }
 
+#list_id{
+    width: 10rem;
+    height: 1.5rem;
+    border-radius: 11px;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.list_id {
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
+}
+
 #giftName {
     width: 20rem;
     height: 1.5rem;
     border-radius: 11px;
     text-align: center;
+    background-color: var(--background-color);
+}
+
+.giftName{
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
 #price {
@@ -206,27 +207,49 @@ div.article div a {
     height: 1.5rem;
     border-radius: 11px;
     text-align: center;
+    background-color: var(--background-color);
+}
+
+.price {
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
 #imgLink {
     width: 20rem;
     height: 1.5rem;
     border-radius: 11px;
+    background-color: var(--background-color);
     text-align: center;
+}
+
+.imgLink {
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
 #giftLink {
     width: 20rem;
     height: 1.5rem;
     border-radius: 11px;
+    background-color: var(--background-color);
     text-align: center;
+
+}
+
+.giftLink {
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
 #description {
-    width: 20rem;
-    height: 1.5rem;
+    width: 25rem;
+    height: 5rem;
     border-radius: 11px;
+    background-color: var(--background-color);
     text-align: center;
+}
+
+.description {
+    color: var(--primary-color);
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
 /*END OF MOBILE FIRST*/
@@ -244,48 +267,6 @@ div.article div a {
         background-size: cover;
         position: fixed
     }
-    .list-share-container {
-        z-index: 1;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 5rem 3rem repeat(9, auto) 2rem;
-        grid-template-areas: "navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar" ". . . . listTitle listTitle listTitle listTitle . . . ." ". . . listEvent listEvent . . listDate listDate . . ." ". . . listDescription listDescription listDescription listDescription listDescription listDescription . . ." ". . . . . . . . . . . sortArticle" ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". . . . . . . . . . . .";
-        justify-items: center;
-    }
-    .list-title {
-        grid-area: listTitle;
-        width: max-content;
-        height: max-content;
-        margin: 0;
-        padding: 0.5rem 2rem 0.5rem 2rem;
-        text-align: center;
-        text-shadow: 5px 5px 8px rgb(0, 0, 0);
-    }
-    .list-event {
-        grid-area: listEvent;
-        width: max-content;
-        height: max-content;
-        margin: 0;
-        padding: 0.5rem 2rem 0.5rem 2rem;
-        text-align: center;
-    }
-    .list-date {
-        grid-area: listDate;
-        width: max-content;
-        height: max-content;
-        margin: 0;
-        padding: 0.5rem 2rem 0.5rem 2rem;
-        text-align: center;
-    }
-    .list-description {
-        grid-area: listDescription;
-        width: 100%;
-        height: max-content;
-        margin: 0;
-        padding: 0.5rem 2rem 0.5rem 2rem;
-        text-align: center;
-    }
     .list-sort {
         grid-area: sortArticle;
     }
@@ -301,8 +282,9 @@ div.article div a {
         grid-template-columns: 1.5fr 1.5fr 0.5fr;
         grid-template-rows: 1fr 2fr 1fr 1fr;
         grid-template-areas: "articlePicture articleTitle articlePrice" "articlePicture articleDescription articleDescription" "articlePicture seeMore seeMore" "giftButton giftButton giftButton";
-        width: 18rem;
-        height: 15rem;
+        width: 22rem;
+        height: 10rem;
+        padding: 1rem;
         border-radius: 10px;
         margin-bottom: 2rem;
         background-color: var(--background-color);
@@ -312,60 +294,42 @@ div.article div a {
         max-height: calc(100% - 0.4rem);
         max-width: calc(100% - 0.4rem);
         align-self: center;
-        margin: 0.2rem;
+        margin: 0.3rem;
     }
     .article-title {
         grid-area: articleTitle;
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin: 0;
         padding: 0.2rem 0 0 0.2rem;
     }
     .article-price {
         grid-area: articlePrice;
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin: 0;
         justify-self: end;
         padding: 0.2rem 0.2rem 0 0;
     }
     .article-description {
         grid-area: articleDescription;
-        font-size: 1.3rem;
-        margin: 0;
+        font-size: 15px;
+        margin: 0.3rem;
         padding: 0.2rem 0.5rem 0 0.5rem;
         height: 100%;
     }
     .seeMore-button {
         grid-area: seeMore;
-        margin: 0;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 0 0 0.2rem 0;
-    }
-    .seeMore-button>p {
-        font-size: 1rem;
-        text-align: center;
+        margin-top: 1rem 0.5rem 0 0.5rem;
         background-color: var(--btn-color);
         border-radius: 10px;
-        width: 50%;
-        margin: 0;
-        padding: 0.2rem;
-        align-self: center;
-        color: var(--color-2);
+        text-decoration: none;
+        box-shadow: 2px 2px 4px black;
     }
-    .gift-button {
-        grid-area: giftButton;
-        margin: 0;
-        background-color: var(--event-color-4);
-        width: 100%;
+    .seeMore-button>p {
+        font-size: 15px;
         text-align: center;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
-    .gift-button>p {
+        width: 100%;
         margin: 0;
-        font-size: 1.7rem;
-        font-weight: bold;
+        color: var(--primary-color);
     }
     .list-share-container {
         grid-template-rows: 2rem 3rem repeat(9, auto) 2rem;
