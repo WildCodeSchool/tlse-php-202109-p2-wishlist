@@ -39,7 +39,13 @@ class ListModel extends AbstractManager
         $statement->bindValue('share_link', $linkShare, \PDO::PARAM_INT);
         $statement->execute();
 
-        return $statement->fetchAll();
+        $results = $statement->fetchAll();
+        //Modification of date
+        $count = count($results); //Avoid using App\Model\count() function in for loops.
+        for ($i = 0; $i < $count; $i++) {
+            $results[$i]['limit_date'] = $this->displayDate($results[$i]['limit_date']);
+        }
+        return $results;
     }
 
     /**
@@ -98,6 +104,11 @@ class ListModel extends AbstractManager
 
             // insert the 2 queries in the same index array
             $lists[] = [$listInfos, $listData];
+        }
+        //modify date format
+        $count = count($lists); //Avoid using App\Model\count() function in for loops.
+        for ($i = 0; $i < $count; $i++) {
+            $lists[$i][0][0]['limit_date'] = $this->displayDate($lists[$i][0][0]['limit_date']);
         }
         return $lists;
     }

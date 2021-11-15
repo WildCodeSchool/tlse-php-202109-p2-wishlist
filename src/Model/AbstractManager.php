@@ -65,4 +65,10 @@ abstract class AbstractManager
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();
     }
+
+    protected function displayDate(string $dateString): string
+    {
+        $displayDate = \DateTime::createFromFormat("Y-m-d", $dateString);
+        return $displayDate->format("d-m-Y");
+    }
 }
