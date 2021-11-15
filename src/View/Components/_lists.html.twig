@@ -11,76 +11,25 @@
 <h3>
     Voici quelques exemples de listes.
 </h3>
-
 <div class="cards">
-    <div class="card">
-        <div class="card-header">Événement</div>
-        <div class="in-card">
-            <div class="card-body">
-                <p class="card-title">
-                    Titre de la liste
-                </p>
-                <p class="card-date">
-                    Date
-                </p>
-                <p class="card-description">
-                    Description
-                </p>
-            </div>
-            <div class="gift-list">
-                <p>cadeau1</p>
-                <p>cadeau2</p>
-                <p>cadeau3</p>
-                <p>cadeau4</p>
-                <p>cadeau5</p>
+    {% for list in lists %}
+        <div class="card">
+            <div style="display: none;">{{ list[0][0]['lid'] }}</div>
+            <div class="card-header">{{ list[0][0]['ename'] }}</div>
+            <div class="in-card">
+                <div class="card-body">
+                    <p class="card-title">{{ list[0][0]['lname'] }}</p>
+                    <p class="card-date">{{ list[0][0]['limit_date'] }}</p>
+                    <p class="card-description">{{ list[0][0]['ldescription'] }}</p>
+                </div>
+                <div class="gift-list">
+                    {% for i in 0..3 %}
+                        {% if list[1][i]['aname'] is not null %}
+                            <p>{{ list[1][i]['aname'] }}</p>
+                        {% endif %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="card-header">Événement</div>
-        <div class="in-card">
-            <div class="card-body">
-                <p class="card-title">
-                    Titre de la liste
-                </p>
-                <p class="card-date">
-                    Date
-                </p>
-                <p class="card-description">
-                    Description
-                </p>
-            </div>
-            <div class="gift-list">
-                <p>cadeau1</p>
-                <p>cadeau2</p>
-                <p>cadeau3</p>
-                <p>cadeau4</p>
-                <p>cadeau5</p>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header">Événement</div>
-        <div class="in-card">
-            <div class="card-body">
-                <p class="card-title">
-                    Titre de la liste
-                </p>
-                <p class="card-date">
-                    Date
-                </p>
-                <p class="card-description">
-                    Description
-                </p>
-            </div>
-            <div class="gift-list">
-                <p>cadeau1</p>
-                <p>cadeau2</p>
-                <p>cadeau3</p>
-                <p>cadeau4</p>
-                <p>cadeau5</p>
-            </div>
-        </div>
-    </div>
-
+    {% endfor %}
 </div>
