@@ -103,6 +103,7 @@ h1 {
 
 .in-card .gift-list {
     width: calc(100% - 60%);
+    min-height: 12rem;
     padding: 0.5rem 0.5rem 0.5rem 0;
     display: flex;
     flex-direction: column;

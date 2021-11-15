@@ -19,10 +19,15 @@ class ListController extends AbstractController
     public function index(): string
     {
         if (isset($_SESSION['user'])) {
-            return $this->twig->render('List/index.html.twig', ['user' => $_SESSION['user']]);
+            header("Location: /list/user/lists");
         } else {
-            return $this->twig->render('List/index.html.twig');
+            $userLists = new ListModel();
+            $lists = $userLists->showListsByUserId(1);
+            return $this->twig->render('List/index.html.twig', [
+                'lists' => $lists,
+            ]);
         }
+        return $this->twig->render('List/index.html.twig');
     }
 
     /**

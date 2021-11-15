@@ -3,7 +3,7 @@
     Listes
 </h1>
 <h2>
-    Creez, Modifiez, et Partagez vos listes!
+    Créez, Modifiez, et Partagez vos listes!
 </h2>
 <div class="no-account">
     <a class="no-account-href" href="/signup">Créer un compte</a>
@@ -12,20 +12,20 @@
     Voici quelques exemples de listes.
 </h3>
 <div class="cards">
-    {% for list in lists %}
+    {% for i in 0..2 %}
         <div class="card">
-            <div style="display: none;">{{ list[0][0]['lid'] }}</div>
-            <div class="card-header">{{ list[0][0]['ename'] }}</div>
+            <div style="display: none;">{{ lists[i][0][0]['lid'] }}</div>
+            <div class="card-header">{{ lists[i][0][0]['ename'] }}</div>
             <div class="in-card">
                 <div class="card-body">
-                    <p class="card-title">{{ list[0][0]['lname'] }}</p>
-                    <p class="card-date">{{ list[0][0]['limit_date'] }}</p>
-                    <p class="card-description">{{ list[0][0]['ldescription'] }}</p>
+                    <p class="card-title">{{ lists[i][0][0]['lname'] }}</p>
+                    <p class="card-date">{{ lists[i][0][0]['limit_date']|date('d-m-Y') }}</p>
+                    <p class="card-description">{{ lists[i][0][0]['ldescription'] }}</p>
                 </div>
                 <div class="gift-list">
-                    {% for i in 0..3 %}
-                        {% if list[1][i]['aname'] is not null %}
-                            <p>{{ list[1][i]['aname'] }}</p>
+                    {% for j in 0..3 %}
+                        {% if lists[i][1][j]['aname'] is not null %}
+                            <p>{{ lists[i][1][j]['aname'] }}</p>
                         {% endif %}
                     {% endfor %}
                 </div>
