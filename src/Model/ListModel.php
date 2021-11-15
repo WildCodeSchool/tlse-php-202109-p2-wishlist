@@ -28,9 +28,9 @@ class ListModel extends AbstractManager
 
     public function showByLinkShare(int $linkShare)
     {
-        $query = "SELECT article.name AS aname, article.market_link, article.picture, article.price, article.is_gifted,
-                article.description AS adescription, list.name AS lname, event.name AS ename,
-                list.description AS ldescription, list.limit_date
+        $query = "SELECT article.id AS artid, article.name AS aname, article.market_link, article.picture, 
+       article.price, article.is_gifted, article.description AS adescription, list.name AS lname, event.name AS ename,
+                list.description AS ldescription, list.limit_date, list.share_link
                 FROM article
                 JOIN list ON list.id = article.list_id
                 JOIN event ON event.id = list.event_id 

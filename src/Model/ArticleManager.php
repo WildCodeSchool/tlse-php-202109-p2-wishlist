@@ -20,10 +20,11 @@ class ArticleManager extends AbstractManager
 
         return $statement->fetchAll();
     }
+
     public function insertArticle(array $article)
     {
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE .
-        " (`name`, `market_link`,`picture`, `description`, `price`, `is_gifted`, `list_id`) 
+            " (`name`, `market_link`,`picture`, `description`, `price`, `is_gifted`, `list_id`) 
         VALUES (:name, :market_link, :picture, :description, :price, :is_gifted, :list_id)");
         $statement->bindValue(':name', $article['giftName'], \PDO::PARAM_STR);
         $statement->bindValue(':market_link', $article['giftLink'], \PDO::PARAM_STR);
@@ -34,5 +35,20 @@ class ArticleManager extends AbstractManager
         $statement->bindValue(':list_id', $article['list_id']);
         $statement->execute();
         return $this->pdo->lastInsertId();
+    }
+
+    public function updateArticleIsGiftedById(int $id): int
+    {
+        $isGifted = $this->selectOneById($id);
+        $query = "UPDATE " . self::TABLE . " SET `is_gifted` = :is_gifted WHERE `id` = :id";
+        $statement = $this->pdo->prepare($query);
+        if (intval($isGifted["is_gifted"]) === 0) {
+            $statement->bindValue(':is_gifted', 1);
+        } else {
+            $statement->bindValue(':is_gifted', 0);
+        }
+        $statement->bindValue(':id', $id, \PDO::PARAM_INT);
+        $statement->execute();
+        return (int)$this->pdo->lastInsertId();
     }
 }

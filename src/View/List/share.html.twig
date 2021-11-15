@@ -16,7 +16,7 @@
 {% block content %}
     <div class="main-background"></div>
     <div class="list-share-container">
-
+        <div class="share-link" style="display: none;">{{ list[0]['share_link'] }}</div>
         <h3 class="list-title">{{ list[0]['lname'] }}</h3>
         <h4 class="list-event">{{ list[0]['ename'] }}</h4>
         <h4 class="list-date">{{ list[0]['limit_date']|date('d-m-Y') }}</h4>
@@ -27,6 +27,7 @@
         <div class="article-container">
             {% for article in list %}
                 <div class="article">
+                    <div style="display: none;">{{ article.artid }}</div>
                     <img class="article-img" alt="{{ article.aname }}"
                          src="{{ article.picture }}"/>
                     <h4 class="article-title">{{ article.aname }}</h4>
@@ -36,10 +37,14 @@
                         <p>see more</p>
                     </a>
                     <div class="gift-button">
-                        <p>Gift it!</p>
+                        <p>Réserver!</p>
                     </div>
                 </div>
             {% endfor %}
         </div>
     </div>
+{% endblock %}
+
+{% block javascript %}
+<script src="/assets/javascript/share_link.js"></script>
 {% endblock %}

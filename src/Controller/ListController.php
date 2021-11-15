@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Model\ArticleManager;
 use App\Model\ListModel;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -43,6 +44,15 @@ class ListController extends AbstractController
             if (count($list) === 0) {
                 header('Location: /');
             }
+
+            if (isset($_GET['article_id'])) {
+                $newArticle = new ArticleManager();
+                $newArticle->updateArticleIsGiftedById($_GET['article_id']);
+                return $this->twig->render('List/share.html.twig', [
+                    'list' => $list
+                ]);
+            }
+
             return $this->twig->render('List/share.html.twig', [
                 'list' => $list
             ]);
