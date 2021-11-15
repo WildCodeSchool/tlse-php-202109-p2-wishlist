@@ -8,20 +8,25 @@
 .list-container {
     background-color: var(--background-color);
     border-radius: 15px;
-    width: 50rem;
+    width: calc(100% - 5rem);
     margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
     padding: 0 1rem 0 1rem;
     opacity: 80%;
 }
 .list-title {
     color: var(--font-color);
+    font-weight: bold;
+    font-size: 30px;
 }
-
+.list-date {
+    color: var(--font-color);
+}
 .list-description {
     color: var(--font-color);
 }
-
 .add-form>h1 {
     display: flex;
     flex-direction: column;
@@ -29,7 +34,6 @@
     color: var(--primary-color);
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
-
 #submit {
     background-color: var(--btn-color);
     color: var(--primary-color);
@@ -43,32 +47,27 @@
     border: solid black 0.5px;
     box-shadow: 2px 2px 4px black;
 }
-
 #submit:hover {
     background-color: var(--background-color);
     color: var(--btn-color);
     border: 1px solid var(--btn-color);
 }
-
 .add-form {
     margin: auto;
     color: var(--primary-color);
     font-weight: 400;
 }
-
-
 .list-sort {
     grid-area: sortArticle;
 }
-
 .article-container {
     grid-area: articleContainer;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     min-width: 100%;
+    margin-top: 1rem;
 }
-
 .article {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 0.5fr;
@@ -80,12 +79,10 @@
     margin: 0 1rem 2rem 1rem;
     background-color: var(--background-color);
 }
-
 div.article {
     background: var(--primary-color);
     opacity: 0.8;
 }
-
 .article-img {
     grid-area: articlePicture;
     max-height: calc(100% - 0.4rem);
@@ -93,42 +90,29 @@ div.article {
     align-self: center;
     margin: 0.2rem;
 }
-
 .article-title {
     grid-area: articleTitle;
-    font-size: 1rem;
+    font-size: 20px;
     margin: 0;
     padding: 0.2rem 0 0 0.2rem;
     color: var(--font-color);
 }
-
 .article-price {
     grid-area: articlePrice;
-    font-size: 1rem;
+    font-size: 20px;
     margin: 0;
     justify-self: end;
     padding: 0.2rem 0.2rem 0 0;
     color: var(--font-color);
 }
-
 .article-description {
     grid-area: articleDescription;
-    font-size: 1.3rem;
+    font-size: 20px;
     margin: 0;
     padding: 0.2rem 0.5rem 0 0.5rem;
     height: 100%;
     color: var(--font-color);
 }
-
-.seeMore-button {
-    grid-area: seeMore;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 0 0 0.2rem 0;
-}
-
 div.article div a {
     background: #007EA7;
     color: white;
@@ -137,23 +121,6 @@ div.article div a {
     width: 4rem;
     text-align: center;
 }
-
-.seeMore-button>p {
-    font-size: 1rem;
-    text-align: center;
-    background-color: var(--btn-color);
-    border-radius: 10px;
-    width: 50%;
-    margin: 0;
-    padding: 0.5rem;
-    align-self: center;
-    color: var(--primary-color);
-    text-decoration: none;
-}
-.seeMore-button {
-    text-decoration: none;
-}
-
 .delete-button {
     grid-area: giftButton;
     margin: 0;
@@ -162,14 +129,8 @@ div.article div a {
     text-align: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    font-size: 20px;
 }
-
-.gift-button>p {
-    margin: 0;
-    font-size: 1.7rem;
-    font-weight: bold;
-}
-
 .add-form {
     display: flex;
     flex-direction: column;
@@ -177,79 +138,148 @@ div.article div a {
     text-align: center;
     margin-bottom: 5rem;
 }
-
-#list_id{
+#list_id {
     width: 10rem;
     height: 1.5rem;
     border-radius: 11px;
     text-align: center;
     background-color: var(--background-color);
 }
-
 .list_id {
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
-
 #giftName {
-    width: 20rem;
-    height: 1.5rem;
+    width: 30rem;
+    font-size: 20px;
+    height: 2.5rem;
     border-radius: 11px;
     text-align: center;
     background-color: var(--background-color);
 }
-
-.giftName{
+.giftName {
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
-
 #price {
-    width: 20rem;
-    height: 1.5rem;
+    width: 30rem;
+    font-size: 20px;
+    height: 2.5rem;
     border-radius: 11px;
     text-align: center;
     background-color: var(--background-color);
 }
-
 .price {
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
-
 #imgLink {
-    width: 20rem;
-    height: 1.5rem;
+    width: 30rem;
+    font-size: 20px;
+    height: 2.5rem;
     border-radius: 11px;
     background-color: var(--background-color);
     text-align: center;
 }
-
 .imgLink {
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
-
 #giftLink {
-    width: 20rem;
-    height: 1.5rem;
+    width: 30rem;
+    font-size: 20px;
+    height: 2.5rem;
     border-radius: 11px;
     background-color: var(--background-color);
     text-align: center;
-
 }
-
 .giftLink {
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
-
 #description {
-    width: 25rem;
-    height: 5rem;
+    width: 30rem;
+    font-size: 20px;
+    height: 7rem;
     border-radius: 11px;
     background-color: var(--background-color);
     text-align: center;
 }
-
 .description {
     color: var(--primary-color);
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.add_Article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--event-color-9);
+    opacity: 80%;
+    width: 20rem;
+    margin: auto;
+    border-radius: 15px;
+}
+.add_Article:hover {
+    background-color: var(--btn-color);
+}
+.add {
+    background-color: transparent;
+    border: transparent;
+    font-size: 30px;
+    padding: 1rem;
+    color: var(--font-color);
+}
+.add:hover {
+    color: var(--primary-color);
+}
+.btn_add {
+    width: 2rem;
+}
+.form {
+    display: none;
+    -webkit-animation: scale-up-ver-top 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-ver-top 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes scale-up-ver-top {
+    0% {
+    -webkit-transform: scaleY(0.2);
+            transform: scaleY(0.2);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    }
+    100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    }
+}
+@keyframes scale-up-ver-top {
+0% {
+    -webkit-transform: scaleY(0.2);
+            transform: scaleY(0.2);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+}
+100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+}
+}
+.addArticle-visible {
+    display: block;
 }
 
 /*END OF MOBILE FIRST*/
@@ -258,6 +288,74 @@ div.article div a {
 /*DESKTOP FIRST*/
 
 @media only screen and (min-width: 900px) {
+    .list-container {
+        width: 50%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .add_Article {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: var(--event-color-9);
+        opacity: 80%;
+        width: 20rem;
+        margin: auto;
+        border-radius: 15px;
+        margin-bottom: 2rem;
+    }
+    .add_Article:hover {
+        background-color: var(--btn-color);
+    }
+    .add {
+        background-color: transparent;
+        border: transparent;
+        font-size: 30px;
+        padding: 1rem;
+        color: var(--font-color);
+    }
+    .add:hover {
+        color: var(--primary-color);
+    }
+    .btn_add {
+        width: 2rem;
+    }
+    .form {
+        display: none;
+        -webkit-animation: scale-up-ver-top 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: scale-up-ver-top 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+    @-webkit-keyframes scale-up-ver-top {
+        0% {
+        -webkit-transform: scaleY(0.2);
+                transform: scaleY(0.2);
+        -webkit-transform-origin: 100% 0%;
+                transform-origin: 100% 0%;
+        }
+        100% {
+        -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+                transform-origin: 100% 0%;
+        }
+    }
+    @keyframes scale-up-ver-top {
+    0% {
+        -webkit-transform: scaleY(0.2);
+                transform: scaleY(0.2);
+        -webkit-transform-origin: 100% 0%;
+                transform-origin: 100% 0%;
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+                transform-origin: 100% 0%;
+    }
+    }
+    .addArticle-visible {
+        display: block;
+    }
     .page {
         display: flex;
         flex-direction: row;
@@ -282,8 +380,8 @@ div.article div a {
         grid-template-columns: 1.5fr 1.5fr 0.5fr;
         grid-template-rows: 1fr 2fr 1fr 1fr;
         grid-template-areas: "articlePicture articleTitle articlePrice" "articlePicture articleDescription articleDescription" "articlePicture seeMore seeMore" "giftButton giftButton giftButton";
-        width: 22rem;
-        height: 10rem;
+        width: 25rem;
+        height: 15rem;
         padding: 1rem;
         border-radius: 10px;
         margin-bottom: 2rem;
@@ -298,38 +396,21 @@ div.article div a {
     }
     .article-title {
         grid-area: articleTitle;
-        font-size: 1rem;
+        font-size: 20px;
         margin: 0;
-        padding: 0.2rem 0 0 0.2rem;
     }
     .article-price {
         grid-area: articlePrice;
-        font-size: 1rem;
+        font-size: 20px;
         margin: 0;
         justify-self: end;
-        padding: 0.2rem 0.2rem 0 0;
     }
     .article-description {
         grid-area: articleDescription;
-        font-size: 15px;
+        font-size: 20px;
         margin: 0.3rem;
         padding: 0.2rem 0.5rem 0 0.5rem;
         height: 100%;
-    }
-    .seeMore-button {
-        grid-area: seeMore;
-        margin-top: 1rem 0.5rem 0 0.5rem;
-        background-color: var(--btn-color);
-        border-radius: 10px;
-        text-decoration: none;
-        box-shadow: 2px 2px 4px black;
-    }
-    .seeMore-button>p {
-        font-size: 15px;
-        text-align: center;
-        width: 100%;
-        margin: 0;
-        color: var(--primary-color);
     }
     .list-share-container {
         grid-template-rows: 2rem 3rem repeat(9, auto) 2rem;
