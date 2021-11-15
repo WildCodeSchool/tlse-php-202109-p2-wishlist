@@ -38,7 +38,6 @@ class ListModel extends AbstractManager
         $statement = $this->pdo->prepare($query);
         $statement->bindValue('share_link', $linkShare, \PDO::PARAM_INT);
         $statement->execute();
-
         return $statement->fetchAll();
     }
 

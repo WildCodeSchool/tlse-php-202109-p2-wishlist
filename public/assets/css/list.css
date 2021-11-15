@@ -59,31 +59,7 @@ h3 {
     gap: 2rem;
     height: auto;
     padding-bottom: 3rem;
-    margin-top: 5rem;
-}
-
-/* add new list */
-.in-card-add {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: var(--background-color);
-    opacity: 0.9;
-    padding: 0.5rem;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.card-add {
-    border-radius: 10px;
-    width: calc(100% - 2rem);
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-.in-card-add a img {
-    height: 3rem;
-    width: 3rem;
+    margin-top: 4rem;
 }
 
 .card {
@@ -94,8 +70,7 @@ h3 {
     cursor: pointer;
 }
 
-.card-header,
-.card-header-add {
+.card-header {
     height: fit-content;
     padding: 0.5rem;
     text-align: center;
@@ -139,6 +114,7 @@ h3 {
 
 .in-card .gift-list {
     width: calc(100% - 60%);
+    min-height: 12rem;
     padding: 0.5rem 0.5rem 0.5rem 0;
     display: flex;
     flex-direction: column;
