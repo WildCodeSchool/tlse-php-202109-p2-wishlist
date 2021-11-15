@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Model\ArticleManager;
 use App\Model\ItemManager;
+use App\Model\ListModel;
 
 class ItemController extends AbstractController
 {
@@ -60,21 +62,32 @@ class ItemController extends AbstractController
      */
     public function add(): string
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // clean $_POST data
-            $item = array_map('trim', $_POST);
-
-            // TODO validations (length, format...)
-
-            // if validation is ok, insert and redirection
-            $itemManager = new ItemManager();
-            $id = $itemManager->insert($item);
-            header('Location:/items/show?id=' . $id);
+        if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['share_link'])) {
+            $newList = new ListModel();
+            $list = $newList->showByLinkShare($_GET['share_link']);
+            $userLists = new ListModel();
+            $lists = $userLists->showListsByUserId(intval($_SESSION['user']['id']));
+            return $this->twig->render('Item/add.html.twig', [
+                'list' => $list,
+                'user' => $_SESSION['user'],
+                'lists' => $lists
+            ]);
+        } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $_POST["is_gifted"] = "0";
+            $insertArticle = new ArticleManager();
+            $insertArticle->insertArticle($_POST);
+            $newList = new ListModel();
+            $list = $newList->showByLinkShare($_GET['share_link']);
+            $userLists = new ListModel();
+            $lists = $userLists->showListsByUserId(intval($_SESSION['user']['id']));
+            return $this->twig->render('Item/add.html.twig', [
+                'user' => $_SESSION['user'],
+                'list' => $list,
+                'lists' => $lists
+            ]);
         }
-
         return $this->twig->render('Item/add.html.twig');
     }
-
 
     /**
      * Delete a specific item
