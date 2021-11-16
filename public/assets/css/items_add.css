@@ -16,17 +16,21 @@
     padding: 0 1rem 0 1rem;
     opacity: 80%;
 }
+
 .list-title {
     color: var(--font-color);
     font-weight: bold;
     font-size: 30px;
 }
+
 .list-date {
     color: var(--font-color);
 }
+
 .list-description {
     color: var(--font-color);
 }
+
 .add-form>h1 {
     display: flex;
     flex-direction: column;
@@ -34,6 +38,7 @@
     color: var(--primary-color);
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
+
 #submit {
     background-color: var(--btn-color);
     color: var(--primary-color);
@@ -47,19 +52,23 @@
     border: solid black 0.5px;
     box-shadow: 2px 2px 4px black;
 }
+
 #submit:hover {
     background-color: var(--background-color);
     color: var(--btn-color);
     border: 1px solid var(--btn-color);
 }
+
 .add-form {
     margin: auto;
     color: var(--primary-color);
     font-weight: 400;
 }
+
 .list-sort {
     grid-area: sortArticle;
 }
+
 .article-container {
     grid-area: articleContainer;
     display: flex;
@@ -68,6 +77,7 @@
     min-width: 100%;
     margin-top: 1rem;
 }
+
 .article {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 0.5fr;
@@ -79,10 +89,12 @@
     margin: 0 1rem 2rem 1rem;
     background-color: var(--background-color);
 }
+
 div.article {
     background: var(--primary-color);
     opacity: 0.8;
 }
+
 .article-img {
     grid-area: articlePicture;
     max-height: calc(100% - 0.4rem);
@@ -90,6 +102,7 @@ div.article {
     align-self: center;
     margin: 0.2rem;
 }
+
 .article-title {
     grid-area: articleTitle;
     font-size: 20px;
@@ -97,6 +110,7 @@ div.article {
     padding: 0.2rem 0 0 0.2rem;
     color: var(--font-color);
 }
+
 .article-price {
     grid-area: articlePrice;
     font-size: 20px;
@@ -105,6 +119,7 @@ div.article {
     padding: 0.2rem 0.2rem 0 0;
     color: var(--font-color);
 }
+
 .article-description {
     grid-area: articleDescription;
     font-size: 20px;
@@ -113,6 +128,7 @@ div.article {
     height: 100%;
     color: var(--font-color);
 }
+
 div.article div a {
     background: #007EA7;
     color: white;
@@ -121,6 +137,7 @@ div.article div a {
     width: 4rem;
     text-align: center;
 }
+
 .delete-button {
     grid-area: giftButton;
     margin: 0;
@@ -131,6 +148,7 @@ div.article div a {
     border-bottom-right-radius: 10px;
     font-size: 20px;
 }
+
 .add-form {
     display: flex;
     flex-direction: column;
@@ -138,6 +156,7 @@ div.article div a {
     text-align: center;
     margin-bottom: 5rem;
 }
+
 #list_id {
     width: 10rem;
     height: 1.5rem;
@@ -145,9 +164,11 @@ div.article div a {
     text-align: center;
     background-color: var(--background-color);
 }
+
 .list_id {
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
+
 #giftName {
     width: 30rem;
     font-size: 20px;
@@ -156,12 +177,14 @@ div.article div a {
     text-align: center;
     background-color: var(--background-color);
 }
+
 .giftName {
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
     font-size: 30px;
     margin-bottom: 5px;
     font-weight: bold;
 }
+
 #price {
     width: 30rem;
     font-size: 20px;
@@ -170,12 +193,14 @@ div.article div a {
     text-align: center;
     background-color: var(--background-color);
 }
+
 .price {
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
     font-size: 30px;
     margin-bottom: 5px;
     font-weight: bold;
 }
+
 #imgLink {
     width: 30rem;
     font-size: 20px;
@@ -184,12 +209,14 @@ div.article div a {
     background-color: var(--background-color);
     text-align: center;
 }
+
 .imgLink {
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
     font-size: 30px;
     margin-bottom: 5px;
     font-weight: bold;
 }
+
 #giftLink {
     width: 30rem;
     font-size: 20px;
@@ -198,12 +225,14 @@ div.article div a {
     background-color: var(--background-color);
     text-align: center;
 }
+
 .giftLink {
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
     font-size: 30px;
     margin-bottom: 5px;
     font-weight: bold;
 }
+
 #description {
     width: 30rem;
     font-size: 20px;
@@ -212,6 +241,7 @@ div.article div a {
     background-color: var(--background-color);
     text-align: center;
 }
+
 .description {
     color: var(--primary-color);
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
@@ -219,6 +249,7 @@ div.article div a {
     margin-bottom: 5px;
     font-weight: bold;
 }
+
 .add_Article {
     display: flex;
     flex-direction: row;
@@ -229,9 +260,11 @@ div.article div a {
     margin: auto;
     border-radius: 15px;
 }
+
 .add_Article:hover {
     background-color: var(--btn-color);
 }
+
 .add {
     background-color: transparent;
     border: transparent;
@@ -239,17 +272,21 @@ div.article div a {
     padding: 1rem;
     color: var(--font-color);
 }
+
 .add:hover {
     color: var(--primary-color);
 }
+
 .btn_add {
     width: 2rem;
 }
+
 .form {
     display: none;
     -webkit-animation: scale-up-ver-top 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: scale-up-ver-top 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
 @-webkit-keyframes scale-up-ver-top {
     0% {
     -webkit-transform: scaleY(0.2);
@@ -264,6 +301,7 @@ div.article div a {
             transform-origin: 100% 0%;
     }
 }
+
 @keyframes scale-up-ver-top {
 0% {
     -webkit-transform: scaleY(0.2);
@@ -278,6 +316,7 @@ div.article div a {
             transform-origin: 100% 0%;
 }
 }
+
 .addArticle-visible {
     display: block;
 }
@@ -293,6 +332,7 @@ div.article div a {
         margin: auto;
         margin-bottom: 2rem;
     }
+
     .add_Article {
         display: flex;
         flex-direction: row;
@@ -304,9 +344,11 @@ div.article div a {
         border-radius: 15px;
         margin-bottom: 2rem;
     }
+
     .add_Article:hover {
         background-color: var(--btn-color);
     }
+
     .add {
         background-color: transparent;
         border: transparent;
@@ -314,17 +356,21 @@ div.article div a {
         padding: 1rem;
         color: var(--font-color);
     }
+
     .add:hover {
         color: var(--primary-color);
     }
+
     .btn_add {
         width: 2rem;
     }
+
     .form {
         display: none;
         -webkit-animation: scale-up-ver-top 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
         animation: scale-up-ver-top 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
+
     @-webkit-keyframes scale-up-ver-top {
         0% {
         -webkit-transform: scaleY(0.2);
@@ -339,6 +385,7 @@ div.article div a {
                 transform-origin: 100% 0%;
         }
     }
+
     @keyframes scale-up-ver-top {
     0% {
         -webkit-transform: scaleY(0.2);
@@ -353,21 +400,26 @@ div.article div a {
                 transform-origin: 100% 0%;
     }
     }
+
     .addArticle-visible {
         display: block;
     }
+
     .page {
         display: flex;
         flex-direction: row;
     }
+
     .main-background {
         background-image: url("/assets/images/add_list.jpg");
         background-size: cover;
         position: fixed
     }
+
     .list-sort {
         grid-area: sortArticle;
     }
+
     .article-container {
         grid-area: articleContainer;
         display: flex;
@@ -375,6 +427,7 @@ div.article div a {
         justify-content: space-evenly;
         min-width: 100%;
     }
+
     .article {
         display: grid;
         grid-template-columns: 1.5fr 1.5fr 0.5fr;
@@ -387,6 +440,7 @@ div.article div a {
         margin-bottom: 2rem;
         background-color: var(--background-color);
     }
+
     .article-img {
         grid-area: articlePicture;
         max-height: calc(100% - 0.4rem);
@@ -394,17 +448,20 @@ div.article div a {
         align-self: center;
         margin: 0.3rem;
     }
+
     .article-title {
         grid-area: articleTitle;
         font-size: 20px;
         margin: 0;
     }
+
     .article-price {
         grid-area: articlePrice;
         font-size: 20px;
         margin: 0;
         justify-self: end;
     }
+
     .article-description {
         grid-area: articleDescription;
         font-size: 20px;
@@ -412,9 +469,11 @@ div.article div a {
         padding: 0.2rem 0.5rem 0 0.5rem;
         height: 100%;
     }
+
     .list-share-container {
         grid-template-rows: 2rem 3rem repeat(9, auto) 2rem;
     }
+    
     .add-form {
         margin-top: 2rem;
     }
