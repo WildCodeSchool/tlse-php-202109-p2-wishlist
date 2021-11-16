@@ -32,7 +32,7 @@ class ArticleManager extends AbstractManager
         $statement->bindValue(':description', $article['description'], \PDO::PARAM_STR);
         $statement->bindValue(':price', $article['price'], \PDO::PARAM_INT);
         $statement->bindValue(':is_gifted', $article['is_gifted']);
-        $statement->bindValue(':list_id', $article['list_id']);
+        $statement->bindValue(':list_id', $_GET['listId']);
         $statement->execute();
         return $this->pdo->lastInsertId();
     }
