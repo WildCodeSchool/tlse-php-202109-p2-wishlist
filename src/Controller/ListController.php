@@ -7,6 +7,7 @@ use App\Model\ListModel;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
+use App\Model\ArticleManager;
 
 class ListController extends AbstractController
 {
@@ -116,15 +117,31 @@ class ListController extends AbstractController
 
     public function addArticle()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_SESSION['user'])) {
-            //rajouter le lien vers addArticle - Pour l'instant 404
-            $listId = trim($_GET['listId']);
+        if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['listId'])) {
+            $newList = new ArticleManager();
+            $list = $newList->showArticlesByListId($_GET['listId']);
+            $userLists = new ListModel();
+            $lists = $userLists->selectOneById($_GET['listId']);
             return $this->twig->render('List/add_article.html.twig', [
-                'user' => $_SESSION['user'],
-                'listId' => $listId
+                'list' => $list,
+                'user' => $_SESSION['user']['id'],
+                'lists' => $lists,
+
             ]);
-        } else {
-            header("Location: /login?notConnected=Tu n'es pas connecté");
+        } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $_POST["is_gifted"] = "0";
+            $insertArticle = new ArticleManager();
+            $insertArticle->insertArticle($_POST);
+            $newList = new ArticleManager();
+            $list = $newList->showArticlesByListId($_GET['listId']);
+            $userLists = new ListModel();
+            $lists = $userLists->selectOneById($_GET['listId']);
+            return $this->twig->render('List/add_article.html.twig', [
+                'user' => $_SESSION['user']['id'],
+                'list' => $list,
+                'lists' => $lists
+            ]);
         }
+        header("Location: /login?notConnected=Tu n'es pas connecté");
     }
 }
