@@ -13,6 +13,7 @@
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
+    font-size: 2rem;
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
@@ -31,11 +32,19 @@
 .email {
     text-align: center;
     color: var(--primary-color);
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .password {
     text-align: center;
     color: var(--primary-color);
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input[type=text], input[type=password] {
@@ -78,6 +87,8 @@ input[type=submit]:hover {
     text-align: center;
     padding-bottom: 1rem;
     padding-top: 1rem;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .noaccount:hover {
@@ -115,7 +126,7 @@ input[type=submit]:hover {
         text-align: center;
         background-color: transparent;
         color: var(--primary-color);
-        font-size: 40px;
+        font-size: 4rem;
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
     }
 
@@ -129,11 +140,19 @@ input[type=submit]:hover {
     .email {
         text-align: center;
         color: var(--primary-color);
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-weight: bold;    
     }
 
     .password {
         text-align: center;
         color: var(--primary-color);
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-weight: bold;    
     }
 
     input[type=text], input[type=password] {
@@ -167,7 +186,7 @@ input[type=submit]:hover {
 
     .noaccount {
         background-color: var(--btn-color);
-        width: 10rem;
+        width: 12rem;
         margin: auto;
         border-radius: 11px;
         border: solid black 0.5px;
@@ -186,7 +205,7 @@ input[type=submit]:hover {
     .noaccount-href {
         color: var(--primary-color);
         text-decoration: none;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
     }
     
@@ -197,7 +216,7 @@ input[type=submit]:hover {
 
     .show-password {
         color: var(--background-color);
-        font-size: 15px;
+        font-size: 20px;
         margin-top: 1rem;
         text-shadow: black 2px 2px;
     }
