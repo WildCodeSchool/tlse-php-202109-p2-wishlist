@@ -148,6 +148,11 @@ div.article {
     text-align: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .gift-button > p {
@@ -155,8 +160,6 @@ div.article {
     font-size: 1.7rem;
     font-weight: bold;
 }
-
-
 /*END OF MOBILE FIRST*/
 
 
