@@ -7,7 +7,6 @@ use App\Model\ListModel;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
-use App\Model\ArticleManager;
 
 class ListController extends AbstractController
 {
