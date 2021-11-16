@@ -139,7 +139,7 @@ input[type=submit]:hover {
         font-size: 4rem;
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
     }
-    
+
     .firstname {
         color: var(--primary-color);
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
@@ -256,7 +256,7 @@ input[type=submit]:hover {
 
     .show-password {
         color: var(--primary-color);
-        font-size: 15px;
+        font-size: 20px;
         margin: 1rem;
         text-shadow: black 2px 2px;
     }
