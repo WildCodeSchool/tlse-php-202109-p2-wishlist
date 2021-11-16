@@ -7,5 +7,3 @@ articles.forEach((article) => {
         window.location.href = "/list/share?share_link=" + shareLink + "&article_id=" + articleId
     };
 })
-
-
