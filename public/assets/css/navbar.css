@@ -55,7 +55,7 @@
 }
 
 .logoDesktop>img:nth-child(1) {
-    height: 45px;
+    height: 50px;
     width: auto;
 }
 
@@ -115,5 +115,4 @@ div.card div a {
     html {
         background: rgb(0, 0, 0);
     }
-
 }
