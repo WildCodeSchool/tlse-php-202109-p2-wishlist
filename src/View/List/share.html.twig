@@ -36,12 +36,18 @@
                     <h4 class="article-title">{{ article.aname }}</h4>
                     <h4 class="article-price">{{ article.price }}€</h4>
                     <p class="article-description">{{ article.adescription }}</p>
-                    <a class="seeMore-button" href="{{ article.market_link }}" target="_blank" >
+                    <a class="seeMore-button" href="{{ article.market_link }}" target="_blank">
                         <p>En savoir plus</p>
                     </a>
-                    <div class="gift-button">
-                        <p>Réserver!</p>
-                    </div>
+                    {% if article.is_gifted is same as "0" %}
+                        <div class="gift-button-reserved">
+                            <p>Réserver !</p>
+                        </div>
+                    {% else %}
+                        <div class="gift-button-already-reserved">
+                            <p>Déjà réservé !</p>
+                        </div>
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>
