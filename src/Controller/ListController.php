@@ -105,9 +105,18 @@ class ListController extends AbstractController
         if (isset($_SESSION['user'])) {
             $userLists = new ListModel();
             $lists = $userLists->showListsByUserId(intval($_SESSION['user']['id']));
+            $events = [
+                "Mariage" => "wedding",
+                "Anniversaire" => "birthday",
+                "Crémaillère" => "rack",
+                "Fêtes religieuses" => "christmas",
+                "Fête Prénatale" => "baby_shower",
+                "Autre" => "other"
+            ];
             return $this->twig->render('List/lists.html.twig', [
                 'user' => $_SESSION['user'],
                 'lists' => $lists,
+                'events' => $events,
             ]);
         } else {
             header("Location: /login?notConnected=Tu n'es pas connecté");
