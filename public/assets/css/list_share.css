@@ -1,67 +1,72 @@
 /*MOBILE FIRST*/
 
 .main-background {
-    background-image: url("/assets/images/list_share_bg_mobile.jpg");
+    background-image: url("/assets/images/link_share_bg.png");
     background-size: cover;
     position: fixed
 }
 
 .list-share-container {
-    position: relative;
-    z-index: 1;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 5rem 1fr 1fr auto 1fr auto 2rem;
-    grid-template-areas: "navbar navbar navbar" "listTitle listTitle listTitle" "listEvent . listDate" "listDescription listDescription listDescription" ". . sortArticle" "articleContainer articleContainer articleContainer" ". . .";
+    height: auto;
+    display: flex;
+    flex-direction: column;
     justify-items: center;
 }
 
-.list-title {
-    grid-area: listTitle;
-    margin: 1rem;
-    background-color: var(--color-2);
+.list-data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    margin: 2rem 1rem 0 1rem;
     padding: 1rem;
+    background-color: var(--background-color);
     border-radius: 10px;
+    opacity: 0.8;
+}
+
+.list-title {
+    padding: 0 0 1rem 0;
+    min-width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.list-event-container {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: 50%;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 0.5rem;
 }
 
 .list-event {
-    grid-area: listEvent;
-    margin: 1rem;
-    background-color: var(--color-2);
-    padding: 1rem;
-    border-radius: 10px;
-    width: max-content;
+    min-width: 100%;
+    margin: 0;
 }
 
 .list-date {
-    grid-area: listDate;
-    margin: 1rem;
-    background-color: var(--color-2);
-    padding: 1rem;
-    border-radius: 10px;
-    width: max-content;
+    min-width: 100%;
+    margin: 0;
 }
 
 .list-description {
-    grid-area: listDescription;
-    margin: 1rem;
-    background-color: var(--color-2);
-    padding: 1rem;
-    text-align: justify;
-    border-radius: 10px;
-}
-
-.list-sort {
-    grid-area: sortArticle;
+    min-width: 100%;
+    margin: 0;
+    text-align: center;
 }
 
 .article-container {
-    grid-area: articleContainer;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     min-width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
 }
 
 .article {
@@ -77,7 +82,6 @@
     border-radius: 10px;
     margin: 0 1rem 2rem 1rem;
     background-color: var(--background-color);
-    border: 1px solid var(--border);
     box-shadow: 5px 5px 1px 0 var(--font-color);
 
 }
@@ -143,7 +147,7 @@ div.article {
 .gift-button {
     grid-area: giftButton;
     margin: 0;
-    background-color: var(--event-color-4);
+    background-color: var(--card-color);
     width: 100%;
     text-align: center;
     border-bottom-left-radius: 10px;
@@ -159,7 +163,9 @@ div.article {
     margin: 0;
     font-size: 1.7rem;
     font-weight: bold;
+    color: var(--primary-color);
 }
+
 /*END OF MOBILE FIRST*/
 
 
@@ -167,60 +173,9 @@ div.article {
 
 @media only screen and (min-width: 900px) {
     .main-background {
-        background-image: url("/assets/images/list_share_bg.jpg");
+        background-image: url("/assets/images/link_share_bg.png");
         background-size: cover;
         position: fixed
-    }
-
-    .list-share-container {
-        position: relative;
-        z-index: 1;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 5rem 3rem repeat(9, auto) 2rem;
-        grid-template-areas: "navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar" ". . . . listTitle listTitle listTitle listTitle . . . ." ". . . listEvent listEvent . . listDate listDate . . ." ". . . listDescription listDescription listDescription listDescription listDescription listDescription . . ." ". . . . . . . . . . . sortArticle" ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer articleContainer ." ". . . . . . . . . . . .";
-        justify-items: center;
-    }
-
-    .list-title {
-        grid-area: listTitle;
-        width: max-content;
-        height: max-content;
-        margin: 0;
-        padding: 0.5rem 2rem 0.5rem 2rem;
-        text-align: center;
-    }
-
-    .list-event {
-        grid-area: listEvent;
-        width: max-content;
-        height: max-content;
-        margin: 0;
-        padding: 0.5rem 2rem 0.5rem 2rem;
-        text-align: center;
-    }
-
-    .list-date {
-        grid-area: listDate;
-        width: max-content;
-        height: max-content;
-        margin: 0;
-        padding: 0.5rem 2rem 0.5rem 2rem;
-        text-align: center;
-    }
-
-    .list-description {
-        grid-area: listDescription;
-        width: 100%;
-        height: max-content;
-        margin: 0;
-        padding: 0.5rem 2rem 0.5rem 2rem;
-        text-align: center;
-    }
-
-    .list-sort {
-        grid-area: sortArticle;
     }
 
     .article-container {
@@ -229,6 +184,11 @@ div.article {
         flex-flow: row wrap;
         justify-content: space-evenly;
         min-width: 100%;
+    }
+
+    .list-data-container {
+        width: 50%;
+        margin: 2rem auto auto auto;
     }
 
     .article {
@@ -300,7 +260,7 @@ div.article {
     .gift-button {
         grid-area: giftButton;
         margin: 0;
-        background-color: var(--event-color-4);
+        background-color: var(--card-color);
         width: 100%;
         text-align: center;
         border-bottom-left-radius: 10px;
@@ -311,6 +271,7 @@ div.article {
         margin: 0;
         font-size: 1.7rem;
         font-weight: bold;
+        color: var(--primary-color);
     }
 
     /*END OF DESKTOP FIRST*/
