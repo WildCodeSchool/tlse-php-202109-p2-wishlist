@@ -25,6 +25,8 @@
 
 .list-date {
     color: var(--font-color);
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .list-description {
@@ -182,15 +184,17 @@ div.article div a {
 
 .list_id {
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    text-align: center;
 }
 
 #giftName {
-    width: 30rem;
+    width: max-content;
     font-size: 20px;
     height: 2.5rem;
     border-radius: 11px;
     text-align: center;
     background-color: var(--background-color);
+    opacity: 80%;
 }
 
 .giftName {
@@ -201,12 +205,13 @@ div.article div a {
 }
 
 #price {
-    width: 30rem;
+    width: max-content;
     font-size: 20px;
     height: 2.5rem;
     border-radius: 11px;
     text-align: center;
     background-color: var(--background-color);
+    opacity: 80%;
 }
 
 .price {
@@ -217,12 +222,13 @@ div.article div a {
 }
 
 #imgLink {
-    width: 30rem;
+    width: max-content;
     font-size: 20px;
     height: 2.5rem;
     border-radius: 11px;
     background-color: var(--background-color);
     text-align: center;
+    opacity: 80%;
 }
 
 .imgLink {
@@ -233,12 +239,13 @@ div.article div a {
 }
 
 #giftLink {
-    width: 30rem;
+    width: max-content;
     font-size: 20px;
     height: 2.5rem;
     border-radius: 11px;
     background-color: var(--background-color);
     text-align: center;
+    opacity: 80%;
 }
 
 .giftLink {
@@ -249,12 +256,14 @@ div.article div a {
 }
 
 #description {
-    width: 30rem;
+    width: max-content;
     font-size: 20px;
     height: 7rem;
     border-radius: 11px;
+    padding: 0.5rem;
     background-color: var(--background-color);
     text-align: center;
+    opacity: 80%;
 }
 
 .description {
@@ -552,6 +561,92 @@ div.article div a {
         cursor: pointer;
         width: 50%;
     }
-
+    
+    #giftName {
+        width: 30rem;
+        font-size: 20px;
+        height: 2.5rem;
+        border-radius: 11px;
+        text-align: center;
+        background-color: var(--background-color);
+        opacity: 80%;
+    }
+    
+    .giftName {
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    #price {
+        width: 30rem;
+        font-size: 20px;
+        height: 2.5rem;
+        border-radius: 11px;
+        text-align: center;
+        background-color: var(--background-color);
+        opacity: 80%;
+    }
+    
+    .price {
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    #imgLink {
+        width: 30rem;
+        font-size: 20px;
+        height: 2.5rem;
+        border-radius: 11px;
+        background-color: var(--background-color);
+        text-align: center;
+        opacity: 80%;
+    }
+    
+    .imgLink {
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    #giftLink {
+        width: 30rem;
+        font-size: 20px;
+        height: 2.5rem;
+        border-radius: 11px;
+        background-color: var(--background-color);
+        text-align: center;
+        opacity: 80%;
+    }
+    
+    .giftLink {
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    #description {
+        width: 30rem;
+        font-size: 20px;
+        height: 7rem;
+        border-radius: 11px;
+        padding: 1rem;
+        background-color: var(--background-color);
+        text-align: center;
+        opacity: 80%;
+    }
+    
+    .description {
+        color: var(--primary-color);
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
     /*END OF DESKTOP FIRST*/
 }
