@@ -1,6 +1,7 @@
 .topnav {
     overflow: hidden;
     position: relative;
+    border-bottom: var(--font-color) solid 2px;
 }
 
 .topnav #myLinks {
@@ -11,7 +12,7 @@
     color: rgb(0, 0, 0);
     padding: 10px;
     text-decoration: none;
-    font-size: 45px;
+    font-size: 40px;
     display: block;
 }
 
@@ -44,8 +45,9 @@
     background: white;
 }
 
-#myLinks {
-    font-size: small;
+#myLinks a {
+    font-size: 20px;
+    text-align: center;
 }
 
 .logoMobile>img:nth-child(1) {
@@ -71,7 +73,7 @@ div.card div a {
         align-items: center;
     }
     #myLinks a {
-        font-size: 20px;
+        font-size: 25px;
         margin-right: 4%;
     }
     .icon {
@@ -113,7 +115,5 @@ div.card div a {
     html {
         background: rgb(0, 0, 0);
     }
-    #myLinks {
-        font-size: small;
-    }
+
 }

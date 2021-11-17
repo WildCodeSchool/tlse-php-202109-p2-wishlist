@@ -4,6 +4,10 @@
     position: fixed;
 }
 
+.hidden {
+    display: none;
+}
+
 /*MOBILE FIRST*/
 .list-container {
     background-color: var(--background-color);
@@ -25,13 +29,15 @@
 
 .list-date {
     color: var(--font-color);
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .list-description {
     color: var(--font-color);
 }
 
-.add-form>h1 {
+.add-form > h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,15 +144,30 @@ div.article div a {
     text-align: center;
 }
 
-.delete-button {
+.article-link {
     grid-area: giftButton;
-    margin: 0;
-    background-color: var(--event-color-1);
-    width: 100%;
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: var(--btn-color);
+    border-radius: 11px;
+    font-size: 25px;
     text-align: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    font-size: 20px;
+    padding: 0.5rem;
+}
+
+.delete-button {
+    grid-area: seeMore;
+    background-color: var(--event-color-1);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 50%;
 }
 
 .add-form {
@@ -167,15 +188,17 @@ div.article div a {
 
 .list_id {
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    text-align: center;
 }
 
 #giftName {
-    width: 30rem;
+    width: max-content;
     font-size: 20px;
     height: 2.5rem;
     border-radius: 11px;
     text-align: center;
     background-color: var(--background-color);
+    opacity: 80%;
 }
 
 .giftName {
@@ -186,12 +209,13 @@ div.article div a {
 }
 
 #price {
-    width: 30rem;
+    width: max-content;
     font-size: 20px;
     height: 2.5rem;
     border-radius: 11px;
     text-align: center;
     background-color: var(--background-color);
+    opacity: 80%;
 }
 
 .price {
@@ -202,12 +226,13 @@ div.article div a {
 }
 
 #imgLink {
-    width: 30rem;
+    width: max-content;
     font-size: 20px;
     height: 2.5rem;
     border-radius: 11px;
     background-color: var(--background-color);
     text-align: center;
+    opacity: 80%;
 }
 
 .imgLink {
@@ -218,12 +243,13 @@ div.article div a {
 }
 
 #giftLink {
-    width: 30rem;
+    width: max-content;
     font-size: 20px;
     height: 2.5rem;
     border-radius: 11px;
     background-color: var(--background-color);
     text-align: center;
+    opacity: 80%;
 }
 
 .giftLink {
@@ -234,12 +260,14 @@ div.article div a {
 }
 
 #description {
-    width: 30rem;
+    width: max-content;
     font-size: 20px;
     height: 7rem;
     border-radius: 11px;
+    padding: 0.5rem;
     background-color: var(--background-color);
     text-align: center;
+    opacity: 80%;
 }
 
 .description {
@@ -254,7 +282,8 @@ div.article div a {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: var(--event-color-9);
+    background-color: var(--btn-color);
+    color: var(--primary-color);
     opacity: 80%;
     width: 20rem;
     margin: auto;
@@ -262,7 +291,8 @@ div.article div a {
 }
 
 .add_Article:hover {
-    background-color: var(--btn-color);
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 .add {
@@ -270,11 +300,12 @@ div.article div a {
     border: transparent;
     font-size: 30px;
     padding: 1rem;
-    color: var(--font-color);
+    color: var(--primary-color);
 }
 
 .add:hover {
     color: var(--primary-color);
+    color: var(--font-color);
 }
 
 .btn_add {
@@ -289,36 +320,50 @@ div.article div a {
 
 @-webkit-keyframes scale-up-ver-top {
     0% {
-    -webkit-transform: scaleY(0.2);
-            transform: scaleY(0.2);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
+        -webkit-transform: scaleY(0.2);
+        transform: scaleY(0.2);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
     }
     100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
     }
 }
 
 @keyframes scale-up-ver-top {
-0% {
-    -webkit-transform: scaleY(0.2);
-            transform: scaleY(0.2);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-}
-100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-}
+    0% {
+        -webkit-transform: scaleY(0.2);
+        transform: scaleY(0.2);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
 }
 
 .addArticle-visible {
     display: block;
+}
+
+.share_link-container {
+    margin-bottom: 2rem;
+    opacity: 80%;
+}
+
+.share_link {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 1rem;
+    background-color: var(--background-color);
+    padding: 0.5rem;
+    border-radius: 11px;
 }
 
 /*END OF MOBILE FIRST*/
@@ -327,6 +372,21 @@ div.article div a {
 /*DESKTOP FIRST*/
 
 @media only screen and (min-width: 900px) {
+    .share_link-container {
+        display: flex;
+        position: absolute;
+        right: 1rem;
+    }
+
+    .share_link {
+        text-decoration: none;
+        color: var(--font-color);
+        font-size: 2rem;
+        background-color: var(--background-color);
+        padding: 1rem;
+        border-radius: 11px;
+    }
+
     .list-container {
         width: 50%;
         margin: auto;
@@ -337,7 +397,7 @@ div.article div a {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        background-color: var(--event-color-9);
+        background-color: var(--btn-color);
         opacity: 80%;
         width: 20rem;
         margin: auto;
@@ -346,7 +406,8 @@ div.article div a {
     }
 
     .add_Article:hover {
-        background-color: var(--btn-color);
+        background-color: var(--background-color);
+        color: var(--font-color);
     }
 
     .add {
@@ -354,11 +415,12 @@ div.article div a {
         border: transparent;
         font-size: 30px;
         padding: 1rem;
-        color: var(--font-color);
+        color: var(--primary-color);
     }
 
     .add:hover {
         color: var(--primary-color);
+        color: var(--font-color);
     }
 
     .btn_add {
@@ -373,32 +435,32 @@ div.article div a {
 
     @-webkit-keyframes scale-up-ver-top {
         0% {
-        -webkit-transform: scaleY(0.2);
-                transform: scaleY(0.2);
-        -webkit-transform-origin: 100% 0%;
-                transform-origin: 100% 0%;
+            -webkit-transform: scaleY(0.2);
+            transform: scaleY(0.2);
+            -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
         }
         100% {
-        -webkit-transform: scaleY(1);
-                transform: scaleY(1);
-        -webkit-transform-origin: 100% 0%;
-                transform-origin: 100% 0%;
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
         }
     }
 
     @keyframes scale-up-ver-top {
-    0% {
-        -webkit-transform: scaleY(0.2);
-                transform: scaleY(0.2);
-        -webkit-transform-origin: 100% 0%;
-                transform-origin: 100% 0%;
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-                transform: scaleY(1);
-        -webkit-transform-origin: 100% 0%;
-                transform-origin: 100% 0%;
-    }
+        0% {
+            -webkit-transform: scaleY(0.2);
+            transform: scaleY(0.2);
+            -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+        }
+        100% {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+        }
     }
 
     .addArticle-visible {
@@ -433,9 +495,9 @@ div.article div a {
         grid-template-columns: 1.5fr 1.5fr 0.5fr;
         grid-template-rows: 1fr 2fr 1fr 1fr;
         grid-template-areas: "articlePicture articleTitle articlePrice" "articlePicture articleDescription articleDescription" "articlePicture seeMore seeMore" "giftButton giftButton giftButton";
-        width: 25rem;
+        width: 30rem;
         height: 15rem;
-        padding: 1rem;
+        padding: 0.5rem;
         border-radius: 10px;
         margin-bottom: 2rem;
         background-color: var(--background-color);
@@ -473,9 +535,122 @@ div.article div a {
     .list-share-container {
         grid-template-rows: 2rem 3rem repeat(9, auto) 2rem;
     }
-    
+
     .add-form {
         margin-top: 2rem;
+    }
+
+    .article-link {
+        grid-area: giftButton;
+        text-decoration: none;
+        color: var(--primary-color);
+        background-color: var(--btn-color);
+        border-radius: 11px;
+        font-size: 25px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .delete-button {
+        grid-area: seeMore;
+        background-color: var(--event-color-1);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 50%;
+    }
+    
+    #giftName {
+        width: 30rem;
+        font-size: 20px;
+        height: 2.5rem;
+        border-radius: 11px;
+        text-align: center;
+        background-color: var(--background-color);
+        opacity: 80%;
+    }
+    
+    .giftName {
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    #price {
+        width: 30rem;
+        font-size: 20px;
+        height: 2.5rem;
+        border-radius: 11px;
+        text-align: center;
+        background-color: var(--background-color);
+        opacity: 80%;
+    }
+    
+    .price {
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    #imgLink {
+        width: 30rem;
+        font-size: 20px;
+        height: 2.5rem;
+        border-radius: 11px;
+        background-color: var(--background-color);
+        text-align: center;
+        opacity: 80%;
+    }
+    
+    .imgLink {
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    #giftLink {
+        width: 30rem;
+        font-size: 20px;
+        height: 2.5rem;
+        border-radius: 11px;
+        background-color: var(--background-color);
+        text-align: center;
+        opacity: 80%;
+    }
+    
+    .giftLink {
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    #description {
+        width: 30rem;
+        font-size: 20px;
+        height: 7rem;
+        border-radius: 11px;
+        padding: 1rem;
+        background-color: var(--background-color);
+        text-align: center;
+        opacity: 80%;
+    }
+    
+    .description {
+        color: var(--primary-color);
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-weight: bold;
     }
     /*END OF DESKTOP FIRST*/
 }

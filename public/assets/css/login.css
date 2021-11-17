@@ -186,7 +186,7 @@ input[type=submit]:hover {
 
     .noaccount {
         background-color: var(--btn-color);
-        width: 12rem;
+        width: 13rem;
         margin: auto;
         border-radius: 11px;
         border: solid black 0.5px;

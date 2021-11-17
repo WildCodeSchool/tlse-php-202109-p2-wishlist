@@ -12,8 +12,34 @@ a {
 
 h1 {
     text-align: center;
+    background-color: transparent;
     color: var(--primary-color);
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 2rem;
+}
+
+.wedding {
+    background-color: var(--event-color-8);
+}
+
+.birthday {
+    background-color: var(--event-color-1);
+}
+
+.rack {
+    background-color: var(--event-color-4);
+}
+
+.christmas {
+    background-color: var(--event-color-7);
+}
+
+.baby_shower {
+    background-color: var(--event-color-2);
+}
+
+.other {
+    background-color: var(--event-color-6);
 }
 
 /*list container*/
@@ -58,7 +84,6 @@ h1 {
     cursor: pointer;
 }
 
-.card-header,
 .card-header-add {
     height: fit-content;
     padding: 0.5rem;
@@ -67,6 +92,15 @@ h1 {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     color: var(--primary-color);
+}
+
+.card-header {
+    height: fit-content;
+    padding: 0.5rem;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: var(--font-color);
 }
 
 .in-card {
@@ -83,22 +117,23 @@ h1 {
     padding: 0.5rem;
 }
 
-.in-card .card-body p {
-    font-size: 1rem;
-}
-
 .card-title {
     font-weight: bold;
     text-align: center;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    font-size: 1.2rem;
 }
 
 .card-date {
     font-style: italic;
     text-align: center;
+    font-size: 1rem;
+    padding-bottom: 0.3rem;
 }
 
 .card-description {
     text-align: center;
+    font-size: 1rem;
 }
 
 .in-card .gift-list {
@@ -113,10 +148,9 @@ h1 {
 .in-card .gift-list p {
     margin: 0.3rem;
     font-size: 1.2rem;
-    background-color: var(--card-color);
     padding: 0.5rem;
     border-radius: 10px;
-    color: var(--primary-color);
+    color: var(--font-color);
     text-align: center;
 }
 
@@ -133,14 +167,21 @@ h1 {
 
     .card-add {
         border-radius: 10px;
-        width: calc(100% - 7rem);
-        margin-left: 1rem;
-        margin-right: 1rem;
+        width: calc(100% / 3 - 5rem);
+        margin: 0 auto 2rem auto;
     }
 
     .card {
         box-shadow: 5px 5px 8px rgb(0, 0, 0);
         background: var(--background-color);
         width: calc((100% / 3) - 5rem);
+    }
+
+    h1 {
+        text-align: center;
+        background-color: transparent;
+        color: var(--primary-color);
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 4rem;
     }
 }

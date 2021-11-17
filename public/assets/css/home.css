@@ -53,6 +53,7 @@ a {
     background-color: transparent;
     color: var(--primary-color);
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 2rem;
 }
 
 .paragraph {
@@ -73,6 +74,7 @@ a {
     padding-top: 5px;
     padding-bottom: 10px;
     font-weight: bold;
+    box-shadow: 2px 2px 4px black;
 }
 
 .welcome-user {
@@ -91,6 +93,14 @@ a {
         height: calc(100% - 30%);
     }
 
+    .titre {
+        text-align: center;
+        background-color: transparent;
+        color: var(--primary-color);
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 4rem;
+    }
+    
     .card {
         width: calc(100% / 3 - 3rem);
         height: 100%;
