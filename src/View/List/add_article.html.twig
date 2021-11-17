@@ -64,8 +64,8 @@
 					<div class="article-container">
 						{% for article in list %}
 							<div class="article">
-								<div class="article-id-hidden" style="display: none;">{{ article.id}}</div>
-								<div class="list-id-hidden" style="display: none;">{{ list[0]['list_id'] }}</div>
+								<div class="article-id-hidden hidden" id="article-id-hidden">{{ article.id}}</div>
+								<div class="list-id-hidden hidden">{{ list[0]['list_id'] }}</div>
 								<img class="article-img" alt="{{ article.name }}" src="{{ article.picture }}"/>
 								<h4 class="article-title">{{ article.name }}</h4>
 								<h4 class="article-price">{{ article.price }}€</h4>
@@ -73,7 +73,7 @@
 								<a class="seeMore-button" href="{{ article.market_link }}" target="_blank">
 									<p>En savoir plus</p>
 								</a>
-								<div class="erase-button">
+								<div class="erase-button" id="erase-button">
 									<p>Supprimer !</p>
 								</div>
 							</div>

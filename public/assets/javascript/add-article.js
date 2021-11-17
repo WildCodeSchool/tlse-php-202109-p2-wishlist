@@ -9,8 +9,8 @@ const articles = document.querySelectorAll('.article');
 const listId = document.querySelector('.list-id-hidden').textContent;
 
 articles.forEach((article) => {
-    let articleId = article.children[0].innerText;
-    article.children[7].onclick = function () {
+    let articleId = article.querySelector('#article-id-hidden').innerText;
+    article.querySelector('#erase-button').onclick = function () {
         window.location.href = "/list/user/lists/addArticle?listId=" + listId + "&eraseId=" + articleId;
     };
 })

@@ -4,6 +4,10 @@
     position: fixed;
 }
 
+.hidden {
+    display: none;
+}
+
 /*MOBILE FIRST*/
 .list-container {
     background-color: var(--background-color);
@@ -31,7 +35,7 @@
     color: var(--font-color);
 }
 
-.add-form>h1 {
+.add-form > h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -307,32 +311,32 @@ div.article div a {
 
 @-webkit-keyframes scale-up-ver-top {
     0% {
-    -webkit-transform: scaleY(0.2);
-            transform: scaleY(0.2);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
+        -webkit-transform: scaleY(0.2);
+        transform: scaleY(0.2);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
     }
     100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
     }
 }
 
 @keyframes scale-up-ver-top {
-0% {
-    -webkit-transform: scaleY(0.2);
-            transform: scaleY(0.2);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-}
-100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-}
+    0% {
+        -webkit-transform: scaleY(0.2);
+        transform: scaleY(0.2);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
 }
 
 .addArticle-visible {
@@ -422,32 +426,32 @@ div.article div a {
 
     @-webkit-keyframes scale-up-ver-top {
         0% {
-        -webkit-transform: scaleY(0.2);
-                transform: scaleY(0.2);
-        -webkit-transform-origin: 100% 0%;
-                transform-origin: 100% 0%;
+            -webkit-transform: scaleY(0.2);
+            transform: scaleY(0.2);
+            -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
         }
         100% {
-        -webkit-transform: scaleY(1);
-                transform: scaleY(1);
-        -webkit-transform-origin: 100% 0%;
-                transform-origin: 100% 0%;
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
         }
     }
 
     @keyframes scale-up-ver-top {
-    0% {
-        -webkit-transform: scaleY(0.2);
-                transform: scaleY(0.2);
-        -webkit-transform-origin: 100% 0%;
-                transform-origin: 100% 0%;
-    }
-    100% {
-        -webkit-transform: scaleY(1);
-                transform: scaleY(1);
-        -webkit-transform-origin: 100% 0%;
-                transform-origin: 100% 0%;
-    }
+        0% {
+            -webkit-transform: scaleY(0.2);
+            transform: scaleY(0.2);
+            -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+        }
+        100% {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+        }
     }
 
     .addArticle-visible {
@@ -522,7 +526,7 @@ div.article div a {
     .list-share-container {
         grid-template-rows: 2rem 3rem repeat(9, auto) 2rem;
     }
-    
+
     .add-form {
         margin-top: 2rem;
     }
