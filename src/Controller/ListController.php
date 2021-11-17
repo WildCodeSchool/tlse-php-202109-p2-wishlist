@@ -48,6 +48,7 @@ class ListController extends AbstractController
             if (isset($_GET['article_id'])) {
                 $newArticle = new ArticleManager();
                 $newArticle->updateArticleIsGiftedById($_GET['article_id']);
+                $list = $newList->showByLinkShare($_GET['share_link']);
                 return $this->twig->render('List/share.html.twig', [
                     'list' => $list
                 ]);

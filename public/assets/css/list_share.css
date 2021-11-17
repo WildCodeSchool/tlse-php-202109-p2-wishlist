@@ -86,9 +86,12 @@
 
 }
 
-div.article {
-    background: white;
-    opacity: 0.9;
+.article-reserved {
+    filter: grayscale(80%);
+    -webkit-filter: grayscale(80%);
+    -moz-filter: grayscale(80%);
+    -ms-filter: grayscale(80%);
+    -o-filter: grayscale(80%);
 }
 
 .article-img {
@@ -169,7 +172,7 @@ div.article {
 .gift-button-already-reserved {
     grid-area: giftButton;
     margin: 0;
-    background-color: var(--btn-color);
+    background-color: var(--font-color);
     width: 100%;
     text-align: center;
     border-bottom-left-radius: 10px;

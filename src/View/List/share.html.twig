@@ -29,26 +29,38 @@
         </div>
         <div class="article-container">
             {% for article in list %}
-                <div class="article">
-                    <div style="display: none;">{{ article.artid }}</div>
-                    <img class="article-img" alt="{{ article.aname }}"
-                         src="{{ article.picture }}"/>
-                    <h4 class="article-title">{{ article.aname }}</h4>
-                    <h4 class="article-price">{{ article.price }}€</h4>
-                    <p class="article-description">{{ article.adescription }}</p>
-                    <a class="seeMore-button" href="{{ article.market_link }}" target="_blank">
-                        <p>En savoir plus</p>
-                    </a>
-                    {% if article.is_gifted is same as "0" %}
+                {% if article.is_gifted is same as "0" %}
+                    <div class="article">
+                        <div style="display: none;">{{ article.artid }}</div>
+                        <img class="article-img" alt="{{ article.aname }}"
+                             src="{{ article.picture }}"/>
+                        <h4 class="article-title">{{ article.aname }}</h4>
+                        <h4 class="article-price">{{ article.price }}€</h4>
+                        <p class="article-description">{{ article.adescription }}</p>
+                        <a class="seeMore-button" href="{{ article.market_link }}" target="_blank">
+                            <p>En savoir plus</p>
+                        </a>
+
                         <div class="gift-button-reserved">
-                            <p>Réserver !</p>
+                            <p>Réservez !</p>
                         </div>
-                    {% else %}
+                    </div>
+                {% else %}
+                    <div class="article article-reserved">
+                        <div style="display: none;">{{ article.artid }}</div>
+                        <img class="article-img" alt="{{ article.aname }}"
+                             src="{{ article.picture }}"/>
+                        <h4 class="article-title">{{ article.aname }}</h4>
+                        <h4 class="article-price">{{ article.price }}€</h4>
+                        <p class="article-description">{{ article.adescription }}</p>
+                        <a class="seeMore-button" href="{{ article.market_link }}" target="_blank">
+                            <p>En savoir plus</p>
+                        </a>
                         <div class="gift-button-already-reserved">
                             <p>Déjà réservé !</p>
                         </div>
-                    {% endif %}
-                </div>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
     </div>
