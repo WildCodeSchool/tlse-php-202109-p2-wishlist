@@ -55,14 +55,13 @@
     margin: 1rem 5rem 1rem 5rem;
     width: 13rem;
     border-radius: 11px;
-    border: solid black 0.5px;
     box-shadow: 2px 2px 4px black;
+    opacity: 80%;
 }
 
 #submit:hover {
     background-color: var(--background-color);
-    color: var(--btn-color);
-    border: 1px solid var(--btn-color);
+    color: var(--font-color);
 }
 
 .add-form {
@@ -94,11 +93,6 @@
     border-radius: 10px;
     margin: 0 1rem 2rem 1rem;
     background-color: var(--background-color);
-}
-
-div.article {
-    background: var(--primary-color);
-    opacity: 0.8;
 }
 
 .article-img {
@@ -155,19 +149,47 @@ div.article div a {
     padding: 0.5rem;
 }
 
-.delete-button {
+.seeMore-button {
     grid-area: seeMore;
-    background-color: var(--event-color-1);
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
+    margin: 0;
+    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    padding: 0 0 0.2rem 0;
+    text-decoration: none;
+}
+
+.seeMore-button > p {
+    font-size: 1rem;
+    text-align: center;
+    background-color: var(--btn-color);
+    border-radius: 10px;
     width: 50%;
+    margin: 0;
+    padding: 0.2rem;
+    align-self: center;
+    color: var(--primary-color);
+}
+
+.erase-button {
+    grid-area: giftButton;
+    margin: 0;
+    background-color: var(--event-color-1);
+    width: 100%;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.erase-button > p {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--font-color);
 }
 
 .add-form {
@@ -192,7 +214,7 @@ div.article div a {
 }
 
 #giftName {
-    width: max-content;
+    width: calc(100% - 10%);
     font-size: 20px;
     height: 2.5rem;
     border-radius: 11px;
@@ -209,7 +231,7 @@ div.article div a {
 }
 
 #price {
-    width: max-content;
+    width: calc(100% - 10%);
     font-size: 20px;
     height: 2.5rem;
     border-radius: 11px;
@@ -226,7 +248,7 @@ div.article div a {
 }
 
 #imgLink {
-    width: max-content;
+    width: calc(100% - 10%);
     font-size: 20px;
     height: 2.5rem;
     border-radius: 11px;
@@ -243,7 +265,7 @@ div.article div a {
 }
 
 #giftLink {
-    width: max-content;
+    width: calc(100% - 10%);
     font-size: 20px;
     height: 2.5rem;
     border-radius: 11px;
@@ -260,7 +282,7 @@ div.article div a {
 }
 
 #description {
-    width: max-content;
+    width: calc(100% - 10%);
     font-size: 20px;
     height: 7rem;
     border-radius: 11px;
@@ -288,6 +310,7 @@ div.article div a {
     width: 20rem;
     margin: auto;
     border-radius: 15px;
+    box-shadow: 2px 2px 4px black;
 }
 
 .add_Article:hover {
@@ -301,6 +324,8 @@ div.article div a {
     font-size: 30px;
     padding: 1rem;
     color: var(--primary-color);
+    cursor: pointer;
+    width: 100%;
 }
 
 .add:hover {
@@ -359,11 +384,12 @@ div.article div a {
 
 .share_link {
     text-decoration: none;
-    color: var(--font-color);
+    color: var(--primary-color);
     font-size: 1rem;
-    background-color: var(--background-color);
-    padding: 0.5rem;
+    background-color: var(--card-color);
+    padding: 0.5rem 3rem 0.5rem 3rem;
     border-radius: 11px;
+    box-shadow: 2px 2px 4px black;
 }
 
 /*END OF MOBILE FIRST*/
@@ -378,11 +404,16 @@ div.article div a {
         right: 1rem;
     }
 
+    .share_link:hover {
+        background-color: var(--background-color);
+        color: var(--font-color);
+    }
+
     .share_link {
         text-decoration: none;
-        color: var(--font-color);
+        color: var(--primary-color);
         font-size: 2rem;
-        background-color: var(--background-color);
+        background-color: var(--card-color);
         padding: 1rem;
         border-radius: 11px;
     }
@@ -416,6 +447,8 @@ div.article div a {
         font-size: 30px;
         padding: 1rem;
         color: var(--primary-color);
+        cursor: pointer;
+        width: 100%;
     }
 
     .add:hover {
@@ -497,7 +530,6 @@ div.article div a {
         grid-template-areas: "articlePicture articleTitle articlePrice" "articlePicture articleDescription articleDescription" "articlePicture seeMore seeMore" "giftButton giftButton giftButton";
         width: 30rem;
         height: 15rem;
-        padding: 0.5rem;
         border-radius: 10px;
         margin-bottom: 2rem;
         background-color: var(--background-color);
@@ -551,21 +583,6 @@ div.article div a {
         margin: 0;
     }
 
-    .delete-button {
-        grid-area: seeMore;
-        background-color: var(--event-color-1);
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        width: 50%;
-    }
-    
     #giftName {
         width: 30rem;
         font-size: 20px;
@@ -575,14 +592,14 @@ div.article div a {
         background-color: var(--background-color);
         opacity: 80%;
     }
-    
+
     .giftName {
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 30px;
         margin-bottom: 5px;
         font-weight: bold;
     }
-    
+
     #price {
         width: 30rem;
         font-size: 20px;
@@ -592,14 +609,14 @@ div.article div a {
         background-color: var(--background-color);
         opacity: 80%;
     }
-    
+
     .price {
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 30px;
         margin-bottom: 5px;
         font-weight: bold;
     }
-    
+
     #imgLink {
         width: 30rem;
         font-size: 20px;
@@ -609,14 +626,14 @@ div.article div a {
         text-align: center;
         opacity: 80%;
     }
-    
+
     .imgLink {
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 30px;
         margin-bottom: 5px;
         font-weight: bold;
     }
-    
+
     #giftLink {
         width: 30rem;
         font-size: 20px;
@@ -626,14 +643,14 @@ div.article div a {
         text-align: center;
         opacity: 80%;
     }
-    
+
     .giftLink {
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 30px;
         margin-bottom: 5px;
         font-weight: bold;
     }
-    
+
     #description {
         width: 30rem;
         font-size: 20px;
@@ -644,7 +661,7 @@ div.article div a {
         text-align: center;
         opacity: 80%;
     }
-    
+
     .description {
         color: var(--primary-color);
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
@@ -652,5 +669,6 @@ div.article div a {
         margin-bottom: 5px;
         font-weight: bold;
     }
+
     /*END OF DESKTOP FIRST*/
 }
