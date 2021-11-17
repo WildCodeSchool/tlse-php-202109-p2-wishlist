@@ -16,14 +16,17 @@
 {% block content %}
     <div class="main-background"></div>
     <div class="list-share-container">
-        <div class="share-link" style="display: none;">{{ list[0]['share_link'] }}</div>
-        <h3 class="list-title">{{ list[0]['lname'] }}</h3>
-        <h4 class="list-event">{{ list[0]['ename'] }}</h4>
-        <h4 class="list-date">{{ list[0]['limit_date']|date('d-m-Y') }}</h4>
-        <p class="list-description">
-            <strong>{{ list[0]['ldescription'] }}</strong>
-        </p>
-        <p class="list-sort">sort</p>
+        <div class="list-data-container">
+            <div class="share-link" style="display: none;">{{ list[0]['share_link'] }}</div>
+            <h3 class="list-title">{{ list[0]['lname'] }}</h3>
+            <div class="list-event-container">
+                <h4 class="list-event">{{ list[0]['ename'] }}</h4>
+                <h4 class="list-date">{{ list[0]['limit_date']|date('d-m-Y') }}</h4>
+            </div>
+            <p class="list-description">
+                <strong>{{ list[0]['ldescription'] }}</strong>
+            </p>
+        </div>
         <div class="article-container">
             {% for article in list %}
                 <div class="article">
@@ -34,7 +37,7 @@
                     <h4 class="article-price">{{ article.price }}€</h4>
                     <p class="article-description">{{ article.adescription }}</p>
                     <a class="seeMore-button" href="{{ article.market_link }}">
-                        <p>see more</p>
+                        <p>En savoir plus</p>
                     </a>
                     <div class="gift-button">
                         <p>Réserver!</p>
