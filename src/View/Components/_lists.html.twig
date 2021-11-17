@@ -15,7 +15,13 @@
     {% for i in 0..2 %}
         <div class="card">
             <div style="display: none;">{{ lists[i][0][0]['lid'] }}</div>
-            <div class="card-header">{{ lists[i][0][0]['ename'] }}</div>
+            {% if lists[i][0][0]['ename'] is same as "Mariage" %}
+                <div class="card-header wedding">{{ lists[i][0][0]['ename'] }}</div>
+            {% elseif lists[i][0][0]['ename'] is same as "Anniversaire" %}
+                <div class="card-header birthday">{{ lists[i][0][0]['ename'] }}</div>
+            {% else %}
+                <div class="card-header baby_shower">{{ lists[i][0][0]['ename'] }}</div>
+            {% endif %}
             <div class="in-card">
                 <div class="card-body">
                     <p class="card-title">{{ lists[i][0][0]['lname'] }}</p>
@@ -25,7 +31,13 @@
                 <div class="gift-list">
                     {% for j in 0..3 %}
                         {% if lists[i][1][j]['aname'] is not null %}
-                            <p>{{ lists[i][1][j]['aname'] }}</p>
+                            {% if lists[i][0][0]['ename'] is same as "Mariage" %}
+                                <p class="wedding">{{ lists[i][1][j]['aname'] }}</p>
+                            {% elseif lists[i][0][0]['ename'] is same as "Anniversaire" %}
+                                <p class="birthday">{{ lists[i][1][j]['aname'] }}</p>
+                            {% else %}
+                                <p class="baby_shower">{{ lists[i][1][j]['aname'] }}</p>
+                            {% endif %}
                         {% endif %}
                     {% endfor %}
                 </div>
