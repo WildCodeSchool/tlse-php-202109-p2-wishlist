@@ -115,18 +115,26 @@ class ListController extends AbstractController
         }
     }
 
+    /**
+     * @throws SyntaxError
+     * @throws RuntimeError
+     * @throws LoaderError
+     */
     public function addArticle()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['listId'])) {
-            $newList = new ArticleManager();
-            $list = $newList->showArticlesByListId($_GET['listId']);
+            $newListArticle = new ArticleManager();
+            $list = $newListArticle->showArticlesByListId($_GET['listId']);
             $userLists = new ListModel();
             $lists = $userLists->selectOneById($_GET['listId']);
+            if (isset($_GET['eraseId'])) {
+                $newListArticle->delete($_GET['eraseId']);
+                $list = $newListArticle->showArticlesByListId($_GET['listId']);
+            }
             return $this->twig->render('List/add_article.html.twig', [
                 'list' => $list,
                 'user' => $_SESSION['user']['id'],
                 'lists' => $lists,
-
             ]);
         } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_POST["is_gifted"] = "0";
