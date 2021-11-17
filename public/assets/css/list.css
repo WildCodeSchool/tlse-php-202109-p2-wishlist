@@ -6,8 +6,10 @@
 
 h1 {
     text-align: center;
+    background-color: transparent;
     color: var(--primary-color);
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    font-size: 2rem;
 }
 
 h2 {
@@ -152,5 +154,13 @@ h3 {
         box-shadow: 5px 5px 8px rgb(0, 0, 0);
         background: var(--background-color);
         width: calc((100% / 3) - 5rem);
+    }
+
+    h1 {
+        text-align: center;
+        background-color: transparent;
+        color: var(--primary-color);
+        text-shadow: 5px 5px 8px rgb(0, 0, 0);
+        font-size: 4rem;
     }
 }
