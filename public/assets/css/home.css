@@ -20,7 +20,7 @@ body {
 }
 
 .card {
-    margin: 2rem auto 2rem auto;
+    margin: 0 auto 2rem auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
