@@ -26,6 +26,9 @@
 					<strong>{{ lists['description'] }}</strong>
 				</p>
 			</div>
+			<div class="share_link-container">
+				<a class="share_link" href="http://localhost:8000/list/share?share_link={{ lists.share_link }}" target="_blank" > Partager </a>
+			</div>
 			<div class="form-container">
 				<div class="add_Article">
 					<button class="add">
@@ -61,10 +64,11 @@
 					<div class="article-container">
 						{% for article in list %}
 							<div class="article">
-								<a href="{{ article.market_link }}" class="article-img"><img class="article-img" alt="{{ article.name }}" src="{{ article.picture }}"/></a>
+								<img class="article-img" alt="{{ article.name }}" src="{{ article.picture }}"/>
 								<h4 class="article-title">{{ article.name }}</h4>
 								<h4 class="article-price">{{ article.price }}€</h4>
 								<p class="article-description">{{ article.description }}</p>
+								<a href="{{ article.market_link }}" target="_blank" class="article-link"> En savoir plus </a>
 								<form action="" method="GET">
 									<input class="delete-button" type="submit" name="{{ article.id }}" id="{{ article.id }}" value="Supprimer">
 								</form>
