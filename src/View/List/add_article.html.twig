@@ -21,7 +21,7 @@
 				<h3 class="list-title">Nom de la liste :
 					{{ lists['name'] }}</h3>
 				<h3 class="list-date">Date de l'événement :
-					{{ lists['limit_date'] }}</h3>
+					{{ lists['limit_date']|date('d-m-Y') }}</h3>
 				<p class="list-description">
 					<strong>{{ lists['description'] }}</strong>
 				</p>
