@@ -134,44 +134,44 @@ input[type=submit]:hover {
         font-size: 4rem;
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
     }
-    
+
     .name {
         color: var(--primary-color);
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 30px;
         margin-bottom: 5px;
-        font-weight: bold; 
+        font-weight: bold;
         text-align: center;
     }
-    
+
     .description {
         color: var(--primary-color);
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 30px;
         margin-bottom: 5px;
-        font-weight: bold; 
+        font-weight: bold;
         text-align: center;
     }
-    
+
     .date {
         color: var(--primary-color);
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 30px;
         margin-bottom: 5px;
-        font-weight: bold; 
+        font-weight: bold;
         text-align: center;
     }
-    
+
     .event {
         color: var(--primary-color);
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 30px;
         margin-bottom: 5px;
-        font-weight: bold; 
+        font-weight: bold;
         text-align: center;
     }
-    
-    .form{
+
+    .form {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -190,7 +190,7 @@ input[type=submit]:hover {
         height: 1.5rem;
         font-size: 1rem;
     }
-    
+
     input[type=text] {
         padding: 8px 20px;
         border: 1px solid #ccc;
@@ -203,7 +203,7 @@ input[type=submit]:hover {
         height: 1.5rem;
         font-size: 1rem;
     }
-    
+
     .choose_event {
         padding: 8px 20px;
         border: 1px solid #ccc;
@@ -216,7 +216,7 @@ input[type=submit]:hover {
         height: 2.5rem;
         font-size: 1rem;
     }
-    
+
     .description_area {
         padding: 8px 20px;
         border: 1px solid #ccc;
@@ -228,7 +228,7 @@ input[type=submit]:hover {
         margin-right: auto;
         color: var(--font-color);
     }
-    
+
     input[type=submit] {
         background-color: var(--btn-color);
         color: var(--primary-color);
@@ -242,7 +242,7 @@ input[type=submit]:hover {
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     input[type=submit]:hover {
         background-color: var(--background-color);
         color: var(--font-color);

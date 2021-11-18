@@ -100,7 +100,7 @@ a {
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 4rem;
     }
-    
+
     .card {
         width: calc(100% / 3 - 3rem);
         height: 100%;
