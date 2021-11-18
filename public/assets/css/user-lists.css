@@ -85,7 +85,7 @@ h1 {
     width: calc(100% - 2rem);
     margin-left: 1rem;
     margin-right: 1rem;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .card:hover {

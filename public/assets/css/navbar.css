@@ -50,11 +50,11 @@
     text-align: center;
 }
 
-.logoMobile>img:nth-child(1) {
+.logoMobile > img:nth-child(1) {
     display: none;
 }
 
-.logoDesktop>img:nth-child(1) {
+.logoDesktop > img:nth-child(1) {
     height: 50px;
     width: auto;
 }
@@ -68,30 +68,37 @@ div.card div a {
         display: flex;
         font-size: smaller;
     }
+
     .topnav {
         display: flex;
         align-items: center;
     }
+
     #myLinks a {
         font-size: 25px;
         margin-right: 4%;
     }
+
     .icon {
         width: 0,
     }
+
     #myLinks {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
     }
+
     .fa {
         display: none;
     }
+
     a .icon {
         width: 0%;
         height: 0%;
     }
+
     .topnav a.icon {
         background: rgb(255, 255, 255);
         display: none;
@@ -99,19 +106,24 @@ div.card div a {
         right: 0;
         top: 0;
     }
+
     .active {
         background-color: #04AA6D;
         color: white;
     }
+
     .topnav a img {
         width: 40px;
     }
+
     #logoMenu img {
         height: 40px;
     }
+
     .topnav {
         background: white;
     }
+
     html {
         background: rgb(0, 0, 0);
     }

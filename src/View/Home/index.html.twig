@@ -20,7 +20,7 @@
             <p class="paragraph">Vous pouvez créer vos propres listes de cadeaux et les partager à vos proches, ils
                 peuvent parcourir votre liste et vous offrir ce qu'ils veulent.</p>
             {% if user is not null %}
-                <p class="welcome-user">Bienvenu {{ user['firstname'] }}</p>
+                <p class="welcome-user">Bienvenue {{ user['firstname'] }}</p>
             {% else %}
                 <a class="button" href="/login">Se connecter</a>
             {% endif %}

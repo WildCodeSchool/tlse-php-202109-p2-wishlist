@@ -18,7 +18,7 @@ class LogInController extends AbstractController
     public function index(): string
     {
         if (isset($_SESSION['user']) && isset($_SESSION['session_id'])) {
-            header('Location: /list');
+            header('Location: /list/user/lists');
         }
         if ($_SERVER['REQUEST_METHOD'] === "POST") {
             $_POST = array_map('trim', $_POST);
@@ -47,7 +47,7 @@ class LogInController extends AbstractController
                     $newUser->updateUserSession($sessionInfos);
                     $_SESSION["user"] = $user;
                     $_SESSION['session_id'] = $sessionId;
-                    header("Location: /list/user/lists");
+                    header("Location: /login");
                 } elseif (isset($user['errorEmail'])) {
                     return $this->twig->render('Login/index.html.twig', [
                         'errorEmail' => $user['errorEmail'],
