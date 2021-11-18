@@ -67,14 +67,12 @@ input[type=submit] {
     margin: 1rem 5rem 1rem 5rem;
     width: 13rem;
     border-radius: 11px;
-    border: solid black 0.5px;
     box-shadow: 2px 2px 4px black;
 }
 
 input[type=submit]:hover {
     background-color: var(--background-color);
-    color: var(--btn-color);
-    border: 1px solid var(--btn-color);
+    color: var(--font-color);
 }
 
 .noaccount {
@@ -82,7 +80,6 @@ input[type=submit]:hover {
     width: 13rem;
     margin: auto;
     border-radius: 11px;
-    border: solid black 0.5px;
     box-shadow: 2px 2px 4px black;
     text-align: center;
     padding-bottom: 1rem;
@@ -94,7 +91,6 @@ input[type=submit]:hover {
 .noaccount:hover {
     background-color: var(--background-color);
     color: var(--btn-color);
-    border: 1px solid var(--btn-color);
 }
 
 .noaccount-href {
@@ -104,7 +100,7 @@ input[type=submit]:hover {
 }
 
 .noaccount-href:hover {
-    color: var(--btn-color);
+    color: var(--font-color);
     text-decoration: none;
 }
 
@@ -143,7 +139,7 @@ input[type=submit]:hover {
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 30px;
         margin-bottom: 5px;
-        font-weight: bold;    
+        font-weight: bold;
     }
 
     .password {
@@ -152,7 +148,7 @@ input[type=submit]:hover {
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 30px;
         margin-bottom: 5px;
-        font-weight: bold;    
+        font-weight: bold;
     }
 
     input[type=text], input[type=password] {
@@ -172,16 +168,14 @@ input[type=submit]:hover {
         margin: 1rem 0;
         border: none;
         cursor: pointer;
-        width: 10rem;
+        width: 13rem;
         border-radius: 11px;
         box-shadow: 2px 2px 4px black;
-        border: solid black 0.5px;
     }
 
     input[type=submit]:hover {
         background-color: var(--background-color);
-        color: var(--btn-color);
-        border: 1px solid var(--btn-color);
+        color: var(--font-color);
     }
 
     .noaccount {
@@ -189,28 +183,26 @@ input[type=submit]:hover {
         width: 13rem;
         margin: auto;
         border-radius: 11px;
-        border: solid black 0.5px;
         box-shadow: 2px 2px 4px black;
         text-align: center;
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
-    
+
     .noaccount:hover {
         background-color: var(--background-color);
-        color: var(--btn-color);
-        border: 1px solid var(--btn-color);
+        color: var(--font-color);
     }
-    
+
     .noaccount-href {
         color: var(--primary-color);
         text-decoration: none;
         font-size: 20px;
         font-weight: bold;
     }
-    
+
     .noaccount-href:hover {
-        color: var(--btn-color);
+        color: var(--font-color);
         text-decoration: none;
     }
 

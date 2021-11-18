@@ -34,7 +34,7 @@ h3 {
     text-align: center;
     color: var(--primary-color);
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 .no-account {
@@ -43,15 +43,12 @@ h3 {
     width: 13rem;
     margin: auto;
     border-radius: 11px;
-    border: solid black 0.5px;
     box-shadow: 2px 2px 4px rgb(0, 0, 0);
     padding: 1rem;
 }
 
 .no-account:hover {
     background-color: var(--background-color);
-    color: var(--btn-color);
-    border: 1px solid var(--btn-color);
 }
 
 .no-account a {
@@ -61,7 +58,7 @@ h3 {
 }
 
 .no-account-href:hover {
-    color: var(--btn-color);
+    color: var(--font-color);
     text-decoration: none;
 }
 
@@ -73,7 +70,7 @@ h3 {
     gap: 2rem;
     height: auto;
     padding-bottom: 3rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .card {
@@ -81,35 +78,8 @@ h3 {
     width: calc(100% - 2rem);
     margin-left: 1rem;
     margin-right: 1rem;
-    cursor: pointer;
 }
 
-.card:hover {
-    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-@-webkit-keyframes scale-up-center {
-    0% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
-    100% {
-      -webkit-transform: scale(1.1);
-              transform: scale(1.1);
-    }
-  }
-  @keyframes scale-up-center {
-    0% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
-    100% {
-      -webkit-transform: scale(1.1);
-              transform: scale(1.1);
-    }
-  }
-  
 .card-header {
     height: fit-content;
     padding: 0.5rem;
