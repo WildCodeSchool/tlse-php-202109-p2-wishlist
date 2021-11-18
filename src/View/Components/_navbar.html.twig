@@ -1,38 +1,38 @@
 <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link
-rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Top Navigation Menu -->
 <div class="topnav">
-	
-	<a class="logoDesktop" href="/" title="Home"><img src="/assets/images/logo.svg" alt="Logo"/></a>
-	<!-- Navigation links (hidden by default) -->
-	<div id="myLinks">
-		<a href="/">Accueil</a>
+
+    <a class="logoDesktop" href="/" title="Home"><img src="/assets/images/logo.svg" alt="Logo"/></a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        <a href="/">Accueil</a>
 
 
-		{% if  user is null   %}
-			<a href="/list">Listes</a>
-			<a href="/login">Connexion</a>
-		
-		{% else %}
-			<a href="/list/user/lists">Mes Listes</a>
-			<a href="/logout">Se déconnecter</a>
-					    
-		{% endif %}
-			
-	</div>
-	<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-		<i class="fa fa-bars"></i>
-	</a>
+        {% if  user is null %}
+            <a href="/list">Listes</a>
+            <a href="/login">Connexion</a>
+
+        {% else %}
+            <a href="/list/user/lists">Mes Listes</a>
+            <a href="/logout">Se déconnecter</a>
+
+        {% endif %}
+
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
 </div>
 <script>
-	function myFunction() {
-var x = document.getElementById("myLinks");
-if (x.style.display === "block") {
-x.style.display = "none";
-} else {
-x.style.display = "block";
-}
-}
+    function myFunction() {
+        let x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
 </script>

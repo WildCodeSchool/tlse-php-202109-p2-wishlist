@@ -127,15 +127,16 @@ h3 {
     padding: 0.5rem 0.5rem 0.5rem 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .in-card .gift-list p {
-    font-size: 1rem;
-    align-self: center;
+    margin: 0.3rem;
+    font-size: 1.2rem;
     padding: 0.5rem;
     border-radius: 10px;
-    color: var(--font-color);;
+    color: var(--font-color);
+    text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
