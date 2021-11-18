@@ -8,7 +8,9 @@
     display: none;
 }
 
+
 /*MOBILE FIRST*/
+
 .list-container {
     background-color: var(--background-color);
     border-radius: 15px;
@@ -37,7 +39,7 @@
     color: var(--font-color);
 }
 
-.add-form > h1 {
+.add-form>h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,6 +97,22 @@
     background-color: var(--background-color);
 }
 
+.article-reserved {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 0.5fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-areas: "articlePicture articleTitle articlePrice" "articlePicture articleDescription articleDescription" "articlePicture seeMore seeMore" "giftButton giftButton giftButton";
+    width: 100%;
+    height: 14rem;
+    border-radius: 10px;
+    margin: 0 1rem 2rem 1rem;
+    background-color: var(--background-color);
+}
+
+.article-reserved {
+    filter: grayscale(80%);
+}
+
 .article-img {
     grid-area: articlePicture;
     max-height: calc(100% - 0.4rem);
@@ -138,6 +156,15 @@ div.article div a {
     text-align: center;
 }
 
+div.article-reserved div a {
+    background: #007EA7;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 4rem;
+    text-align: center;
+}
+
 .article-link {
     grid-area: giftButton;
     text-decoration: none;
@@ -159,7 +186,7 @@ div.article div a {
     text-decoration: none;
 }
 
-.seeMore-button > p {
+.seeMore-button>p {
     font-size: 1rem;
     text-align: center;
     background-color: var(--btn-color);
@@ -185,7 +212,7 @@ div.article div a {
     justify-content: center;
 }
 
-.erase-button > p {
+.erase-button>p {
     margin: 0;
     font-size: 1.7rem;
     font-weight: bold;
@@ -392,6 +419,7 @@ div.article div a {
     box-shadow: 2px 2px 4px black;
 }
 
+
 /*END OF MOBILE FIRST*/
 
 
@@ -403,12 +431,10 @@ div.article div a {
         position: absolute;
         right: 1rem;
     }
-
     .share_link:hover {
         background-color: var(--background-color);
         color: var(--font-color);
     }
-
     .share_link {
         text-decoration: none;
         color: var(--primary-color);
@@ -417,13 +443,11 @@ div.article div a {
         padding: 1rem;
         border-radius: 11px;
     }
-
     .list-container {
         width: 50%;
         margin: auto;
         margin-bottom: 2rem;
     }
-
     .add_Article {
         display: flex;
         flex-direction: row;
@@ -435,12 +459,10 @@ div.article div a {
         border-radius: 15px;
         margin-bottom: 2rem;
     }
-
     .add_Article:hover {
         background-color: var(--background-color);
         color: var(--font-color);
     }
-
     .add {
         background-color: transparent;
         border: transparent;
@@ -450,22 +472,18 @@ div.article div a {
         cursor: pointer;
         width: 100%;
     }
-
     .add:hover {
         color: var(--primary-color);
         color: var(--font-color);
     }
-
     .btn_add {
         width: 2rem;
     }
-
     .form {
         display: none;
         -webkit-animation: scale-up-ver-top 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
         animation: scale-up-ver-top 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
-
     @-webkit-keyframes scale-up-ver-top {
         0% {
             -webkit-transform: scaleY(0.2);
@@ -480,7 +498,6 @@ div.article div a {
             transform-origin: 100% 0%;
         }
     }
-
     @keyframes scale-up-ver-top {
         0% {
             -webkit-transform: scaleY(0.2);
@@ -495,26 +512,21 @@ div.article div a {
             transform-origin: 100% 0%;
         }
     }
-
     .addArticle-visible {
         display: block;
     }
-
     .page {
         display: flex;
         flex-direction: row;
     }
-
     .main-background {
         background-image: url("/assets/images/add_list.jpg");
         background-size: cover;
         position: fixed
     }
-
     .list-sort {
         grid-area: sortArticle;
     }
-
     .article-container {
         grid-area: articleContainer;
         display: flex;
@@ -522,7 +534,6 @@ div.article div a {
         justify-content: space-evenly;
         min-width: 100%;
     }
-
     .article {
         display: grid;
         grid-template-columns: 1.5fr 1.5fr 0.5fr;
@@ -534,7 +545,17 @@ div.article div a {
         margin-bottom: 2rem;
         background-color: var(--background-color);
     }
-
+    .article-reserved {
+        display: grid;
+        grid-template-columns: 1.5fr 1.5fr 0.5fr;
+        grid-template-rows: 1fr 2fr 1fr 1fr;
+        grid-template-areas: "articlePicture articleTitle articlePrice" "articlePicture articleDescription articleDescription" "articlePicture seeMore seeMore" "giftButton giftButton giftButton";
+        width: 30rem;
+        height: 15rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        background-color: var(--background-color);
+    }
     .article-img {
         grid-area: articlePicture;
         max-height: calc(100% - 0.4rem);
@@ -542,20 +563,17 @@ div.article div a {
         align-self: center;
         margin: 0.3rem;
     }
-
     .article-title {
         grid-area: articleTitle;
         font-size: 20px;
         margin: 0;
     }
-
     .article-price {
         grid-area: articlePrice;
         font-size: 20px;
         margin: 0;
         justify-self: end;
     }
-
     .article-description {
         grid-area: articleDescription;
         font-size: 20px;
@@ -563,15 +581,12 @@ div.article div a {
         padding: 0.2rem 0.5rem 0 0.5rem;
         height: 100%;
     }
-
     .list-share-container {
         grid-template-rows: 2rem 3rem repeat(9, auto) 2rem;
     }
-
     .add-form {
         margin-top: 2rem;
     }
-
     .article-link {
         grid-area: giftButton;
         text-decoration: none;
@@ -582,7 +597,6 @@ div.article div a {
         text-align: center;
         margin: 0;
     }
-
     #giftName {
         width: 30rem;
         font-size: 20px;
@@ -592,14 +606,12 @@ div.article div a {
         background-color: var(--background-color);
         opacity: 80%;
     }
-
     .giftName {
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 30px;
         margin-bottom: 5px;
         font-weight: bold;
     }
-
     #price {
         width: 30rem;
         font-size: 20px;
@@ -609,14 +621,12 @@ div.article div a {
         background-color: var(--background-color);
         opacity: 80%;
     }
-
     .price {
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 30px;
         margin-bottom: 5px;
         font-weight: bold;
     }
-
     #imgLink {
         width: 30rem;
         font-size: 20px;
@@ -626,14 +636,12 @@ div.article div a {
         text-align: center;
         opacity: 80%;
     }
-
     .imgLink {
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 30px;
         margin-bottom: 5px;
         font-weight: bold;
     }
-
     #giftLink {
         width: 30rem;
         font-size: 20px;
@@ -643,14 +651,12 @@ div.article div a {
         text-align: center;
         opacity: 80%;
     }
-
     .giftLink {
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
         font-size: 30px;
         margin-bottom: 5px;
         font-weight: bold;
     }
-
     #description {
         width: 30rem;
         font-size: 20px;
@@ -661,7 +667,6 @@ div.article div a {
         text-align: center;
         opacity: 80%;
     }
-
     .description {
         color: var(--primary-color);
         text-shadow: 5px 5px 8px rgb(0, 0, 0);
@@ -669,6 +674,5 @@ div.article div a {
         margin-bottom: 5px;
         font-weight: bold;
     }
-
     /*END OF DESKTOP FIRST*/
 }
