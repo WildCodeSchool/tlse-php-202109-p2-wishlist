@@ -34,7 +34,7 @@ h3 {
     text-align: center;
     color: var(--primary-color);
     text-shadow: 5px 5px 8px rgb(0, 0, 0);
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 .no-account {
@@ -70,7 +70,7 @@ h3 {
     gap: 2rem;
     height: auto;
     padding-bottom: 3rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .card {
