@@ -134,7 +134,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Toto','Tacos','tototacos@gmail.com','$2y$10$qQ7LdZLP5bYf.SrbGxvYEOyBplTKeEL5JruuqndCQZXbFqhvfQFrC','1990-02-28','a0jsve282bcvro9nu497bb3eea');
+INSERT INTO `user` VALUES (1,'Exploratrice','Dora','doralexploratrice@gmail.com','$2y$10$qQ7LdZLP5bYf.SrbGxvYEOyBplTKeEL5JruuqndCQZXbFqhvfQFrC','1990-02-28','a0jsve282bcvro9nu497bb3eea');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
