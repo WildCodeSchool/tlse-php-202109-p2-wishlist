@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="/assets/css/user-lists.css" />
 {% endblock %}
 
+  {% block title %} Listes de {{ user['firstname'] }} {% endblock %}
+
 {% block content %}
   {% include 'Components/_user-lists.html.twig' %}
 {% endblock %}

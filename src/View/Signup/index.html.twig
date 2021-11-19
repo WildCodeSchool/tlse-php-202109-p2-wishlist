@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="/assets/css/signup.css">
     <link rel="stylesheet" href="/assets/css/navbar.css">
 {% endblock %}
+{% block title %} Inscription {% endblock %}
 
 {% block navbar %}
 
@@ -20,14 +21,14 @@
                 <div class="name"><label for="firstname"><p class="firstname">Nom</p></label>
                 <label for="lastname"><p class="lastname">Prénom</p></label></div>
                 <div class="input-name">
-                <input type="text" id="firstname" placeholder="Entrer votre nom" name="firstname" value="Wilder" required>
-                <input type="text" id="lastname" placeholder="Entrer votre prénom" name="lastname" value="Wilder" required></div>
+                <input type="text" id="firstname" placeholder="Entrer votre nom" name="firstname" required>
+                <input type="text" id="lastname" placeholder="Entrer votre prénom" name="lastname" required></div>
                 <label for="birthday"><p class="birthday">Date de Naissance</p></label>
-                <input type="date" id="birthday" placeholder="Entrer votre date de naissance" name="birthday" value="1988-10-13" required>
+                <input type="date" id="birthday" placeholder="Entrer votre date de naissance" name="birthday"required>
                 <label for="email"><p class="email">Email</p></label>
-                <input type="email" id="email" placeholder="Entrer votre email" name="email" value="wilders@wildcodeschool.fr" required>
+                <input type="email" id="email" placeholder="Entrer votre email" name="email"required>
                 <label for="password"><p class="password">Mot de passe</p></label>
-                <input type="password" id="password" placeholder="Entrer le mot de passe" name="password" value="uujr24ar" required>
+                <input type="password" id="password" placeholder="Entrer le mot de passe" name="password" required>
                 <label class="show-password" for="checkbox"><input type="checkbox" id="checkbox">Afficher le mot de passe</label>
                 <input type="submit" id='submit' value='Créer le compte' > 
             </form>
