@@ -29,7 +29,7 @@ If you develop on Windows, you should edit you git configuration to change your 
 
 `git config --global core.autocrlf true`
 
-## Example 
+## Example
 
 An example (a basic list of items) is provided (you can load the *simple-mvc.sql* file in a test database). The accessible URLs are :
 
@@ -55,6 +55,6 @@ We prepare a little guided tour to start with the simple-MVC.
 
 To take it, you need to install the `Code Tour` extension for Visual Studio Code : [Code Tour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)
 
-It will give access to a new menu on your IDE where you'll find the different tours about the simple-MVC. Click on play to start one : 
+It will give access to a new menu on your IDE where you'll find the different tours about the simple-MVC. Click on play to start one :
 
 ![menu](.tours/code_tour_menu.jpg)
