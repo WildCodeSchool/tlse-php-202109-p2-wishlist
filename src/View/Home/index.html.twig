@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="/assets/css/home.css">
 {% endblock %}
 
+{% block title %} Accueil {% endblock %}
+
 {% block content %}
     <div class="main-background"></div>
     <h1 class='titre'>Give me Gifts !</h1>
     <div class="container-card">
         <div class="card">
             <img class="image-card" src="/assets/images/list_share_bg.jpg" alt="cadeau-bleu">
-            <h3>Gift Me Gifts</h3>
+            <h3>Give Me Gifts</h3>
             <p class="paragraph">Vous pouvez créer vos propres listes de cadeaux et les partager à vos proches, ils
                 peuvent parcourir votre liste et vous offrir ce qu'ils veulent.</p>
             {% if user is not null %}
